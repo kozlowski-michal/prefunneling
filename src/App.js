@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+
+import Layout from './Layout/Layout';
+import Questionaire from './Questionaire/Questionaire';
+import { Languages } from './data/languages';
 
 function App() {
+
+  let [language, setLanguage] = useState(Languages.ENGLISH);
+
+  const languageChooseHandler = (choosenLanguage) => {
+    setLanguage(() => choosenLanguage);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className = 'App'>
+      <Layout 
+        chooseLanguage = {languageChooseHandler} 
+        language = {language}
+      >
+        <Questionaire 
+          language = {language} 
+        />
+      </Layout>
     </div>
   );
 }

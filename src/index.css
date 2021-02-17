@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  color: #46435B;
+}

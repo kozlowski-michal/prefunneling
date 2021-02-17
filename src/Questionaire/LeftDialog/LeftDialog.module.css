@@ -1,0 +1,7 @@
+li.fromCheckbox {
+    list-style-type: square;
+}
+
+li.fromRadio {
+    list-style-type: circle;
+}

@@ -1,0 +1,33 @@
+.Container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+}
+
+.Container > div {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.Conversation{
+    width: 400px;
+    border-right: solid #E5E5E5 1px;
+}
+
+.Survey {
+    flex: 1;
+}
+
+.TestingOutput {
+    width: 300px;
+    background-color: lightblue;
+    color: darkblue;
+    overflow: auto;
+}
