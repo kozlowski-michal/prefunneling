@@ -5,10 +5,7 @@ import classesCSS from './Layout.module.css';
 const layout = (props) => {
     return (
         <React.Fragment>
-            <Header 
-                chooseLanguage = {props.chooseLanguage}
-                language = {props.language}
-            />
+            <Header />
             <main className = {classesCSS.Content}>
                 {props.children}
             </main>

@@ -3,24 +3,45 @@ import React, { useEffect, useState } from 'react';
 import LeftDialog from './LeftDialog/LeftDialog';
 import RightDialog from './RightDialog/RightDialog';
 import classesCSS from './Questionaire.module.css';
-import { TeamSize } from './dialogSchemas/enums';
+import { collectedData } from '../data/collectedData';
+import { TeamSize } from '../data/enums';
+import { getLocale } from 'react-i18nify';
 
-const Questionnaire = (props) => {
+const Questionnaire = () => {
     let [stepCounter, setStepCounter] = useState(0);
-    let [dialogData, setDialogData] = useState({});
+    let [dialogData, setDialogData] = useState(collectedData);
 
     useEffect( () => {
+        setDialogData( (oldDialogData) => {
+            return {...oldDialogData, language: getLocale()}
+        });
         console.log("Step:" + stepCounter);  // <============================================================= DEL
         console.log(dialogData);  // <============================================================= DEL
-    }, [stepCounter])
+    }, [stepCounter, getLocale() ]);
 
-    // passing data from dialog to state
+    //-------------------------------- Data from dialog to state --------------------------------
     const onSubmitHandler = (formData) => {
-        // for range
+        //--- for range ---
         if (formData.teamSize) {
             formData = {teamSize: TeamSize[formData.teamSize]};
         }
-
+        //--- for checkbox: services needed ---
+        else if (formData.servicesNeeded) {
+            let objectData = {...dialogData.servicesNeeded};
+            formData.servicesNeeded.map( (item) => {
+                objectData[item] = true;
+            });
+            formData = {servicesNeeded: objectData}
+        }
+        //--- for checkbox: offer ---
+        else if (formData.offer) {
+            let objectData = {...dialogData.offer};
+            formData.offer.map( (item) => {
+                objectData[item] = true;
+            });
+            formData = {offer: objectData}
+        }
+        //--- value data ---
         setDialogData( (oldDialogData) => {
             return {...oldDialogData, ...formData};
         });
@@ -31,14 +52,12 @@ const Questionnaire = (props) => {
         <div className = {classesCSS.Container} >
             <div className = {classesCSS.Conversation} >
                 <LeftDialog
-                    language = {props.language}
                     step = {stepCounter}
                     dialogData = {dialogData}
                 />
             </div>
             <div className = {classesCSS.Survey} >
                 <RightDialog 
-                    language = {props.language}
                     step = {stepCounter}
                     submit = {(event) => onSubmitHandler(event)}
                 />
@@ -48,14 +67,3 @@ const Questionnaire = (props) => {
 }
 
 export default Questionnaire;
-
-/*
-            /*<div className = {classesCSS.TestingOutput} >
-                <TestingOutput 
-                    language = {props.language}
-                    step = {stepCounter}
-                    data = {dialogData}
-                />
-            </div>
-
-*/

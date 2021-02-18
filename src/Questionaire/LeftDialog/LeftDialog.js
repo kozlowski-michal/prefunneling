@@ -1,5 +1,5 @@
 import React from 'react';
-import { HaveWebsite } from '../dialogSchemas/enums';
+import { HaveWebsite } from '../../data/enums';
 
 import classesCSS from './LeftDialog.module.css'
 
@@ -8,6 +8,7 @@ const leftDialog = (props) => {
     const LeftDialogSchemas = (step, data) => {
         let answer;
 
+        /*
         switch (step) {
             case 0:
                 answer = <p>Okay!<br/>Let’s get started. 🤘️</p>;
@@ -26,16 +27,18 @@ const leftDialog = (props) => {
                         <p>Website present.<br/>Great! 💪</p>
                 break;
             case 4:
-                answer = <p>That’s a big team already,exciting! 💪</p>;
+                answer = <p>That’s a big team already, exciting! 💪</p>;
+                break;
             case 5:
                 //break;
             default: answer = <p>No text for that step :(</p>
-        }
+        }*/
         return  answer;
     }
 
     let summary = (<p>Marco Dzierma</p>)
 
+    /*
     if (props.step > 1) {
         summary = (<ul>
             Selections:
@@ -44,7 +47,7 @@ const leftDialog = (props) => {
             })}
             {props.dialogData.haveWebsite ? <li key="haveWebsite" className = {classesCSS.fromRadio} >{props.dialogData.haveWebsite}</li> : null}
         </ul>);
-    } 
+    } */
 
     return (
         <React.Fragment>
