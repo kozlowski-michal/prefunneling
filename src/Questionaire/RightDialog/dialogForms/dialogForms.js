@@ -2,8 +2,9 @@ import React from 'react';
 import { I18n, translate, Translate } from 'react-i18nify';
 
 import translations from '../../../data/translations';
+import DialogTitle from './dialogTitle/dialogTitle';
 import { Steps, TeamSize } from '../../../data/enums';
-import classesCSS from '../RightDialog.module.css';
+import classesCSS from './dialogForms.module.css';
 
 const DialogForms = (props) => {
 
@@ -11,12 +12,7 @@ const DialogForms = (props) => {
         //-------------------------------- Asking for name --------------------------------
         case Steps.AskForName:
             return <React.Fragment>
-                <h4 className = {classesCSS.Title} >
-                    <Translate value = {"rightDialog."+Steps.AskForName+".pretitle"} />
-                </h4>
-                <h2 className = {classesCSS.Title} >
-                    <Translate value = {"rightDialog."+Steps.AskForName+".title"} />
-                </h2>
+                <DialogTitle step = {props.step} />
                 <I18n render= {() =>  
                     <input 
                         type = "text"
@@ -37,12 +33,7 @@ const DialogForms = (props) => {
         //-------------------------------- Asking what is needed --------------------------------
         case Steps.AskAboutServices:
             return <div>
-                <h4 className = {classesCSS.Title} >
-                    <Translate value = {"rightDialog."+Steps.AskAboutServices+".pretitle"} />
-                </h4>
-                <h2 className = {classesCSS.Title} >
-                    <Translate value = {"rightDialog."+Steps.AskAboutServices+".title"} />
-                </h2>
+                <DialogTitle step = {props.step} />
                 { Object.keys(translations.en.rightDialog.servicesNeeded).map( (key, index) => {
                     return <React.Fragment key = {key} >
                             <input 
@@ -63,12 +54,7 @@ const DialogForms = (props) => {
         //-------------------------------- Asking about website --------------------------------
         case Steps.AskForWebsite:
             return <div>
-                <h4 className = {classesCSS.Title} >
-                    <Translate value = {"rightDialog."+Steps.AskForWebsite+".pretitle"} />
-                </h4>
-                <h2 className = {classesCSS.Title} >
-                    <Translate value = {"rightDialog."+Steps.AskForWebsite+".title"} />
-                </h2>
+                <DialogTitle step = {props.step} />
                 { Object.keys(translations.en.rightDialog.haveWebsite).map( (key, index) => {
                     return <React.Fragment key = {key} >
                             <input
@@ -88,12 +74,7 @@ const DialogForms = (props) => {
         //-------------------------------- Asking about team size --------------------------------
         case Steps.AskAboutTeamSize:
             return <React.Fragment>
-                <h4 className = {classesCSS.Title} >
-                    <Translate value = {"rightDialog."+Steps.AskAboutTeamSize+".pretitle"} />
-                </h4>
-                <h2 className = {classesCSS.Title} >
-                    <Translate value = {"rightDialog."+Steps.AskAboutTeamSize+".title"} />
-                </h2>
+                <DialogTitle step = {props.step} />
                 <input className = {classesCSS.Range}
                     type = "range"
                     name = "teamSize"
@@ -114,12 +95,7 @@ const DialogForms = (props) => {
         //-------------------------------- Asking about offer --------------------------------
         case Steps.AskAboutOffer:
             return <div>
-                <h4 className = {classesCSS.Title} >
-                    <Translate value = {"rightDialog."+Steps.AskAboutOffer+".pretitle"} />
-                </h4>
-                <h2 className = {classesCSS.Title} >
-                    <Translate value = {"rightDialog."+Steps.AskAboutOffer+".title"} />
-                </h2>
+                <DialogTitle step = {props.step} />
                 { Object.keys(translations.en.rightDialog.offer).map( (key) => {
                     return <React.Fragment key = {key} >
                             <input 
@@ -140,12 +116,7 @@ const DialogForms = (props) => {
         //-------------------------------- Asking for contact --------------------------------
         case Steps.AskForContact:
             return <React.Fragment>
-                <h4 className = {classesCSS.Title} >
-                    <Translate value = {"rightDialog."+Steps.AskForContact+".pretitle"} />
-                </h4>
-                <h2 className = {classesCSS.Title} >
-                    <Translate value = {"rightDialog."+Steps.AskForContact+".title"} />
-                </h2>
+                <DialogTitle step = {props.step} />
                 <I18n render= {() => 
                     <input 
                         type = 'email'
