@@ -19,13 +19,13 @@ const Questionnaire = () => {
         console.log(dialogData);  // <============================================================= DEL
     }, [stepCounter, getLocale() ]);
 
-    //-------------------------------- Data from dialog to state --------------------------------
+    /* Parsing data from dialog */
     const onSubmitHandler = (formData) => {
-        //--- for range ---
+        /* for range */
         if (formData.teamSize) {
             formData = {teamSize: TeamSize[formData.teamSize]};
         }
-        //--- for checkbox: services needed ---
+        /* for checkbox: services needed */
         else if (formData.servicesNeeded) {
             let objectData = {...dialogData.servicesNeeded};
             formData.servicesNeeded.map( (item) => {
@@ -33,7 +33,7 @@ const Questionnaire = () => {
             });
             formData = {servicesNeeded: objectData}
         }
-        //--- for checkbox: offer ---
+        /* for checkbox: offer */
         else if (formData.offer) {
             let objectData = {...dialogData.offer};
             formData.offer.map( (item) => {
@@ -41,10 +41,11 @@ const Questionnaire = () => {
             });
             formData = {offer: objectData}
         }
-        //--- value data ---
+        /* for simple value data */
         setDialogData( (oldDialogData) => {
             return {...oldDialogData, ...formData};
         });
+
         setStepCounter( () => stepCounter + 1 );
     }
 

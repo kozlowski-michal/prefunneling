@@ -1,8 +1,5 @@
-import React, { useEffect } from 'react';
-//import { addLocales, setLocale } from 'react-i18nify';
-//import en from 'date-fns/locale/en';
-//import de from 'date-fns/locale/de';
-import { addLocales, getLocale, setLocale, setTranslations } from 'react-i18nify';
+import React from 'react';
+import { addLocales, setLocale, setTranslations } from 'react-i18nify';
 import en from 'date-fns/locale/en-GB';
 import de from 'date-fns/locale/de';
 
@@ -13,13 +10,11 @@ import Questionaire from './Questionaire/Questionaire';
 function App() {
 
   setTranslations(translations);
-
   addLocales({
     en: en,
     de: de,
   }); 
-
-  setLocale('de');
+  setLocale('en');
 
   return (
     <div className = 'App'>

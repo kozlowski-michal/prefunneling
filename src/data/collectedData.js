@@ -1,3 +1,4 @@
+/* This object is sent to backend */
 export const collectedData = {
     language: 'en',
     name: '',
