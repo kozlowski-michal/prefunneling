@@ -1,4 +1,7 @@
+@import '../../data/colors.css';
+
 .Toolbar {
+    min-height: 82px;
     height: 82px;
     width: 100%;
     justify-content: space-between;
@@ -6,7 +9,7 @@
     display: flex;
     padding: 0;
     margin: 0;
-    border-bottom: solid #E5E5E5 1px;
+    border-bottom: solid var(--light) 1px;
     box-sizing: border-box;
 }
 
@@ -19,25 +22,102 @@
     box-sizing: border-box;
 }
 
-.NavContainer>* {
-    height: 100%;
+.NavContainer {
+    margin: 0;
+    padding: 0;
+}
+
+.NavContainer a {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
-    align-self: flex-end;
+    padding: 0;
+    margin: 0 10px;
+    align-self: center;
     box-sizing: border-box;
     cursor: pointer;
 }
 
-.Logo {
-    height: 100%;
-    width: 82px;
-    padding: 10px;
-    margin: 0;
-    box-sizing: border-box;
+a.Phone {
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: var(--light);
 }
 
-.Active {
-    font-weight: bold;
-    border: 5px solid black;
+.NavContainer a:hover {
+    color: var(--dark);
+    cursor: pointer;
+}
+
+.NavContainer div.RightItem {
+    height: 100%;
+    width: 80px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.LeftSeparator {
+    width: 1px;
+    height: 50px;
+    display: flex;
+    align-self: center;
+    margin: 0 10px;
+    background-color: var(--light);
+}
+
+.RightSeparator {
+    width: 1px;
+    height: 100%;
+    margin: 0;
+    background-color: var(--light);
+}
+
+.IconPlaceholder {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 6px;
+    border-radius: 12px;
+    background-color: var(--light);
+    overflow: hidden;
+}
+
+.Shadow {
+    width: 10px;
+    height: 100%;
+    background-image: linear-gradient(to left, var(--light), rgba(0,0,0,0));
+}
+
+.ItemMobile {
+    display: none;
+}
+
+.NavMobile {
+
+}
+
+@media only screen and ( max-width: 999px) {
+    .Toolbar {
+        min-height: 60px;
+        height: 60px;
+    }
+
+    .NavContainer {
+        display: none;
+    }
+
+    .ItemMobile {
+        display: inherit;
+        cursor: pointer;
+    }
+
+    .MenuIcon {
+        
+    }
+
 }

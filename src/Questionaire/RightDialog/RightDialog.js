@@ -4,7 +4,7 @@ import { Translate } from 'react-i18nify';
 import { Steps } from '../../data/enums';
 
 import DialogForms from './dialogForms/dialogForms';
-import yupOptions from './dialogForms/yupOptions';
+import yupOptions from '../../data/yupOptions';
 import classesCSS from './RightDialog.module.css';
 
 const RightDialog = (props) => {
@@ -22,6 +22,10 @@ const RightDialog = (props) => {
                     errors = {errors}
                     register = {register}
                 />
+
+                { props.step != 0 && props.step != Steps.Done ?
+                    <span onClick={props.goBack}>Go back</span> : null }
+
                 { props.step != Steps.Done ? 
                     <button 
                         className = {classesCSS.Button}

@@ -1,6 +1,6 @@
 /* some predefined values */
 
-/* in this order steps will appear. Last step should stay 'Done'*/
+/* in this order steps will appear. Last step should stay 'Done' */
 export const Steps = {
     AskForName: 0,
     AskAboutServices: 1,

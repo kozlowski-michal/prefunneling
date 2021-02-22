@@ -1,0 +1,29 @@
+.Logo {
+    margin: 20px;
+    margin-right: 40px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.LogoMobile {
+    height: 36px;
+    width: 39px;
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Logo:hover {
+    cursor: pointer;
+}
+
+.LogoImg {
+    width: 40px;
+    height: 40px;
+}
+
+.LogoImgMobile {
+    height: 36px;
+    width: 39px;
+}
+

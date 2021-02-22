@@ -1,6 +1,6 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
-import { Steps } from '../../../data/enums';
+import { Steps } from './enums';
 
 const yupOptions = (step) => {
     switch (step) {

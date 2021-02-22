@@ -17,7 +17,7 @@ const Questionnaire = () => {
         });
         console.log("Step:" + stepCounter);  // <============================================================= DEL
         console.log(dialogData);  // <============================================================= DEL
-    }, [stepCounter, getLocale() ]);
+    }, [stepCounter]);
 
     /* Parsing data from dialog */
     const onSubmitHandler = (formData) => {
@@ -27,26 +27,42 @@ const Questionnaire = () => {
         }
         /* for checkbox: services needed */
         else if (formData.servicesNeeded) {
-            let objectData = {...dialogData.servicesNeeded};
-            formData.servicesNeeded.map( (item) => {
-                objectData[item] = true;
-            });
-            formData = {servicesNeeded: objectData}
+            let services = {};
+
+            Object.keys(dialogData.servicesNeeded).map( (key) => {
+                if (formData.servicesNeeded.includes(key) )
+                    services[key] = true;
+                else
+                    services[key] = false;
+            })
+
+            formData = {servicesNeeded: services}
         }
         /* for checkbox: offer */
         else if (formData.offer) {
-            let objectData = {...dialogData.offer};
-            formData.offer.map( (item) => {
-                objectData[item] = true;
-            });
-            formData = {offer: objectData}
+            let offer = {};
+
+            Object.keys(dialogData.offer).map( (key) => {
+                if (formData.offer.includes(key) )
+                    offer[key] = true;
+                else
+                    offer[key] = false;
+            })
+
+            formData = {offer: offer}
         }
-        /* for simple value data */
+
+        /* for simple value data + adding language for case if updated */
+        formData['language'] = getLocale();
         setDialogData( (oldDialogData) => {
             return {...oldDialogData, ...formData};
         });
 
         setStepCounter( () => stepCounter + 1 );
+    }
+
+    const previousStepHandler = () => {
+        setStepCounter( () => stepCounter - 1 );
     }
 
     return (
@@ -61,6 +77,7 @@ const Questionnaire = () => {
                 <RightDialog 
                     step = {stepCounter}
                     submit = {(event) => onSubmitHandler(event)}
+                    goBack = {previousStepHandler}
                 />
             </div>
         </div>
