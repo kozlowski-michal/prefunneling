@@ -7,22 +7,26 @@
 
 .Container > div {
     height: 100%;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
     margin: 0;
     box-sizing: border-box;
 }
 
-.Conversation{
+.LeftDialog {
     width: 400px;
-    border-right: solid #E5E5E5 1px;
+    display: flex;
+    flex-flow: column;
+    background-image: linear-gradient(to top, #bae1fa, rgba(0,0,0,0));
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px;
 }
 
-.Survey {
+.RightDialog {
+    display: flex;
+    flex-flow: column;
     flex: 1;
+    align-items: center;
+    justify-content: center;
 }
 
 .TestingOutput {
@@ -30,4 +34,11 @@
     background-color: lightblue;
     color: darkblue;
     overflow: auto;
+}
+
+@media only screen and ( max-width: 999px) {
+    .LeftDialog {
+        display: none;
+        overflow: hidden;
+    }
 }

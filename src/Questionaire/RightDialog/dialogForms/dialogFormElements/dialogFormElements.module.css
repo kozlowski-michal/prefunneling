@@ -1,20 +1,42 @@
+@import '../../../../data/colors.css';
+
 h2.Title, h4.Title{
     padding: 0;
     margin: 0;
+    font-weight: 700;
+}
+
+h2.Title {
+    font-size: 24px;
+}
+
+h4.Title {
+    font-size: 14px;
 }
 
 .Error {
-    color: red;
+    color: var(--formRed);
+    margin-bottom: 20px;
 }
 
 .Input {
     width: 100%;
-    height: 30px;
-    margin-top: 50px;
-    font-size: 1.3rem;
+    height: 60px;
+    margin: 20px 0;
+    font-size: 18px;
     border: none;
-    border-bottom: #E5E5E5 solid 1px;
+    border-bottom: var(--secondary) solid 1px;
+    box-sizing: border-box;
 }
+
+.Input::placeholder  {
+    color: var(--secondary);
+}
+
+.Input:focus  {
+    outline: none;
+}
+
 
 .Range {
     width: 80%;
@@ -28,4 +50,8 @@ h2.Title, h4.Title{
     display: flex;
     flex-flow: row;
     justify-content: space-between;
+}
+
+.Message {
+    color: var(--tertiary)
 }

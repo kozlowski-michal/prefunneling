@@ -1,8 +1,6 @@
 import React from 'react'
 import { I18n, translate } from 'react-i18nify';
 
-import classesCSS from './dialogFormElements.module.css';
-
 const dialogInputRadio = (props) => {
     return (
         Object.keys(props.keys).map( (key, index) => {

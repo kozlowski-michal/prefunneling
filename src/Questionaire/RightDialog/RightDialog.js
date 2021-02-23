@@ -3,7 +3,8 @@ import { useForm } from "react-hook-form";
 import { Translate } from 'react-i18nify';
 import { Steps } from '../../data/enums';
 
-import DialogForms from './dialogForms/dialogForms';
+import DialogForms from './DialogForms/DialogForms';
+import { ArrowNext, ArrowBack } from './ButtonsSVG/ButtonsSVG';
 import yupOptions from '../../data/yupOptions';
 import classesCSS from './RightDialog.module.css';
 
@@ -12,27 +13,33 @@ const RightDialog = (props) => {
 
     return (
         <div className = {classesCSS.Survey} >
-            <form 
-                onSubmit={handleSubmit(props.submit)}
-                className = {classesCSS.FormContainer} 
-            >
-                {/* ---------- All cases of form ---------- */}
-                <DialogForms
-                    step = {props.step}
-                    errors = {errors}
-                    register = {register}
-                />
+            <form onSubmit={handleSubmit(props.submit)} className = {classesCSS.Form} >
+                <div className = {classesCSS.FormContainer} >
+                    <DialogForms
+                        step = {props.step}
+                        errors = {errors}
+                        register = {register}
+                    />
+                </div>
 
-                { props.step != 0 && props.step != Steps.Done ?
-                    <span onClick={props.goBack}>Go back</span> : null }
-
+                {/* Buttons */}
                 { props.step != Steps.Done ? 
-                    <button 
-                        className = {classesCSS.Button}
-                        type="submit"
-                    >
-                        ➔
-                    </button> : null
+                    <div className = {classesCSS.ButtonsContainer} >
+                        <div className = {classesCSS.ButtonLine} ></div>
+                        <button 
+                            className = {classesCSS.ButtonNext}
+                            type="submit" >
+                            <ArrowNext/>
+                        </button>
+                        
+                        { props.step != 0 ?
+                            <button 
+                                className = {classesCSS.ButtonBack}
+                                onClick = {props.goBack} > 
+                                <ArrowBack/>
+                            </button> : null 
+                        }
+                    </div> : null
                 }
             </form>
             <p className = {classesCSS.Encrypted} >

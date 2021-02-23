@@ -67,13 +67,13 @@ const Questionnaire = () => {
 
     return (
         <div className = {classesCSS.Container} >
-            <div className = {classesCSS.Conversation} >
+            <div className = {classesCSS.LeftDialog} >
                 <LeftDialog
                     step = {stepCounter}
                     dialogData = {dialogData}
                 />
             </div>
-            <div className = {classesCSS.Survey} >
+            <div className = {classesCSS.RightDialog} >
                 <RightDialog 
                     step = {stepCounter}
                     submit = {(event) => onSubmitHandler(event)}

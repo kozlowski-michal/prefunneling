@@ -19,18 +19,20 @@ const translations = {
             },
             [Steps.AskAboutOffer]: "That’s a big team already, exciting! 💪",
             [Steps.AskForContact]: "Great choice!",
-            [Steps.Done]: "See you soon! 🤘️",
-            selections: "selections",
+            [Steps.Done]: "Ready. Create your account to be the next in line! 🤙",
+            selections: "Selections:",
+            MarcoTitle: "Head of Customer’s success",
         },
         rightDialog: {
             [Steps.AskForName]: {
                 pretitle: "First,",
                 title: "What's your name?",
-                message: "Please let us know how to address you best. We will protect your data and won’t share it anyhow.",
+                message: <span>Please let us know how to address you best.<br/> We will protect your data and won’t share it anyhow.</span>,
             },
             [Steps.AskAboutServices]: {
                 pretitle: "Next,",
                 title: "How we can help you best?",
+                need: "I need ... ",
             },
             [Steps.AskForWebsite]: {
                 pretitle: "Great,",
@@ -49,14 +51,18 @@ const translations = {
                 pretitle: "Almost done,",
                 title: "How can we reach you out?",
             },
+            [Steps.Done]: {
+                pretitle: "",
+                title: "",
+            },
             servicesNeeded: {
                 channels: "Online booking channels",
                 automation: 'Order handling automation',
                 managment: 'Inventory management',               
             },
             haveWebsite: {
-                yes: "Yes, I have one already!",
-                soon: "No, but I’m on it.",
+                yes: "Yes, I have website already!",
+                soon: "I have no website, but I’m on it.",
                 no: "I have no website yet and want help."
             },
             offer: {
@@ -102,18 +108,20 @@ const translations = {
             },
             [Steps.AskAboutOffer]: "That’s a big team already, exciting! 💪(DE)",
             [Steps.AskForContact]: "Great choice!(DE)",
-            [Steps.Done]: "See you soon! 🤘️(DE)",
-            selections: "selections(DE)",
+            [Steps.Done]: "Ready. Create your account to be the next in line! 🤙(DE)",
+            selections: "Selections(DE):",
+            MarcoTitle: "Head of Customer’s success(DE)",
         },
         rightDialog: {
             [Steps.AskForName]: {
                 pretitle: "First,(DE)",
                 title: "What's your name?(DE)",
-                message: "Please let us know how to address you best. We will protect your data and won’t share it anyhow.(DE)",
+                message: <span>Please let us know how to address you best.<br/> We will protect your data and won’t share it anyhow.(DE)</span>,
             },
             [Steps.AskAboutServices]: {
                 pretitle: "Next,(DE)",
                 title: "How we can help you best?(DE)",
+                need: "I need ... (DE)",
             },
             [Steps.AskForWebsite]: {
                 pretitle: "Great,(DE)",

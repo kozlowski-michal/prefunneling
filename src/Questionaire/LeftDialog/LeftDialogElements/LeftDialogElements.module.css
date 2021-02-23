@@ -1,0 +1,43 @@
+@import '../../../data/colors.css';
+
+p.Title {
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+div.Marco {
+    height: 40px;
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+p.MarcoSignature {
+    display: inline-block;
+    margin-left: 9px;
+}
+
+p.Selections {
+    margin: 0;
+    margin-left: 5px;
+    margin-top: 35px;
+}
+
+p.ListItem {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+p.ListItemMargin {
+    margin-top: 30px;  
+}
+
+span.ListItemLabel {
+    margin-left: 10px;
+}

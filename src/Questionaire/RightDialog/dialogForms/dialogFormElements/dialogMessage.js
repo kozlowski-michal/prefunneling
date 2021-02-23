@@ -1,11 +1,11 @@
 import React from 'react'
 import { Translate } from 'react-i18nify';
 
-import classesCSS from './dialogFormElements.module.css';
+import classesCSS from './DialogFormElements.module.css';
 
 const dialogMessage = (props) => {
     return (
-        <p>
+        <p className = {classesCSS.Message} >
             <Translate value = {"rightDialog."+props.step+".message"} />
         </p>
     )

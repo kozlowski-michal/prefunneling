@@ -56,6 +56,7 @@ const header = () => {
                     Login
                 </div>
             </div>
+
             {/* Mobile */}
             <div className = {classesCSS.ItemMobile} >
                 <LogoMobile />
@@ -63,8 +64,10 @@ const header = () => {
             <div className = {classesCSS.ItemMobile} >
                 <a className = {classesCSS.Phone} >+49 (0)30 920 385 4012</a>
             </div>
-            <div className = {classesCSS.ItemMobile} >
-                menu
+            <div className = {[classesCSS.ItemMobile, classesCSS.MenuItem].join(' ')} >
+                <div className = {classesCSS.MenuItemRow} ></div>
+                <div className = {classesCSS.MenuItemRow} ></div>
+                <div className = {classesCSS.MenuItemRow} ></div>
             </div>
         </nav>
     )

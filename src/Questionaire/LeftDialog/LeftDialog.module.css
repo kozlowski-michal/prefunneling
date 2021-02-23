@@ -1,0 +1,8 @@
+@import '../../data/colors.css';
+
+div.TitleLine {
+    height: 2px;
+    width: 60px;
+    margin-left: 5px;
+    background-color: var(--main);
+}

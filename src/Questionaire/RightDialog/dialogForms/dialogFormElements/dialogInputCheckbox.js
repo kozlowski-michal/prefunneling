@@ -1,8 +1,6 @@
 import React from 'react'
 import { I18n, translate } from 'react-i18nify';
 
-import classesCSS from './dialogFormElements.module.css';
-
 const dialogInputCheckbox = (props) => {
     return (
         Object.keys(props.keys).map( (key) => {

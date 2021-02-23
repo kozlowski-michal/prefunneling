@@ -2,16 +2,15 @@ import React from 'react';
 import { translate, Translate } from 'react-i18nify';
 
 import translations from '../../../data/translations';
-import DialogTitle from './dialogFormElements/dialogTitle';
-import DialogError from './dialogFormElements/dialogError';
-import DialogMessage from './dialogFormElements/dialogMessage';
-import DialogInputText from './dialogFormElements/dialogInputText';
-import DialogInputEmail from './dialogFormElements/dialogInputEmail';
-import DialogInputCheckbox from './dialogFormElements/dialogInputCheckbox';
-import DialogInputRadio from './dialogFormElements/dialogInputRadio';
-import DialogInputRange from './dialogFormElements/dialogInputRange';
+import DialogTitle from './DialogFormElements/DialogTitle';
+import DialogError from './DialogFormElements/DialogError';
+import DialogMessage from './DialogFormElements/DialogMessage';
+import DialogInputText from './DialogFormElements/DialogInputText';
+import DialogInputEmail from './DialogFormElements/DialogInputEmail';
+import DialogInputCheckbox from './DialogFormElements/DialogInputCheckbox';
+import DialogInputRadio from './DialogFormElements/DialogInputRadio';
+import DialogInputRange from './DialogFormElements/DialogInputRange';
 import { Steps, TeamSize } from '../../../data/enums';
-import classesCSS from './dialogForms.module.css';
 
 const DialogForms = (props) => {
     switch (props.step) {

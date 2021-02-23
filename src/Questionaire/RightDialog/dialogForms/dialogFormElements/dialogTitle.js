@@ -1,7 +1,7 @@
 import React from 'react'
 import { Translate } from 'react-i18nify';
 
-import classesCSS from './dialogFormElements.module.css';
+import classesCSS from './DialogFormElements.module.css';
 
 const dialogTitle = (props) => {
     return (

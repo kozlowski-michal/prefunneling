@@ -101,6 +101,7 @@ a.Phone {
     .Toolbar {
         min-height: 60px;
         height: 60px;
+        background-color: white;
     }
 
     .NavContainer {
@@ -112,4 +113,20 @@ a.Phone {
         cursor: pointer;
     }
 
+    .MenuItem {
+        width: 18px;
+        height: 12px;
+        margin: 20px;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+    }
+
+    .MenuItemRow {
+        height: 1px;
+        width: 100%;
+        border: 1px solid var(--main);
+        border-radius: 1px;
+        box-sizing: border-box;
+    }
 }

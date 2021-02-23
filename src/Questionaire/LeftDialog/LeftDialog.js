@@ -1,19 +1,18 @@
 import React from 'react';
 
-import LeftDialogSummary from './leftDialogSchemas/leftDialogSummary'
-import LeftDialogSchemas from './leftDialogSchemas/leftDialogSchemas'
+import LeftDialogSummary from './LeftDialogElements/LeftDialogSummary'
+import LeftDialogSchemas from './LeftDialogElements/LeftDialogSchemas'
+
+import classesCSS from './LeftDialog.module.css';
 
 const leftDialog = (props) => {
-
     return (
         <React.Fragment>
-            <strong>
-                <LeftDialogSchemas 
-                    step = {props.step}
-                    dialogData = {props.dialogData} 
-                />
-            </strong>
-            <hr style={{width: "70%", height: "1px", backgroundColor: "#E5E5E5", color: "#E5E5E5", border: "none"}}/>
+            <LeftDialogSchemas 
+                step = {props.step}
+                dialogData = {props.dialogData} 
+            />
+            <div className = {classesCSS.TitleLine} ></div>
             <LeftDialogSummary 
                 step = {props.step}
                 dialogData = {props.dialogData}

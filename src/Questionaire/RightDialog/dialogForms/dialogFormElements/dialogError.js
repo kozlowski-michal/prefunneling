@@ -1,7 +1,7 @@
 import React from 'react'
 import { I18n, translate } from 'react-i18nify';
 
-import classesCSS from './dialogFormElements.module.css';
+import classesCSS from './DialogFormElements.module.css';
 
 const dialogError = (props) => {
     return (
