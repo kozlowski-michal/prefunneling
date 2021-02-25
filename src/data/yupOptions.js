@@ -19,7 +19,7 @@ const yupOptions = (step) => {
         case Steps.AskForContact:
             return yupResolver(yup.object().shape(
                 { email: yup.string().required().email() }
-            ));      
+            ));
         default: 
             return null;
     }

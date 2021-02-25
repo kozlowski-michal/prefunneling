@@ -2,8 +2,11 @@
     --main: #46435B;
     --secondary: #B5B4BD;
     --tertiary: #7E7C8D;
+    --halfLight: #D0D0D6;
     --light: #E2E2E6;
+    --uberLight: #F6F6F6;
     --dark: #2c2a31;
     --formRed: #FF0066;
     --formViolet: #BB00EE;
+    --formAzure: #00EECC;
 }

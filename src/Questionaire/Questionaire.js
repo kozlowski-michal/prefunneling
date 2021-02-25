@@ -19,8 +19,7 @@ const Questionnaire = () => {
         console.log(dialogData);  // <============================================================= DEL
     }, [stepCounter]);
 
-    /* Parsing data from dialog */
-    const onSubmitHandler = (formData) => {
+    const saveData = (formData) => {
         /* for range */
         if (formData.teamSize) {
             formData = {teamSize: TeamSize[formData.teamSize]};
@@ -52,12 +51,15 @@ const Questionnaire = () => {
             formData = {offer: offer}
         }
 
-        /* for simple value data + adding language for case if updated */
+        /* storing language after every data received */
         formData['language'] = getLocale();
         setDialogData( (oldDialogData) => {
             return {...oldDialogData, ...formData};
         });
+    }
 
+    const onSubmitHandler = (formData) => {
+        saveData(formData);
         setStepCounter( () => stepCounter + 1 );
     }
 
@@ -76,6 +78,7 @@ const Questionnaire = () => {
             <div className = {classesCSS.RightDialog} >
                 <RightDialog 
                     step = {stepCounter}
+                    dialogData = {dialogData}
                     submit = {(event) => onSubmitHandler(event)}
                     goBack = {previousStepHandler}
                 />

@@ -1,23 +1,28 @@
 import React from 'react'
 import { I18n, translate } from 'react-i18nify';
 
+import classesCSS from './DialogInputRadio.module.css';
+
 const dialogInputRadio = (props) => {
+    let keys = Object.keys(props.keys);
+    let defaultIndex = keys.indexOf(props.defaultValue) != -1 ? keys.indexOf(props.defaultValue) : 0;
     return (
-        Object.keys(props.keys).map( (key, index) => {
-            return <React.Fragment key = {key} >
+        <div className = {classesCSS.Container}>
+        {keys.map( (key, index) => {
+            return <label key = {key} className = {classesCSS.RadioContainer}>
                     <input
-                        defaultChecked = {index == 0 ? true : false}
+                        defaultChecked = {index == defaultIndex ? true : false}
                         type = "radio"
                         name = {props.name}
                         id = {key}
                         value = {key}
                         ref={props.register}
                     />
-                    <label htmlFor = {key}>
-                        <I18n render={() => translate("rightDialog."+props.name+"."+key)} />
-                    </label><br/>
-                </React.Fragment>
-        })
+                    <div className = {classesCSS.RadioField} ></div>
+                    <I18n render={() => translate("rightDialog."+props.name+"."+key)} />
+                </label>
+        })}
+        </div>
     )
 }
 

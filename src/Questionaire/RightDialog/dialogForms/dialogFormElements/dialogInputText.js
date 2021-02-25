@@ -8,6 +8,7 @@ const dialogInputText = (props) => {
         <I18n render= {() =>  
             <input 
                 type = "text"
+                defaultValue = {props.defaultValue}
                 className = {classesCSS.Input}
                 name = {props.name}
                 placeholder = {props.placeholder}

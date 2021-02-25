@@ -52,8 +52,8 @@ const translations = {
                 title: "How can we reach you out?",
             },
             [Steps.Done]: {
-                pretitle: "",
-                title: "",
+                pretitle: "That's it!",
+                message: <span><strong>Please validate your e-mail address.</strong><br/>We will reach out to you afterwards and help you setting up your account.</span>
             },
             servicesNeeded: {
                 channels: "Online booking channels",
@@ -87,7 +87,6 @@ const translations = {
                 oneCheck: "Please, select at least one option",
             },
             ssl : "SSL encrypted",
-            seeYou: "We will contact with you soon!",
         }
     },
     de: {
@@ -140,6 +139,10 @@ const translations = {
                 pretitle: "Almost done,(DE)",
                 title: "How can we reach you out?(DE)",
             },
+            [Steps.Done]: {
+                pretitle: "That's it!(DE)",
+                message: <span><strong>Please validate your e-mail address.</strong><br/>We will reach out to you afterwards and help you setting up your account.(DE)</span>
+            },
             servicesNeeded: {
                 channels: "Online booking channels(DE)",
                 automation: 'Order handling automation(DE)',
@@ -172,7 +175,6 @@ const translations = {
                 oneCheck: "Please, select at least one option(DE)",
             },
             ssl : "SSL encrypted(DE)",
-            seeYou: "We will contact with you soon!(DE)",
         }
     }
 }

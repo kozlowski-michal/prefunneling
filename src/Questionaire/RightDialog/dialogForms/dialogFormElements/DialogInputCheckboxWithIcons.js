@@ -1,12 +1,11 @@
 import React from 'react'
 import { I18n, translate } from 'react-i18nify';
 
-import classesCSS from './DialogInputCheckbox.module.css';
+import classesCSS from './DialogInputCheckboxWithIcons.module.css';
 
 const dialogInputCheckbox = (props) => {
     return (
         <div className = {classesCSS.Container}>
-            <I18n render={() => translate("rightDialog."+props.step+".need")} />
             {Object.keys(props.keys).map( (key) => {
                 return <label key = {key} className = {classesCSS.CheckboxContainer}>
                         <input 
@@ -18,7 +17,10 @@ const dialogInputCheckbox = (props) => {
                             ref={props.register}
                         />
                         <div className = {classesCSS.CheckboxField} ></div>
-                        <I18n render={() => translate("rightDialog."+props.name+"."+key)} />
+                        <div className = {classesCSS.IconContainer}>                  
+
+                        </div>
+                        {<I18n render={() => translate("rightDialog."+props.name+"."+key)} />}
                     </label>  
     })}
         </div>

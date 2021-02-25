@@ -1,0 +1,74 @@
+@import '../../../../data/colors.css';
+
+.Container {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.CheckboxContainer {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0;
+    border: 1px solid var(--halfLight);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.CheckboxContainer:hover {
+    border: 1px solid var(--tertiary);
+    cursor: pointer;
+}
+
+.CheckboxContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.CheckboxField {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+    padding: 0px;
+    display: inline-block;
+    border: 1px solid var(--halfLight);
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+
+.CheckboxContainer:hover input ~ .CheckboxField {
+    border: 1px solid var(--tertiary);
+}
+
+.CheckboxField:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+.CheckboxContainer input:checked ~ .CheckboxField {
+    border-color: var(--tertiary);
+}
+
+.CheckboxContainer input:checked ~ .CheckboxField:after {
+    display: block;
+}
+  
+.CheckboxContainer .CheckboxField:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--tertiary);
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
