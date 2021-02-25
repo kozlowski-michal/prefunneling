@@ -7,9 +7,11 @@ const dialogInputEmail = (props) => {
     return (
         <I18n render= {() =>  
             <input 
-                type = "email"
-                className = {classesCSS.Input}
                 name = {props.name}
+                type = "text"
+                onBlur = {(event) => props.saveData({[props.name]: event.target.value})}
+                defaultValue = {props.defaultValue}
+                className = {classesCSS.Input}
                 placeholder = {props.placeholder}
                 ref={props.register}
             />

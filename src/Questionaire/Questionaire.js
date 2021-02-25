@@ -4,7 +4,6 @@ import LeftDialog from './LeftDialog/LeftDialog';
 import RightDialog from './RightDialog/RightDialog';
 import classesCSS from './Questionaire.module.css';
 import { collectedData } from '../data/collectedData';
-import { TeamSize } from '../data/enums';
 import { getLocale } from 'react-i18nify';
 
 const Questionnaire = () => {
@@ -20,51 +19,21 @@ const Questionnaire = () => {
     }, [stepCounter]);
 
     const saveData = (formData) => {
-        /* for range */
-        if (formData.teamSize) {
-            formData = {teamSize: TeamSize[formData.teamSize]};
-        }
-        /* for checkbox: services needed */
-        else if (formData.servicesNeeded) {
-            let services = {};
-
-            Object.keys(dialogData.servicesNeeded).map( (key) => {
-                if (formData.servicesNeeded.includes(key) )
-                    services[key] = true;
-                else
-                    services[key] = false;
-            })
-
-            formData = {servicesNeeded: services}
-        }
-        /* for checkbox: offer */
-        else if (formData.offer) {
-            let offer = {};
-
-            Object.keys(dialogData.offer).map( (key) => {
-                if (formData.offer.includes(key) )
-                    offer[key] = true;
-                else
-                    offer[key] = false;
-            })
-
-            formData = {offer: offer}
-        }
-
-        /* storing language after every data received */
-        formData['language'] = getLocale();
         setDialogData( (oldDialogData) => {
+            if (formData.servicesNeeded) { // deep merging
+                formData = { servicesNeeded: {...oldDialogData.servicesNeeded, ...formData.servicesNeeded}}
+            }
+            if (formData.offer) { // deep merging
+                formData = { offer: {...oldDialogData.offer, ...formData.offer}}
+            }           
+            formData['language'] = getLocale();
+            console.log(formData);
             return {...oldDialogData, ...formData};
         });
     }
 
-    const onSubmitHandler = (formData) => {
-        saveData(formData);
-        setStepCounter( () => stepCounter + 1 );
-    }
-
-    const previousStepHandler = () => {
-        setStepCounter( () => stepCounter - 1 );
+    const stepChangeHandler = ( value ) => {
+        setStepCounter( () => stepCounter + value );   
     }
 
     return (
@@ -79,8 +48,9 @@ const Questionnaire = () => {
                 <RightDialog 
                     step = {stepCounter}
                     dialogData = {dialogData}
-                    submit = {(event) => onSubmitHandler(event)}
-                    goBack = {previousStepHandler}
+                    saveData = {(data) => saveData(data)}
+                    submit = {() => stepChangeHandler(1)}
+                    goBack = {() => stepChangeHandler(-1)}
                 />
             </div>
         </div>

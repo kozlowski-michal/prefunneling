@@ -12,6 +12,7 @@ const dialogInputRadio = (props) => {
             return <label key = {key} className = {classesCSS.RadioContainer}>
                     <input
                         defaultChecked = {index == defaultIndex ? true : false}
+                        onChange = {(event) => props.saveData({website: event.target.value})}
                         type = "radio"
                         name = {props.name}
                         id = {key}

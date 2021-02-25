@@ -2,7 +2,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import { Steps } from './enums';
 
-const yupOptions = (step) => {
+const validatorOptions = (step) => {
     switch (step) {
         case Steps.AskForName:
             return yupResolver(yup.object().shape(
@@ -11,11 +11,11 @@ const yupOptions = (step) => {
         case Steps.AskAboutServices:
             return yupResolver(yup.object().shape({
                 servicesNeeded: yup.array().min(1)
-            }) )
+            }));
         case Steps.AskAboutOffer:
             return yupResolver(yup.object().shape({
                 offer: yup.array().min(1)
-            }) )           
+            }));         
         case Steps.AskForContact:
             return yupResolver(yup.object().shape(
                 { email: yup.string().required().email() }
@@ -25,5 +25,5 @@ const yupOptions = (step) => {
     }
 }
 
-export default yupOptions;
+export default validatorOptions;
 
