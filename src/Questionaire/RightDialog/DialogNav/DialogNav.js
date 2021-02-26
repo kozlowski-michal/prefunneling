@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Steps } from '../../../data/enums';
-import { ArrowNext, ArrowBack } from './ButtonsSVG/ButtonsSVG';
+import { ArrowNextSVG, ArrowBackSVG } from '../../../data/svg/DialogButtons';
 import classesCSS from './DialogNav.module.css';
 
 const dialogNav = (props) => {
@@ -13,7 +13,7 @@ const dialogNav = (props) => {
                     className = {classesCSS.ButtonNext}
                     type="submit" 
                 >
-                    <ArrowNext/>
+                    <ArrowNextSVG/>
                 </button>
                 
                 { props.step != 0 ?
@@ -22,7 +22,7 @@ const dialogNav = (props) => {
                         className = {classesCSS.ButtonBack}
                         onClick = {props.goBack} 
                     > 
-                        <ArrowBack/>
+                        <ArrowBackSVG/>
                     </button> : null 
                 }
             </div> : null

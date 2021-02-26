@@ -1,17 +1,12 @@
 import React from 'react';
 
 import classesCSS from './Logo.module.css';
-import logoImg from '../../../assets/Logo.png';
-import logoMobileImg from '../../../assets/LogoMobile.png';
+import { LogoSVG, LogoMobileSVG } from '../../../data/svg/Logo'
 
 export const Logo = () => {
     return (
         <div className = {classesCSS.Logo}>
-            <img
-                src = {logoImg}
-                alt = "Logo"
-                className = {classesCSS.LogoImg}
-            />
+            <LogoSVG/>
         </div>
     )
 }
@@ -19,11 +14,7 @@ export const Logo = () => {
 export const LogoMobile = () => {
     return (
         <div className = {classesCSS.LogoMobile}>
-            <img
-                src = {logoMobileImg}
-                alt = "Logo"
-                className = {classesCSS.LogoImgMobile}
-            />
+            <LogoMobileSVG/>
         </div>
     )
 }

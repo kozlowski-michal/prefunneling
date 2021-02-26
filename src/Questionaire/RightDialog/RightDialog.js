@@ -9,7 +9,11 @@ import classesCSS from './RightDialog.module.css';
 import { Steps } from '../../data/enums';
 
 const RightDialog = (props) => {
-    const { register, handleSubmit, errors } = useForm({ resolver: validatorOptions(props.step) });
+    const { register, handleSubmit, errors } = useForm({
+        mode: 'onBlur',
+        reValidateMode: 'onChange',
+        resolver: validatorOptions(props.step) 
+    });
 
     return (
         <div className = {classesCSS.Survey} >

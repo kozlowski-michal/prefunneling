@@ -1,7 +1,7 @@
 import React from 'react';
 import { I18n, translate, Translate } from 'react-i18nify';
 
-import { SquareBullet, RoundBullet } from './DialogSummaryBullets/DialogSummaryBullets';
+import { SquareBulletSVG, RoundBulletSVG } from '../../../data/svg/DialogSummaryBullets';
 import { Steps } from '../../../data/enums';
 import classesCSS from './LeftDialogElements.module.css';
 import MarcoImg from '../../../assets/Marco.png';
@@ -31,7 +31,7 @@ const leftDialogSummary = (props) => {
         {services.map( (item, index) => {
             return (
                 <p key={index} className = {classesCSS.ListItem} >
-                    <SquareBullet/>
+                    <SquareBulletSVG/>
                     <span className = {classesCSS.ListItemLabel}>{item}</span>
                 </p>
             )
@@ -39,7 +39,7 @@ const leftDialogSummary = (props) => {
 
         {props.dialogData.website ? 
             <p className = {[classesCSS.ListItem, classesCSS.ListItemMargin].join(' ')} >
-                <RoundBullet/>
+                <RoundBulletSVG/>
                 <span className = {classesCSS.ListItemLabel}>
                     <I18n render={() => translate("rightDialog.haveWebsite."+props.dialogData.website )} />
                 </span>

@@ -82,6 +82,9 @@
 .IconContainer {
     width: 60px;
     height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--uberLight);
     border-radius: 30px;
     margin-top: 20px;

@@ -45,10 +45,9 @@ a.Phone {
 
 .NavContainer a:hover {
     color: var(--dark);
-    cursor: pointer;
 }
 
-.NavContainer div.RightItem {
+.NavContainer .RightItem {
     height: 100%;
     width: 80px;
     display: flex;
@@ -60,6 +59,12 @@ a.Phone {
     font-size: 12px;
     box-sizing: border-box;
     cursor: pointer;
+    /*stroke: var(--iconStroke);*/
+}
+
+.NavContainer .RightItem:hover {
+    color: var(--dark);
+    /*stroke: var(--dark);*/
 }
 
 .LeftSeparator {

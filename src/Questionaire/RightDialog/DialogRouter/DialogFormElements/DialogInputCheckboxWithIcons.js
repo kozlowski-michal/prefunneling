@@ -1,9 +1,11 @@
 import React from 'react'
 import { I18n, translate } from 'react-i18nify';
 
+import IconsSVG from '../../../../data/svg/DialogIcons';
 import classesCSS from './DialogInputCheckboxWithIcons.module.css';
 
 const dialogInputCheckbox = (props) => {
+
     return (
         <div className = {classesCSS.Container}>
             {Object.keys(props.keys).map( (key) => {
@@ -18,12 +20,12 @@ const dialogInputCheckbox = (props) => {
                             ref={props.register}
                         />
                         <div className = {classesCSS.CheckboxField} ></div>
-                        <div className = {classesCSS.IconContainer}>                  
-
+                        <div className = {classesCSS.IconContainer}>                 
+                            <IconsSVG offer = {key}/>
                         </div>
                         {<I18n render={() => translate("rightDialog."+props.name+"."+key)} />}
                     </label>  
-    })}
+                })}
         </div>
     )
 }

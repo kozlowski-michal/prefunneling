@@ -24,7 +24,7 @@
     outline: none;
 }
 
-.Slider:hover {
+.Slider:hover, .RangeLabel:hover ~ .SliderContainer input {
     background-image: linear-gradient(to right, var(--formAzure) 30%, var(--formViolet) 150%);
 }
 

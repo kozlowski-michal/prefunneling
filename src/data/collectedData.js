@@ -7,7 +7,7 @@ export const collectedData = {
         automation: false,
         managment: false,
     },
-    website: '',
+    website: 'yes',
     teamSize: '',
     offer: {
         bikes: false,

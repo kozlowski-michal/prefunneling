@@ -2,6 +2,7 @@ import React from 'react';
 import { I18n, getLocale, setLocale } from 'react-i18nify';
 
 import { Logo, LogoMobile } from './Logo/Logo';
+import { LoginSVG, CreateSVG, DownloadSVG, EnUsSVG, DeDeSVG } from '../../data/svg/HeaderIcons';
 import classesCSS from './Header.module.css';
 
 const header = () => {
@@ -24,37 +25,29 @@ const header = () => {
                 <I18n render = {() => 
                     getLocale() == 'de' ?
                         <div className = {classesCSS.RightItem} onClick = {() => setLocale('en')} > 
-                            <div className = {classesCSS.IconPlaceholder} >
-                                <img 
-                                    src = "https://preview.redd.it/fimwru2gj3011.png?auto=webp&s=2893f03df490c710fba8ff3f78669ca101c5c865"
-                                    style = {{width: "24px", height: "24px"}} />
-                            </div>
+                            <DeDeSVG/>
                             Region 
                         </div> :
                         <div className = {classesCSS.RightItem} onClick = {() => setLocale('de')} > 
-                            <div className = {classesCSS.IconPlaceholder} >
-                                <img 
-                                    src = "https://i.pinimg.com/474x/e9/c9/63/e9c9638398640c5e3f2567400ae51da4.jpg"
-                                    style = {{width: "24px", height: "24px"}} />
-                            </div>
+                            <EnUsSVG/>
                             Region 
                         </div>
                 } />
                 <div className = {classesCSS.RightSeparator}></div>
                 <div className = {classesCSS.RightItem} >
-                    <div className = {classesCSS.IconPlaceholder} ></div>
+                    <DownloadSVG/>
                     Download
                 </div>
                 <div className = {classesCSS.RightSeparator}></div>
                 <div className = {classesCSS.RightItem} >
-                    <div className = {classesCSS.IconPlaceholder} ></div>
+                    <CreateSVG/>
                     Create
                 </div>
                 <div className = {classesCSS.RightSeparator}></div>
-                <div className = {classesCSS.RightItem} >
-                    <div className = {classesCSS.IconPlaceholder} ></div>
+                <a className = {classesCSS.RightItem} >
+                    <LoginSVG/>
                     Login
-                </div>
+                </a>
             </div>
 
             {/* Mobile */}
