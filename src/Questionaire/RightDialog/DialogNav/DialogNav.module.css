@@ -36,6 +36,10 @@ div.ButtonLine {
     background-image: linear-gradient(120deg, var(--formRed) 40%, var(--formViolet) 180%);  
 }
 
+.ButtonNext:focus {
+    box-shadow: 0 0 3px 1px var(--iconStroke);
+}
+
 .ButtonBack {
     width: 40px;
     height: 40px;
@@ -54,6 +58,9 @@ div.ButtonLine {
 }
 
 .ButtonBack:hover {
-    color: var(--tertiary);
     border: 1px solid var(--tertiary); 
+}
+
+.ButtonBack:focus {
+    box-shadow: 0 0 3px 1px var(--light);
 }

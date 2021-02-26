@@ -15,11 +15,15 @@
     border: 1px solid var(--halfLight);
     border-radius: 10px;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .RadioContainer:hover {
     border: 1px solid var(--tertiary);
-    cursor: pointer;
+}
+
+.RadioContainer:focus-within {
+    box-shadow: 0 0 3px 1px var(--light);
 }
 
 .RadioContainer input {

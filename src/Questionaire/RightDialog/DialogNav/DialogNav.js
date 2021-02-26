@@ -8,14 +8,6 @@ const dialogNav = (props) => {
     return (
         props.step != Steps.Done ? 
             <div className = {classesCSS.ButtonsContainer} >
-                <div className = {classesCSS.ButtonLine} ></div>
-                <button 
-                    className = {classesCSS.ButtonNext}
-                    type="submit" 
-                >
-                    <ArrowNextSVG/>
-                </button>
-                
                 { props.step != 0 ?
                     <button 
                         type="button"
@@ -25,6 +17,14 @@ const dialogNav = (props) => {
                         <ArrowBackSVG/>
                     </button> : null 
                 }
+
+                <div className = {classesCSS.ButtonLine} ></div>
+                <button 
+                    className = {classesCSS.ButtonNext}
+                    type="submit" 
+                >
+                    <ArrowNextSVG/>
+                </button>
             </div> : null
     )
 }

@@ -44,6 +44,7 @@ h4.Title {
 
 .Input:focus  {
     outline: none;
+    border-bottom: var(--tertiary) solid 1px;
 }
 
 /*** Message ***/

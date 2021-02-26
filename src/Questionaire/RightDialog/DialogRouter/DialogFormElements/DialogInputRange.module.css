@@ -24,6 +24,10 @@
     outline: none;
 }
 
+.Slider:focus {
+    box-shadow: 0 0 3px 1px var(--secondary);
+}
+
 .Slider:hover, .RangeLabel:hover ~ .SliderContainer input {
     background-image: linear-gradient(to right, var(--formAzure) 30%, var(--formViolet) 150%);
 }

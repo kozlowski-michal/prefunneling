@@ -29,6 +29,10 @@
     cursor: pointer;
 }
 
+.CheckboxContainer:focus-within {
+    box-shadow: 0 0 3px 1px var(--light);
+}
+
 .CheckboxContainer input {
     position: absolute;
     opacity: 0;
