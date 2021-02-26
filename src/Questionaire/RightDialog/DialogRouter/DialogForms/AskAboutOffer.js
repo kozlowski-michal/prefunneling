@@ -7,16 +7,16 @@ import DialogInputCheckboxWithIcons from '../DialogFormElements/DialogInputCheck
 
 const askAboutOffer = (props) => (
     <div>
-        <DialogTitle step = {props.step} />
-        <DialogInputCheckboxWithIcons 
-            name = "offer"
-            saveData = {props.saveData}
-            defaultValue = {props.dialogData.offer}
-            keys = {translations.en.rightDialog.offer} 
+        <DialogTitle step={props.step} />
+        <DialogInputCheckboxWithIcons
+            name="offer"
+            saveData={props.saveData}
+            defaultValue={props.dialogData.offer}
+            keys={translations.en.rightDialog.offer}
             register={props.register} />
-        <DialogError 
-            errorField = {props.errors.offer}
-            errorType = "oneCheck" />
+        <DialogError
+            errorField={props.errors.offer}
+            errorType="oneCheck" />
     </div>
 )
 

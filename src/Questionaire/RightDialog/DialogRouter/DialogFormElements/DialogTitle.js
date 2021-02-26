@@ -6,11 +6,11 @@ import classesCSS from './DialogFormElements.module.css';
 const dialogTitle = (props) => {
     return (
         <React.Fragment>
-            <h4 className = {classesCSS.Title} >
-                <Translate value = {"rightDialog."+props.step+".pretitle"} />
+            <h4 className={classesCSS.Title} >
+                <Translate value={"rightDialog." + props.step + ".pretitle"} />
             </h4>
-            <h2 className = {classesCSS.Title} >
-                <Translate value = {"rightDialog."+props.step+".title"} />
+            <h2 className={classesCSS.Title} >
+                <Translate value={"rightDialog." + props.step + ".title"} />
             </h2>
         </React.Fragment>
     )

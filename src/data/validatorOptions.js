@@ -15,12 +15,12 @@ const validatorOptions = (step) => {
         case Steps.AskAboutOffer:
             return yupResolver(yup.object().shape({
                 offer: yup.array().min(1)
-            }));         
+            }));
         case Steps.AskForContact:
             return yupResolver(yup.object().shape(
                 { email: yup.string().required().email() }
             ));
-        default: 
+        default:
             return null;
     }
 }

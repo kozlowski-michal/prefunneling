@@ -8,7 +8,7 @@ export const collectedData = {
         managment: false,
     },
     website: 'yes',
-    teamSize: '',
+    teamSize: '2-5',
     offer: {
         bikes: false,
         photo: false,

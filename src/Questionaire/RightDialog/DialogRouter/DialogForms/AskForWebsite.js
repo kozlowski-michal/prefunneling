@@ -7,12 +7,12 @@ import DialogInputRadio from '../DialogFormElements/DialogInputRadio';
 
 const askAboutServices = (props) => (
     <div>
-        <DialogTitle step = {props.step} />
-        <DialogInputRadio 
-            name = "website"
-            saveData = {props.saveData}
-            defaultValue = {props.dialogData.website}
-            keys = {translations.en.rightDialog.haveWebsite} 
+        <DialogTitle step={props.step} />
+        <DialogInputRadio
+            name="website"
+            saveData={props.saveData}
+            defaultValue={props.dialogData.website}
+            keys={translations.en.rightDialog.haveWebsite}
             register={props.register} />
         <DialogError />{/* does nothing, styling purpose (placeholder) */}
     </div>

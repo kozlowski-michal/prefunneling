@@ -5,17 +5,17 @@ import classesCSS from './DialogFormElements.module.css';
 
 const dialogDone = (props) => {
     return (
-        <div className = {classesCSS.DoneContainer} >
-            <div className = {classesCSS.DoneWheel} >
+        <div className={classesCSS.DoneContainer} >
+            <div className={classesCSS.DoneWheel} >
                 <svg width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.999955 11.5L7.99998 18.5L25.5 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M0.999955 11.5L7.99998 18.5L25.5 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
             </div>
-            <h2 className = {classesCSS.Title} >
-                <Translate value = {"rightDialog."+props.step+".pretitle"} />
+            <h2 className={classesCSS.Title} >
+                <Translate value={"rightDialog." + props.step + ".pretitle"} />
             </h2>
-            <p className = {classesCSS.MessageDone} >
-                <Translate value = {"rightDialog."+props.step+".message"} />
+            <p className={classesCSS.MessageDone} >
+                <Translate value={"rightDialog." + props.step + ".message"} />
             </p>
         </div>
     )

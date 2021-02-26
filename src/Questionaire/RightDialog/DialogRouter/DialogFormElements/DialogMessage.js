@@ -5,8 +5,8 @@ import classesCSS from './DialogFormElements.module.css';
 
 const dialogMessage = (props) => {
     return (
-        <p className = {classesCSS.Message} >
-            <Translate value = {"rightDialog."+props.step+".message"} />
+        <p className={classesCSS.Message} >
+            <Translate value={"rightDialog." + props.step + ".message"} />
         </p>
     )
 }

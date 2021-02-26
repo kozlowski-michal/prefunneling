@@ -3,19 +3,19 @@ import { Steps } from "./enums";
 const translations = {
     en: {
         leftDialog: {
-            [Steps.AskForName]:  <span>Okay! <br/>Let’s get started. 🤘️</span>,
-            [Steps.AskAboutServices]: { 
+            [Steps.AskForName]: <span>Okay! <br />Let’s get started. 🤘️</span>,
+            [Steps.AskAboutServices]: {
                 line1: "Hej %{name}!",
                 line2: "Nice to meet you!",
-            },  
+            },
             [Steps.AskForWebsite]: {
                 caseAll: "All of them, makes sense! 💪",
                 default: ", makes sense!",
             },
             [Steps.AskAboutTeamSize]: {
-                no: <span>No website yet, okay.<br/>No problem! 💪</span>,
-                soon: <span>Website soon.<br/>Great! 💪</span>,
-                yes: <span>Website present.<br/>Great! 💪</span>,
+                no: <span>No website yet, okay.<br />No problem! 💪</span>,
+                soon: <span>Website soon.<br />Great! 💪</span>,
+                yes: <span>Website present.<br />Great! 💪</span>,
             },
             [Steps.AskAboutOffer]: "That’s a big team already, exciting! 💪",
             [Steps.AskForContact]: "Great choice!",
@@ -27,7 +27,7 @@ const translations = {
             [Steps.AskForName]: {
                 pretitle: "First,",
                 title: "What's your name?",
-                message: <span>Please let us know how to address you best.<br/> We will protect your data and won’t share it anyhow.</span>,
+                message: <span>Please let us know how to address you best.<br /> We will protect your data and won’t share it anyhow.</span>,
             },
             [Steps.AskAboutServices]: {
                 pretitle: "Next,",
@@ -53,12 +53,12 @@ const translations = {
             },
             [Steps.Done]: {
                 pretitle: "That's it!",
-                message: <span><strong>Please validate your e-mail address.</strong><br/>We will reach out to you afterwards and help you setting up your account.</span>
+                message: <span><strong>Please validate your e-mail address.</strong><br />We will reach out to you afterwards and help you setting up your account.</span>
             },
             servicesNeeded: {
                 channels: "Online booking channels",
                 automation: 'Order handling automation',
-                managment: 'Inventory management',               
+                managment: 'Inventory management',
             },
             haveWebsite: {
                 yes: "Yes, I have website already!",
@@ -86,24 +86,24 @@ const translations = {
                 noEmail: "Please, write your email adress",
                 oneCheck: "Please, select at least one option",
             },
-            ssl : "SSL encrypted",
+            ssl: "SSL encrypted",
         }
     },
     de: {
         leftDialog: {
-            [Steps.AskForName]:  <span>Okay! <br/>Let’s get started. 🤘️(DE)</span>,
-            [Steps.AskAboutServices]: { 
+            [Steps.AskForName]: <span>Okay! <br />Let’s get started. 🤘️(DE)</span>,
+            [Steps.AskAboutServices]: {
                 line1: "Hej %{name}!(DE)",
                 line2: "Nice to meet you!(DE)",
-            },  
+            },
             [Steps.AskForWebsite]: {
                 caseAll: "All of them, makes sense! 💪(DE)",
                 default: ", makes sense!(DE)",
             },
             [Steps.AskAboutTeamSize]: {
-                no: <span>No website yet, okay.<br/>No problem! 💪(DE)</span>,
-                soon: <span>Website soon.<br/>Great! 💪(DE)</span>,
-                yes: <span>Website present.<br/>Great! 💪(DE)</span>,
+                no: <span>No website yet, okay.<br />No problem! 💪(DE)</span>,
+                soon: <span>Website soon.<br />Great! 💪(DE)</span>,
+                yes: <span>Website present.<br />Great! 💪(DE)</span>,
             },
             [Steps.AskAboutOffer]: "That’s a big team already, exciting! 💪(DE)",
             [Steps.AskForContact]: "Great choice!(DE)",
@@ -115,7 +115,7 @@ const translations = {
             [Steps.AskForName]: {
                 pretitle: "First,(DE)",
                 title: "What's your name?(DE)",
-                message: <span>Please let us know how to address you best.<br/> We will protect your data and won’t share it anyhow.(DE)</span>,
+                message: <span>Please let us know how to address you best.<br /> We will protect your data and won’t share it anyhow.(DE)</span>,
             },
             [Steps.AskAboutServices]: {
                 pretitle: "Next,(DE)",
@@ -141,12 +141,12 @@ const translations = {
             },
             [Steps.Done]: {
                 pretitle: "That's it!(DE)",
-                message: <span><strong>Please validate your e-mail address.</strong><br/>We will reach out to you afterwards and help you setting up your account.(DE)</span>
+                message: <span><strong>Please validate your e-mail address.</strong><br />We will reach out to you afterwards and help you setting up your account.(DE)</span>
             },
             servicesNeeded: {
                 channels: "Online booking channels(DE)",
                 automation: 'Order handling automation(DE)',
-                managment: 'Inventory management(DE)',               
+                managment: 'Inventory management(DE)',
             },
             haveWebsite: {
                 yes: "Yes, I have one already!(DE)",
@@ -174,7 +174,7 @@ const translations = {
                 noEmail: "Please, write your email adress(DE)",
                 oneCheck: "Please, select at least one option(DE)",
             },
-            ssl : "SSL encrypted(DE)",
+            ssl: "SSL encrypted(DE)",
         }
     }
 }

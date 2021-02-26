@@ -13,11 +13,11 @@ function App() {
   addLocales({
     en: en,
     de: de,
-  }); 
+  });
   setLocale('en');
 
   return (
-    <div className = 'App'>
+    <div className='App'>
       <Layout >
         <Questionaire />
       </Layout>

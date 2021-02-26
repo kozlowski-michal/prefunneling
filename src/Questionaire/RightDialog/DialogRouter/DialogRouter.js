@@ -12,29 +12,29 @@ import DialogDone from './DialogFormElements/DialogDone';
 const DialogForms = (props) => {
     switch (props.step) {
         case Steps.AskForName:
-            return <AskForName {...props}/>
+            return <AskForName {...props} />
 
         case Steps.AskAboutServices:
-            return <AskAboutServices {...props}/>
+            return <AskAboutServices {...props} />
 
         case Steps.AskForWebsite:
-            return <AskForWebsite {...props}/>
+            return <AskForWebsite {...props} />
 
         case Steps.AskAboutTeamSize:
-            return <AskAboutTeamSize {...props}/> 
+            return <AskAboutTeamSize {...props} />
 
         case Steps.AskAboutOffer:
-            return <AskAboutOffer {...props}/> 
+            return <AskAboutOffer {...props} />
 
         case Steps.AskForContact:
-            return <AskForContact {...props}/> 
+            return <AskForContact {...props} />
 
         case Steps.Done:
-            return <DialogDone step = {props.step}/>
+            return <DialogDone step={props.step} />
 
         default:
             return <p>No text for that step :( (Error) </p>
-            
+
     }
 }
 

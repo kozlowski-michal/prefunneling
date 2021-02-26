@@ -6,24 +6,24 @@ import classesCSS from './DialogNav.module.css';
 
 const dialogNav = (props) => {
     return (
-        props.step != Steps.Done ? 
-            <div className = {classesCSS.ButtonsContainer} >
-                { props.step != 0 ?
-                    <button 
+        props.step != Steps.Done ?
+            <div className={classesCSS.ButtonsContainer} >
+                {props.step != 0 ?
+                    <button
                         type="button"
-                        className = {classesCSS.ButtonBack}
-                        onClick = {props.goBack} 
-                    > 
-                        <ArrowBackSVG/>
-                    </button> : null 
+                        className={classesCSS.ButtonBack}
+                        onClick={props.goBack}
+                    >
+                        <ArrowBackSVG />
+                    </button> : null
                 }
 
-                <div className = {classesCSS.ButtonLine} ></div>
-                <button 
-                    className = {classesCSS.ButtonNext}
-                    type="submit" 
+                <div className={classesCSS.ButtonLine} ></div>
+                <button
+                    className={classesCSS.ButtonNext}
+                    type="submit"
                 >
-                    <ArrowNextSVG/>
+                    <ArrowNextSVG />
                 </button>
             </div> : null
     )

@@ -8,14 +8,14 @@ import classesCSS from './LeftDialog.module.css';
 const leftDialog = (props) => {
     return (
         <React.Fragment>
-            <LeftDialogSchemas 
-                step = {props.step}
-                dialogData = {props.dialogData} 
+            <LeftDialogSchemas
+                step={props.step}
+                dialogData={props.dialogData}
             />
-            <div className = {classesCSS.TitleLine} ></div>
-            <LeftDialogSummary 
-                step = {props.step}
-                dialogData = {props.dialogData}
+            <div className={classesCSS.TitleLine} ></div>
+            <LeftDialogSummary
+                step={props.step}
+                dialogData={props.dialogData}
             />
         </React.Fragment>
     )

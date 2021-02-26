@@ -10,47 +10,50 @@ const Questionnaire = () => {
     let [stepCounter, setStepCounter] = useState(0);
     let [dialogData, setDialogData] = useState(collectedData);
 
-    useEffect( () => {
-        setDialogData( (oldDialogData) => {
-            return {...oldDialogData, language: getLocale()}
+    useEffect(() => {
+        setDialogData((oldDialogData) => {
+            return { ...oldDialogData, language: getLocale() }
         });
         console.log("Step:" + stepCounter);  // <============================================================= DEL
         console.log(dialogData);  // <============================================================= DEL
     }, [stepCounter]);
 
     const saveData = (formData) => {
-        setDialogData( (oldDialogData) => {
+        setDialogData((oldDialogData) => {
             if (formData.servicesNeeded) { // deep merging
-                formData = { servicesNeeded: {...oldDialogData.servicesNeeded, ...formData.servicesNeeded}}
+                formData = { servicesNeeded: { ...oldDialogData.servicesNeeded, ...formData.servicesNeeded } }
             }
             if (formData.offer) { // deep merging
-                formData = { offer: {...oldDialogData.offer, ...formData.offer}}
-            }           
+                formData = { offer: { ...oldDialogData.offer, ...formData.offer } }
+            }
             formData['language'] = getLocale();
-            console.log(formData);
-            return {...oldDialogData, ...formData};
+            console.log(formData); // <============================================================= DEL
+            return { ...oldDialogData, ...formData };
         });
     }
 
-    const stepChangeHandler = ( value ) => {
-        setStepCounter( () => stepCounter + value );   
+    const stepChangeHandler = (formData, value) => {
+        console.log("formData:");
+        console.log(formData);
+        saveData(formData);
+        setStepCounter(() => stepCounter + value);
     }
 
     return (
-        <div className = {classesCSS.Container} >
-            <div className = {classesCSS.LeftDialog} >
+        <div className={classesCSS.Container} >
+            <div className={classesCSS.LeftDialog} >
                 <LeftDialog
-                    step = {stepCounter}
-                    dialogData = {dialogData}
+                    step={stepCounter}
+                    dialogData={dialogData}
                 />
             </div>
-            <div className = {classesCSS.RightDialog} >
-                <RightDialog 
-                    step = {stepCounter}
-                    dialogData = {dialogData}
-                    saveData = {(data) => saveData(data)}
-                    submit = {() => stepChangeHandler(1)}
-                    goBack = {() => stepChangeHandler(-1)}
+            <div className={classesCSS.RightDialog} >
+                <RightDialog
+                    step={stepCounter}
+                    dialogData={dialogData}
+                    saveData={(data) => saveData(data)}
+                    submit={(data) => stepChangeHandler(data, 1)}
+                    goBack={(data) => stepChangeHandler(data, -1)}
                 />
             </div>
         </div>
