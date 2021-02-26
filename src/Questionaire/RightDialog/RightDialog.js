@@ -15,10 +15,13 @@ const RightDialog = (props) => {
         resolver: validatorOptions(props.step) 
     });
 
+    let classesFormContainer = props.step == Steps.Done ? [classesCSS.FormContainer, classesCSS.FormContainerDone ].join(" ") : classesCSS.FormContainer;
+    let classesForm = props.step == Steps.Done ? [classesCSS.Form, classesCSS.FormDone ].join(" ") : classesCSS.Form;
+
     return (
         <div className = {classesCSS.Survey} >
-            <form onSubmit={handleSubmit(props.submit)} className = {classesCSS.Form} >
-                <div className = {classesCSS.FormContainer} >
+            <form onSubmit={handleSubmit(props.submit)} className = {classesForm} >
+                <div className = {classesFormContainer} >
                     <DialogRouter
                         step = {props.step}
                         saveData = {props.saveData}

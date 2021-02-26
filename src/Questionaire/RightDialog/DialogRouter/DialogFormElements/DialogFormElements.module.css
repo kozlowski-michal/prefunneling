@@ -55,10 +55,13 @@ h4.Title {
 /*** Done ***/
 .DoneContainer {
     width: 100%;
-    align-self: center; /* flex-flow prevents to work */
+    height: 100%;
+    margin-bottom: 40px;
+    justify-content: center;
     display: flex;
     align-items: center;
     flex-flow: column;
+    box-sizing: border-box;
 }
 
 .DoneWheel {

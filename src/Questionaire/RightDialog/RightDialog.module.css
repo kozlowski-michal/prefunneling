@@ -3,7 +3,7 @@
     display: flex;
     flex-flow: column;
     align-items: flex-start;
-    margin: 0;
+    margin: 20px 0;
     padding: 0;
     background-color: white;
     border-radius: 10px;
@@ -41,7 +41,17 @@
 @media only screen and ( max-width: 999px) {
     .Survey {
         width: 100%;
+        margin: 0;
+        border-radius: 0;
         box-sizing: border-box;
         flex: 1;
+    }
+
+    .FormDone {
+        height: 100%;
+    }
+
+    .FormContainerDone {
+        height: 100%;   
     }
 }
