@@ -34,7 +34,6 @@ const Questionnaire = () => {
 
     const stepChangeHandler = (formData, value) => {
         console.log("formData:");
-        console.log(formData);
         saveData(formData);
         setStepCounter(() => stepCounter + value);
     }
