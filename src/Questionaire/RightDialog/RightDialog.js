@@ -24,7 +24,7 @@ const RightDialog = (props) => {
                 <div className={classesFormContainer} >
                     <DialogRouter
                         step={props.step}
-                        saveData={props.saveData}
+                        saveDataOnEvent={props.saveDataOnEvent}
                         dialogData={props.dialogData}
                         errors={errors}
                         register={register} />

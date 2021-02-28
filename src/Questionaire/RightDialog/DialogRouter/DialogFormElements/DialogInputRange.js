@@ -8,12 +8,12 @@ const DialogInputRange = (props) => {
 
     const onChangeHandler = (event) => {
         setValueFromRange(() => currentValueFromRange = event.target.value);
-        props.saveData({ teamSize: props.labels[event.target.value] })
+        props.saveDataOnEvent({ teamSize: props.labels[event.target.value] })
     }
 
     const labelClickHandler = (labelIndex) => {
         setValueFromRange(() => currentValueFromRange = labelIndex);
-        props.saveData({ teamSize: props.labels[labelIndex] })
+        props.saveDataOnEvent({ teamSize: props.labels[labelIndex] })
     }
 
     return (

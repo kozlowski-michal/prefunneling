@@ -18,7 +18,9 @@ const Questionnaire = () => {
         console.log(dialogData);  // <============================================================= DEL
     }, [stepCounter]);
 
-    const saveData = (formData) => {
+    const saveDataOnEventHandler = (formData) => {
+        console.log("Data from event:"); // <============================================================= DEL
+        console.log(formData); // <============================================================= DEL
         setDialogData((oldDialogData) => {
             if (formData.servicesNeeded) { // deep merging
                 formData = { servicesNeeded: { ...oldDialogData.servicesNeeded, ...formData.servicesNeeded } }
@@ -27,14 +29,11 @@ const Questionnaire = () => {
                 formData = { offer: { ...oldDialogData.offer, ...formData.offer } }
             }
             formData['language'] = getLocale();
-            console.log(formData); // <============================================================= DEL
             return { ...oldDialogData, ...formData };
         });
     }
 
     const stepChangeHandler = (formData, value) => {
-        console.log("formData:");
-        saveData(formData);
         setStepCounter(() => stepCounter + value);
     }
 
@@ -50,7 +49,7 @@ const Questionnaire = () => {
                 <RightDialog
                     step={stepCounter}
                     dialogData={dialogData}
-                    saveData={(data) => saveData(data)}
+                    saveDataOnEvent={(data) => saveDataOnEventHandler(data)}
                     submit={(data) => stepChangeHandler(data, 1)}
                     goBack={(data) => stepChangeHandler(data, -1)}
                 />

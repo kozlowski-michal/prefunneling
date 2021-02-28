@@ -10,7 +10,7 @@ const askAboutServices = (props) => (
         <DialogTitle step={props.step} />
         <DialogInputCheckbox
             step={props.step}
-            saveData={props.saveData}
+            saveDataOnEvent={props.saveDataOnEvent}
             defaultValue={props.dialogData.servicesNeeded}
             name="servicesNeeded"
             keys={translations.en.rightDialog.servicesNeeded}

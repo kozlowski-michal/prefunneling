@@ -11,7 +11,7 @@ const dialogInputCheckbox = (props) => {
                 return <label key={key} className={classesCSS.CheckboxContainer}>
                     <input
                         type="checkbox"
-                        onChange={(event) => props.saveData({ servicesNeeded: { [event.target.value]: event.target.checked } })}
+                        onChange={(event) => props.saveDataOnEvent({ servicesNeeded: { [event.target.value]: event.target.checked } })}
                         defaultChecked={props.defaultValue[key]}
                         name={props.name}
                         id={key}

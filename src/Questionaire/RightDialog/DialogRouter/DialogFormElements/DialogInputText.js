@@ -9,7 +9,7 @@ const dialogInputText = (props) => {
             <input
                 name={props.name}
                 type="text"
-                onBlur={(event) => props.saveData({ [props.name]: event.target.value })}
+                onKeyUp={(event) => props.saveDataOnEvent({ [props.name]: event.target.value })}
                 defaultValue={props.defaultValue}
                 className={classesCSS.Input}
                 placeholder={props.placeholder}

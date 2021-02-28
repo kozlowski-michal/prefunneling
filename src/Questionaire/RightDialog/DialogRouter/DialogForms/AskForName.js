@@ -11,7 +11,7 @@ const askForName = (props) => (
         <DialogTitle step={props.step} />
         <DialogInputText
             name="name"
-            saveData={props.saveData}
+            saveDataOnEvent={props.saveDataOnEvent}
             defaultValue={props.dialogData.name}
             placeholder={translate("rightDialog.placeholders.name")}
             register={props.register} />
@@ -19,6 +19,7 @@ const askForName = (props) => (
             step={props.step} />
         <DialogError
             errorField={props.errors.name}
+            onBlurFlag={props.onBlurFlag}
             errorType="noName" />
     </React.Fragment>
 )

@@ -10,7 +10,7 @@ const askAboutOffer = (props) => (
         <DialogTitle step={props.step} />
         <DialogInputCheckboxWithIcons
             name="offer"
-            saveData={props.saveData}
+            saveDataOnEvent={props.saveDataOnEvent}
             defaultValue={props.dialogData.offer}
             keys={translations.en.rightDialog.offer}
             register={props.register} />

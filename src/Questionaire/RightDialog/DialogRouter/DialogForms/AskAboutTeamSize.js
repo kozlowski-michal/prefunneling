@@ -11,7 +11,7 @@ const askAboutTeamSize = (props) => (
         <DialogTitle step={props.step} />
         <DialogInputRange
             name="teamSize"
-            saveData={props.saveData}
+            saveDataOnEvent={props.saveDataOnEvent}
             defaultValue={props.dialogData.teamSize}
             labels={TeamSize}
             range="4"
