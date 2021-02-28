@@ -37,7 +37,7 @@ const leftDialogSummary = (props) => {
             )
         })}
 
-        {props.dialogData.website ?
+        {props.step > Steps.AskForWebsite ?
             <p className={[classesCSS.ListItem, classesCSS.ListItemMargin].join(' ')} >
                 <RoundBulletSVG />
                 <span className={classesCSS.ListItemLabel}>

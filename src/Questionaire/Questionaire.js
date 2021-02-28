@@ -33,7 +33,7 @@ const Questionnaire = () => {
         });
     }
 
-    const stepChangeHandler = (formData, value) => {
+    const stepChangeHandler = (value) => {
         setStepCounter(() => stepCounter + value);
     }
 
@@ -50,8 +50,8 @@ const Questionnaire = () => {
                     step={stepCounter}
                     dialogData={dialogData}
                     saveDataOnEvent={(data) => saveDataOnEventHandler(data)}
-                    submit={(data) => stepChangeHandler(data, 1)}
-                    goBack={(data) => stepChangeHandler(data, -1)}
+                    submit={() => stepChangeHandler(1)}
+                    goBack={() => stepChangeHandler(-1)}
                 />
             </div>
         </div>
