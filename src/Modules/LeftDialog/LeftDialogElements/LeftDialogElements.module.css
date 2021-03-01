@@ -2,8 +2,15 @@
 
 p.Title {
     font-size: 24px;
-    margin-bottom: 40px;
     font-weight: 700;
+}
+
+p.Message {
+    margin-top: 10px;
+}
+
+p.ListTitle {
+    margin-top: 35px;
 }
 
 div.Marco {

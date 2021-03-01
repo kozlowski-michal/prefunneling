@@ -4,5 +4,6 @@ div.TitleLine {
     height: 2px;
     width: 60px;
     margin-left: 5px;
+    margin-top:40px;
     background-color: var(--main);
 }

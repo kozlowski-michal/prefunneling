@@ -1,6 +1,6 @@
 import React from 'react';
 
-import translations from '../../../../../data/translations/questionaireTranslations';
+import translations from '../../../../../data/translations';
 import DialogTitle from '../DialogFormElements/DialogTitle';
 import DialogError from '../DialogFormElements/DialogError';
 import DialogInputRadio from '../DialogFormElements/DialogInputRadio';

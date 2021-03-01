@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { setTranslations } from 'react-i18nify';
 
-import LeftDialog from '../LeftDialog/LeftDialog';
 import RightDialog from './RightDialog/RightDialog';
-import classesCSS from './Questionaire.module.css';
 import { collectedData } from '../../data/collectedData';
 import { getLocale } from 'react-i18nify';
 
@@ -19,8 +18,6 @@ const Questionnaire = () => {
     }, [stepCounter]);
 
     const saveDataOnEventHandler = (formData) => {
-        console.log("Data from event:"); // <============================================================= DEL
-        console.log(formData); // <============================================================= DEL
         setDialogData((oldDialogData) => {
             if (formData.servicesNeeded) { // deep merging
                 formData = { servicesNeeded: { ...oldDialogData.servicesNeeded, ...formData.servicesNeeded } }
@@ -38,23 +35,15 @@ const Questionnaire = () => {
     }
 
     return (
-        <div className={classesCSS.Container} >
-            <div className={classesCSS.LeftDialog} >
-                <LeftDialog
-                    step={stepCounter}
-                    dialogData={dialogData}
-                />
-            </div>
-            <div className={classesCSS.RightDialog} >
-                <RightDialog
-                    step={stepCounter}
-                    dialogData={dialogData}
-                    saveDataOnEvent={(data) => saveDataOnEventHandler(data)}
-                    submit={() => stepChangeHandler(1)}
-                    goBack={() => stepChangeHandler(-1)}
-                />
-            </div>
-        </div>
+        <React.Fragment>
+            <RightDialog
+                step={stepCounter}
+                dialogData={dialogData}
+                saveDataOnEvent={(data) => saveDataOnEventHandler(data)}
+                submit={() => stepChangeHandler(1)}
+                goBack={() => stepChangeHandler(-1)}
+            />
+        </React.Fragment >
     )
 }
 

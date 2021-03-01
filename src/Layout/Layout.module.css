@@ -3,3 +3,42 @@
     flex-grow: 1;
     background-color: #f6f6f6;
 }
+
+.Container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+}
+
+.Container > div {
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.LeftDialog {
+    width: 400px;
+    display: flex;
+    flex-flow: column;
+    background-image: linear-gradient(to top, #bae1fa, rgba(0,0,0,0));
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px;
+}
+
+.RightDialog {
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+=
+
+@media only screen and ( max-width: 999px) {
+    .LeftDialog {
+        display: none;
+        overflow: hidden;
+    }
+}

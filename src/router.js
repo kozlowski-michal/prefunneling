@@ -4,11 +4,22 @@ import { Route, Switch } from 'react-router-dom';
 import Questionnaire from './Modules/Questionaire/Questionaire';
 import DashBoard from './Modules/DashBoard/DashBoard';
 
-const router = () => {
+
+const router = (props) => {
     return (
         <Switch>
-            <Route path="/create" exact component={Questionnaire} />
-            <Route path="/" exact component={DashBoard} />
+            <Route
+                path="/create"
+                exact
+                render={() => (
+                    <Questionnaire {...props} />
+                )} />
+            <Route
+                path="/"
+                exact
+                render={() => (
+                    <DashBoard {...props} />
+                )} />
         </Switch>
     )
 }

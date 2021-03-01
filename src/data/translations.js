@@ -1,4 +1,4 @@
-import { Steps } from "../../Modules/Questionaire/data/enums";
+import { Steps } from "../Modules/Questionaire/data/enums";
 
 const translations = {
     en: {
@@ -22,6 +22,10 @@ const translations = {
             [Steps.Done]: "Ready. Create your account to be the next in line! 🤙",
             selections: "Selections:",
             MarcoTitle: "Head of Customer’s success",
+            dashboard: {
+                title: "We will reach out soon!",
+                message: <span>Feel free to start your account configuration.<br />The more data you fill out, the faster we can process your account!</span>,
+            }
         },
         rightDialog: {
             [Steps.AskForName]: {
@@ -110,6 +114,10 @@ const translations = {
             [Steps.Done]: "Ready. Create your account to be the next in line! 🤙(DE)",
             selections: "Selections(DE):",
             MarcoTitle: "Head of Customer’s success(DE)",
+            dashboard: {
+                title: "We will reach out soon!(DE)",
+                message: <span>Feel free to start your account configuration.<br />The more data you fill out, the faster we can process your account!(DE)</span>,
+            }
         },
         rightDialog: {
             [Steps.AskForName]: {

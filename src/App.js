@@ -4,9 +4,8 @@ import en from 'date-fns/locale/en-GB';
 import de from 'date-fns/locale/de';
 import { BrowserRouter } from 'react-router-dom';
 
-import translations from './data/translations/questionaireTranslations';
+import translations from './data/translations';
 import Layout from './Layout/Layout';
-import Router from './router.js';
 
 function App() {
   setTranslations(translations);
@@ -19,9 +18,7 @@ function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-        <Layout >
-          <Router />
-        </Layout>
+        <Layout />
       </BrowserRouter>
     </div>
   );

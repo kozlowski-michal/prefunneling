@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-const DashBoard = () => {
+const DashBoard = (props) => {
+    useEffect(() => {
+        props.sendToLeftDialog({
+            title: "dashboard.title",
+            message: "dashboard.message",
+            marco: true,
+        });
+    }, [])
 
     return (
         <React.Fragment>
