@@ -6,7 +6,7 @@ import classesCSS from './DialogNav.module.css';
 
 const dialogNav = (props) => {
     return (
-        props.step != Steps.Done ?
+        props.step != Steps.done ?
             <div className={classesCSS.ButtonsContainer} >
                 {props.step != 0 ?
                     <button

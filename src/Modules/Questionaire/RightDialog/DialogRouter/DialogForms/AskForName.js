@@ -13,7 +13,7 @@ const askForName = (props) => (
             name="name"
             saveDataOnEvent={props.saveDataOnEvent}
             defaultValue={props.dialogData.name}
-            placeholder={translate("rightDialog.placeholders.name")}
+            placeholder={"name"}
             register={props.register} />
         <DialogMessage
             step={props.step} />

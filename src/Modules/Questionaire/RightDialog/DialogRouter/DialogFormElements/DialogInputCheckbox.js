@@ -1,12 +1,13 @@
 import React from 'react'
 import { I18n, translate } from 'react-i18nify';
 
+import { Steps } from '../../../data/enums';
 import classesCSS from './DialogInputCheckbox.module.css';
 
 const dialogInputCheckbox = (props) => {
     return (
         <div className={classesCSS.Container}>
-            <I18n render={() => translate("rightDialog." + props.step + ".need")} />
+            <I18n render={() => translate("questionaire." + Object.keys(Steps)[props.step] + ".need")} />
             {Object.keys(props.keys).map((key) => {
                 return <label key={key} className={classesCSS.CheckboxContainer}>
                     <input
@@ -19,7 +20,7 @@ const dialogInputCheckbox = (props) => {
                         ref={props.register}
                     />
                     <div className={classesCSS.CheckboxField} ></div>
-                    <I18n render={() => translate("rightDialog." + props.name + "." + key)} />
+                    <I18n render={() => translate("questionaire." + props.name + "." + key)} />
                 </label>
             })}
         </div>

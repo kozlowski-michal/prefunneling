@@ -13,7 +13,7 @@ const askAboutServices = (props) => (
             saveDataOnEvent={props.saveDataOnEvent}
             defaultValue={props.dialogData.servicesNeeded}
             name="servicesNeeded"
-            keys={translations.en.rightDialog.servicesNeeded}
+            keys={translations.en.questionaire.servicesNeeded}
             register={props.register} />
         <DialogError
             errorField={props.errors.servicesNeeded}

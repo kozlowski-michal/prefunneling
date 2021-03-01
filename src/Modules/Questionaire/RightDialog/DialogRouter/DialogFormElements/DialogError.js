@@ -6,7 +6,7 @@ import classesCSS from './DialogFormElements.module.css';
 const dialogError = (props) => {
     return (
         <I18n render={() =>
-            <div className={classesCSS.ErrorContainer} > {props.errorField && !props.hideErrorFlag && translate("rightDialog.errors." + props.errorType)}</div>
+            <div className={classesCSS.ErrorContainer} > {props.errorField && translate("questionaire.errors." + props.errorType)}</div>
         } />
     )
 }

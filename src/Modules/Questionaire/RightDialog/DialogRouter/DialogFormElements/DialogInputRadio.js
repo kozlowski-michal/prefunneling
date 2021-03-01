@@ -20,7 +20,7 @@ const dialogInputRadio = (props) => {
                         ref={props.register}
                     />
                     <div className={classesCSS.RadioField} ></div>
-                    <I18n render={() => translate("rightDialog." + props.name + "." + key)} />
+                    <I18n render={() => translate("questionaire." + props.name + "." + key)} />
                 </label>
             })}
         </div>

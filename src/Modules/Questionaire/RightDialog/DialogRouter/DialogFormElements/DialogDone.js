@@ -1,6 +1,7 @@
 import React from 'react';
 import { Translate } from 'react-i18nify';
 
+import { Steps } from '../../../data/enums';
 import classesCSS from './DialogFormElements.module.css';
 
 const dialogDone = (props) => {
@@ -12,10 +13,10 @@ const dialogDone = (props) => {
                 </svg>
             </div>
             <h2 className={classesCSS.Title} >
-                <Translate value={"rightDialog." + props.step + ".pretitle"} />
+                <Translate value={"questionaire." + Object.keys(Steps)[props.step] + ".pretitle"} />
             </h2>
             <p className={classesCSS.MessageDone} >
-                <Translate value={"rightDialog." + props.step + ".message"} />
+                <Translate value={"questionaire." + Object.keys(Steps)[props.step] + ".message"} />
             </p>
         </div>
     )

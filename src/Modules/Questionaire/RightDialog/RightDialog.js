@@ -15,8 +15,8 @@ const RightDialog = (props) => {
         resolver: validatorOptions(props.step)
     });
 
-    let classesFormContainer = props.step == Steps.Done ? [classesCSS.FormContainer, classesCSS.FormContainerDone].join(" ") : classesCSS.FormContainer;
-    let classesForm = props.step == Steps.Done ? [classesCSS.Form, classesCSS.FormDone].join(" ") : classesCSS.Form;
+    let classesFormContainer = props.step == Steps.done ? [classesCSS.FormContainer, classesCSS.FormContainerDone].join(" ") : classesCSS.FormContainer;
+    let classesForm = props.step == Steps.done ? [classesCSS.Form, classesCSS.FormDone].join(" ") : classesCSS.Form;
 
     return (
         <div className={classesCSS.Survey} >
@@ -34,7 +34,7 @@ const RightDialog = (props) => {
                     submit={props.submit}
                     goBack={props.goBack} />
             </form>
-            { props.step != Steps.Done ?
+            { props.step != Steps.done ?
                 <p className={classesCSS.Encrypted} >
                     <Translate value="rightDialog.ssl" />
                 </p> : null}

@@ -12,7 +12,7 @@ const askAboutServices = (props) => (
             name="website"
             saveDataOnEvent={props.saveDataOnEvent}
             defaultValue={props.dialogData.website}
-            keys={translations.en.rightDialog.haveWebsite}
+            keys={translations.en.questionaire.website}
             register={props.register} />
         <DialogError />{/* does nothing, styling purpose (placeholder) */}
     </div>

@@ -29,7 +29,6 @@ const leftDialog = (props) => {
 
             {props.roundList?.length > 0 ? <LeftDialogRoundList
                 list={props.roundList} /> : null}
-
         </React.Fragment>
     )
 }

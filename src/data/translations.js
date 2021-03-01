@@ -1,5 +1,3 @@
-import { Steps } from "../Modules/Questionaire/data/enums";
-
 const translations = {
     en: {
         leftDialog: {
@@ -16,6 +14,11 @@ const translations = {
                 askAboutOffer: "That’s a big team already, exciting! 💪",
                 askForContact: "Great choice!",
                 done: "Ready. Create your account to be the next in line! 🤙",
+                haveWebsite: {
+                    yes: "Yes, I have website already!",
+                    soon: "I have no website, but I’m on it.",
+                    no: "I have no website yet and want help."
+                },
                 selections: "Selections:",
             },
             dashboard: {
@@ -23,35 +26,35 @@ const translations = {
                 message: <span>Feel free to start your account configuration.<br />The more data you fill out, the faster we can process your account!</span>,
             }
         },
-        rightDialog: {
-            [Steps.AskForName]: {
+        questionaire: {
+            askForName: {
                 pretitle: "First,",
                 title: "What's your name?",
                 message: <span>Please let us know how to address you best.<br /> We will protect your data and won’t share it anyhow.</span>,
             },
-            [Steps.AskAboutServices]: {
+            askAboutServices: {
                 pretitle: "Next,",
                 title: "How we can help you best?",
                 need: "I need ... ",
             },
-            [Steps.AskForWebsite]: {
+            askForWebsite: {
                 pretitle: "Great,",
                 title: "Do you have a website?",
             },
-            [Steps.AskAboutTeamSize]: {
+            askAboutTeamSize: {
                 pretitle: "Understood,",
                 title: "What size is your team?",
                 message: "Based on your team size we can offer you advanced cooperation features.",
             },
-            [Steps.AskAboutOffer]: {
+            askAboutOffer: {
                 pretitle: "Great,",
                 title: "What do you offer?",
             },
-            [Steps.AskForContact]: {
+            askForContact: {
                 pretitle: "Almost done,",
                 title: "How can we reach you out?",
             },
-            [Steps.Done]: {
+            done: {
                 pretitle: "That's it!",
                 message: <span><strong>Please validate your e-mail address.</strong><br />We will reach out to you afterwards and help you setting up your account.</span>
             },
@@ -60,9 +63,9 @@ const translations = {
                 automation: 'Order handling automation',
                 managment: 'Inventory management',
             },
-            haveWebsite: {
-                yes: "Yes, I have website already!",
-                soon: "I have no website, but I’m on it.",
+            website: {
+                yes: "Yes, I have one already!",
+                soon: "No, but I’m on it.",
                 no: "I have no website yet and want help."
             },
             offer: {
@@ -87,6 +90,9 @@ const translations = {
                 oneCheck: "Please, select at least one option",
             },
             ssl: "SSL encrypted",
+        },
+        dashboard: {
+
         }
     },
     de: {
@@ -104,6 +110,11 @@ const translations = {
                 askAboutOffer: "That’s a big team already, exciting! 💪(DE)",
                 askForContact: "Great choice!(DE)",
                 done: "Ready. Create your account to be the next in line! 🤙(DE)",
+                haveWebsite: {
+                    yes: "Yes, I have website already!(DE)",
+                    soon: "I have no website, but I’m on it.(DE)",
+                    no: "I have no website yet and want help.(DE)"
+                },
                 selections: "Selections:(DE)",
             },
             dashboard: {
@@ -111,35 +122,35 @@ const translations = {
                 message: <span>Feel free to start your account configuration.<br />The more data you fill out, the faster we can process your account!(DE)</span>,
             }
         },
-        rightDialog: {
-            [Steps.AskForName]: {
+        questionaire: {
+            askForName: {
                 pretitle: "First,(DE)",
                 title: "What's your name?(DE)",
                 message: <span>Please let us know how to address you best.<br /> We will protect your data and won’t share it anyhow.(DE)</span>,
             },
-            [Steps.AskAboutServices]: {
+            askAboutServices: {
                 pretitle: "Next,(DE)",
                 title: "How we can help you best?(DE)",
                 need: "I need ... (DE)",
             },
-            [Steps.AskForWebsite]: {
+            askForWebsite: {
                 pretitle: "Great,(DE)",
                 title: "Do you have a website?(DE)",
             },
-            [Steps.AskAboutTeamSize]: {
+            askAboutTeamSize: {
                 pretitle: "Understood,(DE)",
                 title: "What size is your team?(DE)",
                 message: "Based on your team size we can offer you advanced cooperation features.(DE)",
             },
-            [Steps.AskAboutOffer]: {
+            askAboutOffer: {
                 pretitle: "Great,(DE)",
                 title: "What do you offer?(DE)",
             },
-            [Steps.AskForContact]: {
+            askForContact: {
                 pretitle: "Almost done,(DE)",
                 title: "How can we reach you out?(DE)",
             },
-            [Steps.Done]: {
+            done: {
                 pretitle: "That's it!(DE)",
                 message: <span><strong>Please validate your e-mail address.</strong><br />We will reach out to you afterwards and help you setting up your account.(DE)</span>
             },
@@ -148,9 +159,9 @@ const translations = {
                 automation: 'Order handling automation(DE)',
                 managment: 'Inventory management(DE)',
             },
-            haveWebsite: {
-                yes: "Yes, I have website already!(DE)",
-                soon: "I have no website, but I’m on it.(DE)",
+            website: {
+                yes: "Yes, I have one already!(DE)",
+                soon: "No, but I’m on it.(DE)",
                 no: "I have no website yet and want help.(DE)"
             },
             offer: {
@@ -176,7 +187,11 @@ const translations = {
             },
             ssl: "SSL encrypted(DE)",
         }
+    },
+    dashboard: {
+
     }
+
 }
 
 export default translations;

@@ -24,7 +24,7 @@ const dialogInputCheckbox = (props) => {
                         <IconsSVG offer={key} />
                     </div>
                     <div className={classesCSS.TextContainer}>
-                        {<I18n render={() => translate("rightDialog." + props.name + "." + key)} />}
+                        {<I18n render={() => translate("questionaire." + props.name + "." + key)} />}
                     </div>
                 </label>
             })}

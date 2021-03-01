@@ -2,11 +2,11 @@
 
 /* in this order steps will appear. Last step should stay 'Done' */
 export const Steps = {
-    AskForName: 0,
-    AskAboutServices: 1,
-    AskForWebsite: 2,
-    AskAboutTeamSize: 3,
-    AskAboutOffer: 4,
-    AskForContact: 5,
-    Done: 6,
+    askForName: 0,
+    askAboutServices: 1,
+    askForWebsite: 2,
+    askAboutTeamSize: 3,
+    askAboutOffer: 4,
+    askForContact: 5,
+    done: 6,
 }

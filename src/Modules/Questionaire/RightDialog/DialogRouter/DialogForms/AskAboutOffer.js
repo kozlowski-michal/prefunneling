@@ -12,7 +12,7 @@ const askAboutOffer = (props) => (
             name="offer"
             saveDataOnEvent={props.saveDataOnEvent}
             defaultValue={props.dialogData.offer}
-            keys={translations.en.rightDialog.offer}
+            keys={translations.en.questionaire.offer}
             register={props.register} />
         <DialogError
             errorField={props.errors.offer}

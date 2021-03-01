@@ -4,19 +4,19 @@ import { Steps } from './enums';
 
 const validatorOptions = (step) => {
     switch (step) {
-        case Steps.AskForName:
+        case Steps.askForName:
             return yupResolver(yup.object().shape(
                 { name: yup.string().required() }
             ));
-        case Steps.AskAboutServices:
+        case Steps.askAboutServices:
             return yupResolver(yup.object().shape({
                 servicesNeeded: yup.array().min(1)
             }));
-        case Steps.AskAboutOffer:
+        case Steps.askAboutOffer:
             return yupResolver(yup.object().shape({
                 offer: yup.array().min(1)
             }));
-        case Steps.AskForContact:
+        case Steps.askForContact:
             return yupResolver(yup.object().shape(
                 { email: yup.string().required().email() }
             ));
