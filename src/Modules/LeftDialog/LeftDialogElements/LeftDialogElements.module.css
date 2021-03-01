@@ -33,7 +33,7 @@ p.Selections {
     margin-top: 35px;
 }
 
-p.ListItem {
+.listContainer p {
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -42,10 +42,6 @@ p.ListItem {
     margin-left: 10px;
 }
 
-p.ListItemMargin {
-    margin-top: 30px;  
-}
-
-span.ListItemLabel {
+.listContainer p span {
     margin-left: 10px;
 }

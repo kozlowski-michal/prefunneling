@@ -12,8 +12,7 @@ const leftDialog = (props) => {
     return (
         <React.Fragment>
             <LeftDialogTitle
-                title={props.title}
-                name={props.name} />
+                title={props.title} />
 
             {props.message ? <LeftDialogMessage
                 message={props.message} /> : null}

@@ -5,7 +5,7 @@ import classesCSS from './LeftDialogElements.module.css';
 
 const leftDialogListTitle = (props) => (
     <p className={classesCSS.ListTitle}>
-        <Translate value={"leftDialog." + props.listTitle} />
+        {props.listTitle}
     </p>
 )
 

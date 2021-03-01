@@ -5,26 +5,11 @@ import LeftDialog from '../Modules/LeftDialog/LeftDialog';
 import classesCSS from './Layout.module.css';
 import Router from '../router.js';
 
-const Layout = (props) => {
-
-    /*** testowe dane ***/
-    let leftData = {
-        marco: false,
-        title: "Some title",
-        message: "Some text",
-        listTitle: "List title",
-        squareList: [],
-        roundList: ["sdfsdfsdfd"],
-    }
-
+const Layout = () => {
     let [leftDialogProps, setLeftDialogProps] = useState(null);
 
     const leftDialogPropsHandler = (newLeftDialogProps) => {
-        console.log(newLeftDialogProps);
-        console.log("newLeftDialogProps");
-        setLeftDialogProps(() => {
-            return newLeftDialogProps;
-        })
+        setLeftDialogProps(() => newLeftDialogProps)
     }
 
     return (

@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react';
 
+import { dataToLeftDialog } from './data/dataToLeftDialog'
+
 const DashBoard = (props) => {
     useEffect(() => {
-        props.sendToLeftDialog({
-            title: "dashboard.title",
-            message: "dashboard.message",
-            marco: true,
-        });
+        props.sendToLeftDialog(dataToLeftDialog());
     }, [])
 
     return (

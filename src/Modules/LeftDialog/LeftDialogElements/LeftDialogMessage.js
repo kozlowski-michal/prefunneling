@@ -4,8 +4,8 @@ import { Translate } from 'react-i18nify';
 import classesCSS from './LeftDialogElements.module.css';
 
 const leftDialogMessage = (props) => (
-    <p className={classesCSS.Message}>
-        <Translate value={"leftDialog." + props.message} />
+    <p className={classesCSS.Message} >
+        {props.message}
     </p>
 )
 
