@@ -2,7 +2,7 @@ import React from 'react';
 import { I18n, translate, Translate } from 'react-i18nify';
 
 import { SquareBulletSVG, RoundBulletSVG } from '../../../data/svg/DialogSummaryBullets';
-import { Steps } from '../../../data/enums';
+import { Steps } from '../../Questionaire/data/enums';
 import classesCSS from './LeftDialogElements.module.css';
 import MarcoImg from '../../../assets/Marco.png';
 

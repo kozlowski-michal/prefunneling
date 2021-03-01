@@ -1,5 +1,6 @@
 import React from 'react';
 import { I18n, getLocale, setLocale } from 'react-i18nify';
+import { NavLink } from 'react-router-dom';
 
 import { Logo, LogoMobile } from './Logo/Logo';
 import { LoginSVG, CreateSVG, DownloadSVG, EnUsSVG, DeDeSVG } from '../../data/svg/HeaderIcons';
@@ -10,7 +11,9 @@ const header = () => {
         <nav className={classesCSS.Toolbar} >
             {/* Desktop */}
             <div className={classesCSS.NavContainer} >
-                <Logo />
+                <NavLink to="/">
+                    <Logo />
+                </NavLink>
                 <a>Overview</a>
                 <a>Solutions</a>
                 <a>Case studies</a>
@@ -39,10 +42,10 @@ const header = () => {
                     Download
                 </div>
                 <div className={classesCSS.RightSeparator}></div>
-                <div className={classesCSS.RightItem} >
+                <NavLink to="/create" className={classesCSS.RightItem}>
                     <CreateSVG />
-                    Create
-                </div>
+                        Create
+                </NavLink>
                 <div className={classesCSS.RightSeparator}></div>
                 <a className={classesCSS.RightItem} >
                     <LoginSVG />

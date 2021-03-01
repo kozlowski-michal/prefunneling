@@ -4,7 +4,7 @@ import DialogTitle from '../DialogFormElements/DialogTitle';
 import DialogError from '../DialogFormElements/DialogError';
 import DialogInputRange from '../DialogFormElements/DialogInputRange';
 import DialogMessage from '../DialogFormElements/DialogMessage';
-import { TeamSize } from '../../../../data/enums';
+import { TeamSize } from '../../../../../data/enums';
 
 const askAboutTeamSize = (props) => (
     <React.Fragment>

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-import LeftDialog from './LeftDialog/LeftDialog';
+import LeftDialog from '../LeftDialog/LeftDialog';
 import RightDialog from './RightDialog/RightDialog';
 import classesCSS from './Questionaire.module.css';
-import { collectedData } from '../data/collectedData';
+import { collectedData } from '../../data/collectedData';
 import { getLocale } from 'react-i18nify';
 
 const Questionnaire = () => {

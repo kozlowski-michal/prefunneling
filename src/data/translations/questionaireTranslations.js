@@ -1,4 +1,4 @@
-import { Steps } from "./enums";
+import { Steps } from "../../Modules/Questionaire/data/enums";
 
 const translations = {
     en: {

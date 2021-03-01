@@ -4,9 +4,9 @@ import { Translate } from 'react-i18nify';
 
 import DialogRouter from './DialogRouter/DialogRouter';
 import DialogNav from './DialogNav/DialogNav';
-import validatorOptions from '../../data/validatorOptions';
+import validatorOptions from '../data/validatorOptions';
 import classesCSS from './RightDialog.module.css';
-import { Steps } from '../../data/enums';
+import { Steps } from '../data/enums';
 
 const RightDialog = (props) => {
     let { register, handleSubmit, errors } = useForm({

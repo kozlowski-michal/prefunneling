@@ -1,14 +1,14 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import Questionnaire from './Questionaire/Questionaire';
-import DashBoard from './data/DashBoard/DashBoard';
+import Questionnaire from './Modules/Questionaire/Questionaire';
+import DashBoard from './Modules/DashBoard/DashBoard';
 
 const router = () => {
     return (
         <Switch>
-            <Route path="/" exact component={Questionnaire} />
-            <Route path="/dashboard" exact component={DashBoard} />
+            <Route path="/create" exact component={Questionnaire} />
+            <Route path="/" exact component={DashBoard} />
         </Switch>
     )
 }

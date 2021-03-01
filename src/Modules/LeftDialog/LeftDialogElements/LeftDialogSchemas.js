@@ -1,7 +1,7 @@
 import React from 'react';
 import { translate, Translate } from 'react-i18nify';
 
-import { Steps } from '../../../data/enums';
+import { Steps } from '../../Questionaire/data/enums';
 import classesCSS from './LeftDialogElements.module.css';
 
 const LeftDialogSchemas = (props) => {

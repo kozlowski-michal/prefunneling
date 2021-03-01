@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { Steps } from '../../../data/enums';
-import { ArrowNextSVG, ArrowBackSVG } from '../../../data/svg/DialogButtons';
+import { Steps } from '../../data/enums';
+import { ArrowNextSVG, ArrowBackSVG } from '../../../../data/svg/DialogButtons';
 import classesCSS from './DialogNav.module.css';
 
 const dialogNav = (props) => {

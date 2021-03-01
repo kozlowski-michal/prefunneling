@@ -1,7 +1,7 @@
 import React from 'react'
 import { I18n, translate } from 'react-i18nify';
 
-import IconsSVG from '../../../../data/svg/DialogIcons';
+import IconsSVG from '../../../../../data/svg/DialogIcons';
 import classesCSS from './DialogInputCheckboxWithIcons.module.css';
 
 const dialogInputCheckbox = (props) => {

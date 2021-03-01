@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Steps } from '../../../data/enums';
+import { Steps } from '../../data/enums';
 import AskForName from './DialogForms/AskForName';
 import AskAboutServices from './DialogForms/AskAboutServices';
 import AskForWebsite from './DialogForms/AskForWebsite';

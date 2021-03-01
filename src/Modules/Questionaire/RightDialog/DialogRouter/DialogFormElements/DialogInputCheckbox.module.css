@@ -1,11 +1,11 @@
-@import '../../../../data/colors.css';
+@import '../../../../../data/colors.css';
 
 .Container {
     width: 100%;
     box-sizing: border-box;
 }
 
-.RadioContainer {
+.CheckboxContainer {
     width: 100%;
     height: 40px;
     display: flex;
@@ -18,15 +18,20 @@
     cursor: pointer;
 }
 
-.RadioContainer:hover {
-    border: 1px solid var(--tertiary);
-}
-
-.RadioContainer:focus-within {
+.CheckboxContainer:focus-within {
     box-shadow: 0 0 3px 1px var(--light);
 }
 
-.RadioContainer input {
+.CheckboxContainer:hover {
+    border: 1px solid var(--tertiary);
+}
+
+.CheckboxContainer:focus {
+    border: 1px solid var(--tertiary);
+}
+
+
+.CheckboxContainer input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -34,7 +39,7 @@
     width: 0;
 }
 
-.RadioField {
+.CheckboxField {
     position: relative;
     width: 20px;
     height: 20px;
@@ -42,30 +47,30 @@
     padding: 0px;
     display: inline-block;
     border: 1px solid var(--halfLight);
-    border-radius: 10px;
+    border-radius: 5px;
     box-sizing: border-box; 
 }
 
 
-.RadioContainer:hover input ~ .RadioField {
+.CheckboxContainer:hover input ~ .CheckboxField {
     border: 1px solid var(--tertiary);
 }
 
-.RadioField:after {
+.CheckboxField:after {
     content: "";
     position: absolute;
     display: none;
 }
   
-.RadioContainer input:checked ~ .RadioField {
+.CheckboxContainer input:checked ~ .CheckboxField {
     border-color: var(--tertiary);
 }
 
-.RadioContainer input:checked ~ .RadioField:after {
+.CheckboxContainer input:checked ~ .CheckboxField:after {
     display: block;
 }
   
-.RadioContainer .RadioField:after {
+.CheckboxContainer .CheckboxField:after {
     left: 6px;
     top: 2px;
     width: 5px;
