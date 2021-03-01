@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { setTranslations } from 'react-i18nify';
 
 import RightDialog from './RightDialog/RightDialog';
 import { collectedData } from '../../data/collectedData';
 import { getLocale } from 'react-i18nify';
+import { dataToLeftDialog } from './data/dataToLeftDialog';
 
-const Questionnaire = () => {
+const Questionnaire = (props) => {
     let [stepCounter, setStepCounter] = useState(0);
     let [dialogData, setDialogData] = useState(collectedData);
 
     useEffect(() => {
+        props.sendToLeftDialog(dataToLeftDialog(stepCounter, dialogData));
         setDialogData((oldDialogData) => {
             return { ...oldDialogData, language: getLocale() }
         });

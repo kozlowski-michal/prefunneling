@@ -3,25 +3,21 @@ import { Steps } from "../Modules/Questionaire/data/enums";
 const translations = {
     en: {
         leftDialog: {
-            [Steps.AskForName]: <span>Okay! <br />Let’s get started. 🤘️</span>,
-            [Steps.AskAboutServices]: {
-                line1: "Hej %{name}!",
-                line2: "Nice to meet you!",
-            },
-            [Steps.AskForWebsite]: {
-                caseAll: "All of them, makes sense! 💪",
-                default: ", makes sense!",
-            },
-            [Steps.AskAboutTeamSize]: {
-                no: <span>No website yet, okay.<br />No problem! 💪</span>,
-                soon: <span>Website soon.<br />Great! 💪</span>,
-                yes: <span>Website present.<br />Great! 💪</span>,
-            },
-            [Steps.AskAboutOffer]: "That’s a big team already, exciting! 💪",
-            [Steps.AskForContact]: "Great choice!",
-            [Steps.Done]: "Ready. Create your account to be the next in line! 🤙",
-            selections: "Selections:",
             MarcoTitle: "Head of Customer’s success",
+            questionaire: {
+                askForName: <span>Okay! <br />Let’s get started. 🤘️</span>,
+                askAboutServices: "Hej %{name}!\nNice to meet you!",
+                askForWebsite: "Makes sense! 💪",
+                askAboutTeamSize: {
+                    no: <span>No website yet, okay.<br />No problem! 💪</span>,
+                    soon: <span>Website soon.<br />Great! 💪</span>,
+                    yes: <span>Website present.<br />Great! 💪</span>,
+                },
+                askAboutOffer: "That’s a big team already, exciting! 💪",
+                askForContact: "Great choice!",
+                done: "Ready. Create your account to be the next in line! 🤙",
+                selections: "Selections:",
+            },
             dashboard: {
                 title: "We will reach out soon!",
                 message: <span>Feel free to start your account configuration.<br />The more data you fill out, the faster we can process your account!</span>,
@@ -95,25 +91,21 @@ const translations = {
     },
     de: {
         leftDialog: {
-            [Steps.AskForName]: <span>Okay! <br />Let’s get started. 🤘️(DE)</span>,
-            [Steps.AskAboutServices]: {
-                line1: "Hej %{name}!(DE)",
-                line2: "Nice to meet you!(DE)",
-            },
-            [Steps.AskForWebsite]: {
-                caseAll: "All of them, makes sense! 💪(DE)",
-                default: ", makes sense!(DE)",
-            },
-            [Steps.AskAboutTeamSize]: {
-                no: <span>No website yet, okay.<br />No problem! 💪(DE)</span>,
-                soon: <span>Website soon.<br />Great! 💪(DE)</span>,
-                yes: <span>Website present.<br />Great! 💪(DE)</span>,
-            },
-            [Steps.AskAboutOffer]: "That’s a big team already, exciting! 💪(DE)",
-            [Steps.AskForContact]: "Great choice!(DE)",
-            [Steps.Done]: "Ready. Create your account to be the next in line! 🤙(DE)",
-            selections: "Selections(DE):",
             MarcoTitle: "Head of Customer’s success(DE)",
+            questionaire: {
+                askForName: <span>Okay! <br />Let’s get started. 🤘️(DE)</span >,
+                askAboutServices: "Hej %{name}!\nNice to meet you!(DE)",
+                askForWebsite: "Makes sense! 💪(DE)",
+                askAboutTeamSize: {
+                    no: <span>No website yet, okay.<br />No problem! 💪(DE)</span>,
+                    soon: <span>Website soon.<br />Great! 💪(DE)</span>,
+                    yes: <span>Website present.<br />Great! 💪(DE)</span>,
+                },
+                askAboutOffer: "That’s a big team already, exciting! 💪(DE)",
+                askForContact: "Great choice!(DE)",
+                done: "Ready. Create your account to be the next in line! 🤙(DE)",
+                selections: "Selections:(DE)",
+            },
             dashboard: {
                 title: "We will reach out soon!(DE)",
                 message: <span>Feel free to start your account configuration.<br />The more data you fill out, the faster we can process your account!(DE)</span>,
@@ -157,8 +149,8 @@ const translations = {
                 managment: 'Inventory management(DE)',
             },
             haveWebsite: {
-                yes: "Yes, I have one already!(DE)",
-                soon: "No, but I’m on it.(DE)",
+                yes: "Yes, I have website already!(DE)",
+                soon: "I have no website, but I’m on it.(DE)",
                 no: "I have no website yet and want help.(DE)"
             },
             offer: {

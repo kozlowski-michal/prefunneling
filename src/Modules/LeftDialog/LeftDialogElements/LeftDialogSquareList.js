@@ -1,4 +1,5 @@
 import React from 'react';
+import { Translate } from 'react-i18nify';
 
 import { SquareBulletSVG } from '../../../data/svg/DialogSummaryBullets';
 import classesCSS from './LeftDialogElements.module.css';
@@ -8,7 +9,9 @@ const leftDialogSquareList = (props) => (
         return (
             <p key={index} className={classesCSS.ListItem} >
                 <SquareBulletSVG />
-                <span className={classesCSS.ListItemLabel}>{item}</span>
+                <span className={classesCSS.ListItemLabel}>
+                    <Translate value={"rightDialog.servicesNeeded." + item} />
+                </span>
             </p>
         )
     })
