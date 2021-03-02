@@ -5,8 +5,10 @@ import classesCSS from './FormsElements.module.css';
 
 const dialogError = (props) => {
     return (
-        <I18n render={() =>
-            <div className={classesCSS.ErrorContainer} > {props.errorField && translate("dashboard.errors." + props.errorType)}</div>
+        <I18n render={() => props.errorField ?
+            <div className={classesCSS.ErrorContainer} >
+                {translate("dashboard.errors." + props.errorType)}
+            </div> : null
         } />
     )
 }
