@@ -19,7 +19,6 @@ const askForName = (props) => (
             step={props.step} />
         <DialogError
             errorField={props.errors.name}
-            onBlurFlag={props.onBlurFlag}
             errorType="noName" />
     </React.Fragment>
 )

@@ -92,7 +92,16 @@ const translations = {
             ssl: "SSL encrypted",
         },
         dashboard: {
-
+            customer: {
+                title: "Your data",
+                name: "Name",
+                email: "E-mail",
+                phone: "Phone",
+            },
+            errors: {
+                noName: "Your name could not be empty",
+                noEmail: "Please, write your email adress",
+            }
         }
     },
     de: {
@@ -186,12 +195,20 @@ const translations = {
                 oneCheck: "Please, select at least one option(DE)",
             },
             ssl: "SSL encrypted(DE)",
+        },
+        dashboard: {
+            customer: {
+                title: "Your data(DE)",
+                name: "Name(DE)",
+                email: "E-mail(DE)",
+                phone: "Phone(DE)",
+            },
+            errors: {
+                noName: "Your name could not be empty(DE)",
+                noEmail: "Please, write your email adress(DE)",
+            }
         }
-    },
-    dashboard: {
-
     }
-
 }
 
 export default translations;

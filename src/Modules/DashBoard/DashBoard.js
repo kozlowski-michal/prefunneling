@@ -9,29 +9,24 @@ const DashBoard = (props) => {
 
     useEffect(() => {
         props.sendToLeftDialog(dataToLeftDialog());
-        console.log(dashboardData);  // <============================================================= DEL
-    }, [dashboardData])
+        console.log(dashboardData);  // <============================================================= DEL\
+    }, [dashboardData]);
 
-    const saveDataOnEventHandler = (formData) => {
+    const saveDataOnEventHandler = (component, formData) => {
         setDashboardData((oldData) => {
-            console.log("data from event:");
-            console.log(formData);
-            /*if (formData.servicesNeeded) { // deep merging
-                formData = { servicesNeeded: { ...oldDialogData.servicesNeeded, ...formData.servicesNeeded } }
+            switch (component) {
+                case "customer":
+                    let customer = { ...oldData.customer, ...formData }
+                    return { ...oldData, ...customer };
             }
-            if (formData.offer) { // deep merging
-                formData = { offer: { ...oldDialogData.offer, ...formData.offer } }
-            }
-            formData['language'] = getLocale();*/
-            return { ...oldData, ...formData };
-        });
+        })
     }
 
     return (
         <React.Fragment>
             <DashboardDialog
                 dashboardData={dashboardData}
-                saveDataOnEvent={(data) => saveDataOnEventHandler(data)} />
+                saveDataOnEvent={(component, data) => saveDataOnEventHandler(component, data)} />
         </React.Fragment>
     )
 }

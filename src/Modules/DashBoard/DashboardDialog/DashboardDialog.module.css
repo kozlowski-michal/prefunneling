@@ -2,10 +2,16 @@
     height: 100%;
     width: 100%;
     display: flex;
-    flex-flow: column wrap;
-    align-items: flex-start;
-    align-content: flex-start;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     padding: 40px;
     margin: 0;
     box-sizing: border-box;
+}
+
+.DashboardColumn {
+    width: calc(50% - 20px);
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
 }
