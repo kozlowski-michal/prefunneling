@@ -3,7 +3,7 @@ const translations = {
         leftDialog: {
             MarcoTitle: "Head of Customer’s success",
             questionaire: {
-                askForName: <span>Okay! <br />Let’s get started. 🤘️</span>,
+                askForName: "Okay!\nLet’s get started. 🤘️",
                 askAboutServices: "Hej %{name}!\nNice to meet you!",
                 askForWebsite: "Makes sense! 💪",
                 askAboutTeamSize: {

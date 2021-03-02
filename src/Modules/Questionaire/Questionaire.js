@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
 import RightDialog from './RightDialog/RightDialog';
-import { collectedData } from '../../data/collectedData';
+import { questionaireDataModel } from '../../data/collectedData';
 import { getLocale } from 'react-i18nify';
 import { dataToLeftDialog } from './data/dataToLeftDialog';
 
 const Questionnaire = (props) => {
     let [stepCounter, setStepCounter] = useState(0);
-    let [dialogData, setDialogData] = useState(collectedData);
+    let [dialogData, setDialogData] = useState(questionaireDataModel);
 
     useEffect(() => {
         props.sendToLeftDialog(dataToLeftDialog(stepCounter, dialogData));

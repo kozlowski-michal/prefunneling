@@ -1,0 +1,11 @@
+.DashboardDialog {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding: 40px;
+    margin: 0;
+    box-sizing: border-box;
+}
