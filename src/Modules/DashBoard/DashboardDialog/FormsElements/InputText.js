@@ -18,7 +18,7 @@ const InputText = (props) => {
         <I18n render={() =>
             <div className={classesCSS.InputContainer}>
                 <div className={classesCSS.InputLabel}>
-                    <Translate value={"dashboard.customer." + props.name} />
+                    <Translate value={"dashboard." + props.component + "." + props.name} />
                 </div>
                 < input
                     className={classesCSS.Input}

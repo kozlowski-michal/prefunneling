@@ -12,12 +12,12 @@ import FormContainer from './FormsElements/FormContainer';
 
 const DashboardDialog = (props) => {
     let { register, errors } = useForm({
-        mode: 'onChange',
+        mode: 'onBlur',
         reValidateMode: 'onChange',
         resolver: yupResolver(yup.object().shape(
             {
-                name: yup.string().required(),
-                email: yup.string().required().email(),
+                customerName: yup.string().required(),
+                customerEmail: yup.string().required().email(),
             }
         ))
     });
@@ -27,21 +27,25 @@ const DashboardDialog = (props) => {
             <div className={classesCSS.DashboardColumn}>
                 <FormContainer title="customer">
                     <Customer
-                        customerData={props.dashboardData?.customer}
+                        dashboardData={props.dashboardData}
                         saveDataOnEvent={props.saveDataOnEvent}
                         errors={errors}
                         register={register}
                     />
                 </FormContainer>
-                <FormContainer title="Company data">
-                    <Company />
+                <FormContainer title="company">
+                    <Company
+                        dashboardData={props.dashboardData}
+                        saveDataOnEvent={props.saveDataOnEvent}
+                        errors={errors}
+                        register={register} />
                 </FormContainer>
             </div>
             <div className={classesCSS.DashboardColumn}>
-                <FormContainer boldTitle="Booking">
+                <FormContainer boldTitle="booking">
                     <Booking />
                 </FormContainer>
-                <FormContainer title="Features">
+                <FormContainer title="features">
                     <Features />
                 </FormContainer>
             </div>

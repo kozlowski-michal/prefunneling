@@ -1,0 +1,17 @@
+.Row {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.Column {
+    width: calc(50% - 10px);
+}
+
+.Subtitle {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    box-sizing: border-box;
+}

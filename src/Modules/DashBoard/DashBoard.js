@@ -12,13 +12,10 @@ const DashBoard = (props) => {
         console.log(dashboardData);  // <============================================================= DEL\
     }, [dashboardData]);
 
-    const saveDataOnEventHandler = (component, formData) => {
+    const saveDataOnEventHandler = (formData) => {
         setDashboardData((oldData) => {
-            switch (component) {
-                case "customer":
-                    let customer = { ...oldData.customer, ...formData }
-                    return { ...oldData, ...customer };
-            }
+            console.log(formData);
+            return { ...oldData, ...formData };
         })
     }
 
@@ -26,7 +23,7 @@ const DashBoard = (props) => {
         <React.Fragment>
             <DashboardDialog
                 dashboardData={dashboardData}
-                saveDataOnEvent={(component, data) => saveDataOnEventHandler(component, data)} />
+                saveDataOnEvent={(data) => saveDataOnEventHandler(data)} />
         </React.Fragment>
     )
 }

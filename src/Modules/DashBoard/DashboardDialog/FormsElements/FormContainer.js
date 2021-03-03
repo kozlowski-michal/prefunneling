@@ -9,7 +9,7 @@ const formContainer = (props) => (
             <Translate value={"dashboard." + props.title + ".title"} />
         </h4> : null}
         { props.boldTitle ? <h5 className={classesCSS.BoldTitle}>
-            <Translate value={"dashboard." + props.BoldTitle + ".title"} />
+            <Translate value={"dashboard." + props.boldTitle + ".title"} />
         </h5> : null}
         {props.children}
     </div>

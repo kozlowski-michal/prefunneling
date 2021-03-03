@@ -98,6 +98,24 @@ const translations = {
                 email: "E-mail",
                 phone: "Phone",
             },
+            company: {
+                title: "Company data",
+                name: "Company name",
+                industry: "Industry",
+                address: "Address",
+                street: "Street + Number",
+                street2: "Address 2",
+                city: "City",
+                zip: "Zip code",
+                country: "Country",
+                teamsize: "Team size",
+            },
+            booking: {
+                title: "Booking",
+            },
+            features: {
+                title: "Features",
+            },
             errors: {
                 noName: "Your name could not be empty",
                 noEmail: "Please, write your email adress",
@@ -202,6 +220,24 @@ const translations = {
                 name: "Name(DE)",
                 email: "E-mail(DE)",
                 phone: "Phone(DE)",
+            },
+            company: {
+                title: "Company data(DE)",
+                name: "Company name(DE)",
+                industry: "Industry(DE)",
+                address: "Address(DE)",
+                street: "Street + Number(DE)",
+                street2: "Address 2(DE)",
+                city: "City(DE)",
+                zip: "Zip code(DE)",
+                country: "Country(DE)",
+                teamsize: "Team size(DE)",
+            },
+            booking: {
+                title: "Booking(DE)",
+            },
+            features: {
+                title: "Features(DE)",
             },
             errors: {
                 noName: "Your name could not be empty(DE)",

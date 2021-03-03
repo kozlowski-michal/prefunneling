@@ -1,33 +1,34 @@
 import React from 'react';
+import { I18n, t } from 'react-i18nify';
 
-import InputText from '../FormsElements/InputText';
+import InputText from '../../../Forms/InputText/InputText';
 import InputError from '../FormsElements/InputError';
 
 const customer = (props) => (
     <React.Fragment>
         <InputText
-            name="name"
-            component="customer"
-            defaultValue={props.customerData?.name}
-            saveDataOnEvent={props.saveDataOnEvent}
+            name="customerName"
+            label={<I18n render={() => t("dashboard.customer.title")} />}
+            defaultValue={props.dashboardData?.customerName}
+            onBlur={props.saveDataOnEvent}
             register={props.register} />
         <InputError
             errorField={props.errors.name}
             errorType="noName" />
         <InputText
-            name="email"
-            component="customer"
-            defaultValue={props.customerData?.email}
-            saveDataOnEvent={props.saveDataOnEvent}
+            name="customerEmail"
+            label={<I18n render={() => t("dashboard.customer.email")} />}
+            defaultValue={props.dashboardData?.customerEmail}
+            onBlur={props.saveDataOnEvent}
             register={props.register} />
         <InputError
             errorField={props.errors.email}
             errorType="noEmail" />
         <InputText
-            name="phone"
-            component="customer"
-            defaultValue={props.customerData?.phone}
-            saveDataOnEvent={props.saveDataOnEvent} />
+            name="customerPhone"
+            label={<I18n render={() => t("dashboard.customer.phone")} />}
+            defaultValue={props.dashboardData?.customerPhone}
+            onBlur={props.saveDataOnEvent} />
     </React.Fragment>
 )
 

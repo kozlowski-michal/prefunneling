@@ -25,56 +25,49 @@ export const questionaireDataModel = {
 };
 
 export const dashboardDataModel = {
-    customer: {
-        name: "John Olsson",
-        email: "johns@mail.no",
-        phone: ""
+    customerName: "John Olsson",
+    customerEmail: "johns@mail.no",
+    customerPhone: "",
+
+    companyName: "John's yachts",
+    companyStreet: "Tore Hunds gate 5",
+    companySecondaryAddress: "",
+    companyCity: "Mosjøen",
+    companyZip: "8657",
+    companyCountry: "Norway",
+    companyTeamSize: "2-5",
+    companyIndustry: {
+        bikes: false,
+        photo: false,
+        transport: false,
+        cars: false,
+        machines: false,
+        activities: true,
+        boats: true,
+        ceremonial: false,
+        other: false,
     },
-    company: {
-        name: "John's yachts",
-        street: "Tore Hunds gate 5",
-        secondaryAdress: "",
-        city: "Mosjøen",
-        zip: "8657 ",
-        country: "Norway",
-        teamsize: "2-5",
-        industry: {
-            bikes: false,
-            photo: false,
-            transport: false,
-            cars: false,
-            machines: false,
-            activities: true,
-            boats: true,
-            ceremonial: false,
-            other: false,
-        }
+
+    bookingWebsite: "yes",
+    bookingUrl: "www.johnsboats.no",
+    bookingFontColor: "#000000",
+    bookingButtonColor: "#00CCEE",
+    bookingLogo: "",
+
+    featuresChannels: {
+        integration: true,
+        payments: false,
+        shop: true,
+        smoobu: false,
     },
-    booking: {
-        website: "yes",
-        url: "www.johnsboats.no",
-        color: {
-            font: "#000000",
-            button: "#00CCEE",
-        },
-        logo: "",
+    featuresChannelsAutomation: {
+        checkInOut: true,
+        damage: false,
+        request: false,
     },
-    features: {
-        channels: {
-            integration: true,
-            payments: false,
-            shop: true,
-            smoobu: false,
-        },
-        automation: {
-            checkInOut: true,
-            damage: false,
-            request: false,
-        },
-        managment: {
-            variations: true,
-            tracing: false,
-            codes: false,
-        }
+    featuresChannelsManagment: {
+        variations: true,
+        tracing: false,
+        codes: false,
     }
 }
