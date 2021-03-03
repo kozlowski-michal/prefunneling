@@ -1,31 +1,36 @@
 import React from 'react';
-import { translate } from 'react-i18nify';
+import { I18n, t } from 'react-i18nify';
 
 import DialogTitle from '../DialogFormElements/DialogTitle';
-import DialogError from '../DialogFormElements/DialogError';
-import DialogInputText from '../DialogFormElements/DialogInputText';
+import InputText from '../../../../Forms/InputText/InputText';
+import InputError from '../../../../Forms/InputError/InputError';
 
 const askForContact = (props) => {
     return (
-        <React.Fragment>
-            <DialogTitle step={props.step} />
-            <DialogInputText
-                name="email"
-                saveDataOnEvent={props.saveDataOnEvent}
-                defaultValue={props.dialogData.email}
-                placeholder={"email"}
-                register={props.register} />
-            <div style={{ width: "100%", height: "20px" }}></div>
-            <DialogInputText
-                name="phone"
-                saveDataOnEvent={props.saveDataOnEvent}
-                defaultValue={props.dialogData.phone}
-                placeholder={"phone"}
-                register={props.register} />
-            <DialogError
-                errorField={props.errors.email}
-                errorType="noEmail" />
-        </React.Fragment>
+        <I18n render={() =>
+            <React.Fragment>
+                <DialogTitle step={props.step} />
+                <InputText
+                    name="email"
+                    placeholder={t("questionaire.placeholders.email")}
+                    defaultValue={props.dialogData.email}
+                    onKeyUp={props.saveDataOnEvent}
+                    style="questionaire"
+                    register={props.register} />
+                <div style={{ width: "100%", height: "20px" }}></div>
+                <InputText
+                    name="phone"
+                    placeholder={t("questionaire.placeholders.phone")}
+                    defaultValue={props.dialogData.phone}
+                    onKeyUp={props.saveDataOnEvent}
+                    style="questionaire"
+                    register={props.register} />
+                <InputError
+                    errorField={props.errors.email}
+                    message={t("dashboard.errors.noEmail")}
+                    spaceHolder />
+            </React.Fragment>}
+        />
     )
 }
 

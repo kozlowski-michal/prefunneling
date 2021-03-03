@@ -8,11 +8,11 @@ import Customer from './DialogForms/Customer';
 import Company from './DialogForms/Company';
 import Booking from './DialogForms/Booking';
 import Features from './DialogForms/Features';
-import FormContainer from './FormsElements/FormContainer';
+import FormContainer from './FormContainer/FormContainer';
 
 const DashboardDialog = (props) => {
     let { register, errors } = useForm({
-        mode: 'onBlur',
+        mode: 'onChange',
         reValidateMode: 'onChange',
         resolver: yupResolver(yup.object().shape(
             {

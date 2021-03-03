@@ -1,23 +1,27 @@
 import React from 'react';
+import { I18n, t } from 'react-i18nify';
 
 import translations from '../../../../../data/translations';
 import DialogTitle from '../DialogFormElements/DialogTitle';
-import DialogError from '../DialogFormElements/DialogError';
+import InputError from '../../../../Forms/InputError/InputError';
 import DialogInputCheckboxWithIcons from '../DialogFormElements/DialogInputCheckboxWithIcons';
 
 const askAboutOffer = (props) => (
-    <div>
-        <DialogTitle step={props.step} />
-        <DialogInputCheckboxWithIcons
-            name="offer"
-            saveDataOnEvent={props.saveDataOnEvent}
-            defaultValue={props.dialogData.offer}
-            keys={translations.en.questionaire.offer}
-            register={props.register} />
-        <DialogError
-            errorField={props.errors.offer}
-            errorType="oneCheck" />
-    </div>
+    <I18n render={() =>
+        <div>
+            <DialogTitle step={props.step} />
+            <DialogInputCheckboxWithIcons
+                name="offer"
+                saveDataOnEvent={props.saveDataOnEvent}
+                defaultValue={props.dialogData.offer}
+                keys={translations.en.questionaire.offer}
+                register={props.register} />
+            <InputError
+                errorField={props.errors.offer}
+                message={t("questionaire.errors.oneCheck")}
+                spaceHolder />
+        </div>}
+    />
 )
 
 export default askAboutOffer;

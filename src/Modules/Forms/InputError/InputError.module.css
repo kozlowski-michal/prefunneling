@@ -1,0 +1,17 @@
+@import '../../../data/colors.css';
+
+.ErrorContainer {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+    color: var(--formRed);
+    box-sizing: border-box;
+}
+
+.SpaceHolder {
+    height: 25px;
+    width: 100%;
+    margin: 10px 0;
+}

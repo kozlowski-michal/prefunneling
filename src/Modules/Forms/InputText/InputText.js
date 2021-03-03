@@ -6,7 +6,7 @@ import classesCSS from './InputText.module.css';
 //  label?
 //  defaultValue?
 //  placeholder?
-//  class?
+//  class? default as in dashboard
 //  onBlur?
 //  onKeyUp?
 //  register?
@@ -26,7 +26,7 @@ const InputText = (props) => {
 
     return (
         <div className={classesCSS.InputContainer}>
-            { props.label ? <div className={classesCSS.InputLabel}>
+            {props.label ? <div className={classesCSS.InputLabel}>
                 {props.label}
             </div> : null}
             < input
@@ -34,7 +34,7 @@ const InputText = (props) => {
                 defaultValue={props.defaultValue ? props.defaultValue : null}
                 placeholder={props.placeholder ? props.placeholder : null}
                 className={style}
-                onKeyUp={props.onKeyUp ? props.onKeyUp : null}
+                onKeyUp={props.onKeyUp ? (event) => props.onKeyUp({ [props.name]: event.target.value }) : null}
                 onBlur={props.onBlur ? (event) => onBlurHandler(event, props.onBlur) : null}
                 type="text"
                 ref={props.register ? props.register : null} />

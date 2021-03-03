@@ -36,7 +36,7 @@ const RightDialog = (props) => {
             </form>
             { props.step != Steps.done ?
                 <p className={classesCSS.Encrypted} >
-                    <Translate value="rightDialog.ssl" />
+                    <Translate value="questionaire.ssl" />
                 </p> : null}
         </div>
     )

@@ -1,7 +1,7 @@
 import React from 'react';
-import { I18n, Translate, translate } from 'react-i18nify';
+import { Translate } from 'react-i18nify';
 
-import classesCSS from './FormsElements.module.css';
+import classesCSS from './FormContainer.module.css';
 
 const formContainer = (props) => (
     <div className={classesCSS.FormContainer}>

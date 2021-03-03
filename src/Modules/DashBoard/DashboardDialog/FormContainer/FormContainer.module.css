@@ -1,0 +1,28 @@
+@import '../../../../data/colors.css';
+
+.FormContainer {
+    background-color: white;
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column;
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+h4.Title {
+    font-weight: 300;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+h5.BoldTitle {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}

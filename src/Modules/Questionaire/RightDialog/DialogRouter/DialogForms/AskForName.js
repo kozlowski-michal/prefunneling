@@ -1,26 +1,30 @@
 import React from 'react';
-import { translate } from 'react-i18nify';
+import { I18n, t } from 'react-i18nify';
 
 import DialogTitle from '../DialogFormElements/DialogTitle';
-import DialogError from '../DialogFormElements/DialogError';
 import DialogMessage from '../DialogFormElements/DialogMessage';
-import DialogInputText from '../DialogFormElements/DialogInputText';
+import InputText from '../../../../Forms/InputText/InputText';
+import InputError from '../../../../Forms/InputError/InputError';
 
 const askForName = (props) => (
-    <React.Fragment>
-        <DialogTitle step={props.step} />
-        <DialogInputText
-            name="name"
-            saveDataOnEvent={props.saveDataOnEvent}
-            defaultValue={props.dialogData.name}
-            placeholder={"name"}
-            register={props.register} />
-        <DialogMessage
-            step={props.step} />
-        <DialogError
-            errorField={props.errors.name}
-            errorType="noName" />
-    </React.Fragment>
+    <I18n render={() =>
+        <React.Fragment>
+            <DialogTitle step={props.step} />
+            <InputText
+                name="name"
+                placeholder={t("questionaire.placeholders.name")}
+                defaultValue={props.dialogData?.name}
+                onKeyUp={props.saveDataOnEvent}
+                style="questionaire"
+                register={props.register} />
+            <DialogMessage
+                step={props.step} />
+            <InputError
+                errorField={props.errors.name}
+                message={t("dashboard.errors.noName")}
+                spaceHolder />
+        </React.Fragment>
+    } />
 )
 
 export default askForName;
