@@ -112,7 +112,9 @@ const translations = {
                     SE: "Sweden",
                     CH: "Switzerland",
                     US: "USA",
-                }
+                },
+                noOption: "All options have been selected already",
+                placeholder: "Please, select at least one option",
             },
             booking: {
                 title: "Booking",
@@ -252,7 +254,9 @@ const translations = {
                     SE: "Sweden(DE)",
                     CH: "Switzerland(DE)",
                     US: "USA(DE)",
-                }
+                },
+                noOption: "All options have been selected already(DE)",
+                placeholder: "Please, select at least one option(DE)",
             },
             booking: {
                 title: "Booking(DE)",

@@ -6,7 +6,6 @@ import { TeamSize } from '../../../../data/enums';
 import classesCSS from './DialogForms.module.css'
 import InputText from '../../../Forms/InputText/InputText';
 import InputRange from '../../../Forms/InputRange/InputRange';
-import InputSelect from '../../../Forms/InputSelect/InputSelect';
 import InputMultiselect from '../../../Forms/InputMultiselect/InputMultiselect';
 
 const company = (props) => {
@@ -36,6 +35,10 @@ const company = (props) => {
             label: t("dashboard.company.countries." + countryISO),
         }
     });
+    const defaultCountry = {
+        value: props.dashboardData?.companyCountry,
+        label: t("dashboard.company.countries." + props.dashboardData?.companyCountry)
+    };
 
     return (
         <I18n render={() =>
@@ -48,7 +51,10 @@ const company = (props) => {
                 <InputMultiselect
                     name="companyIndustry"
                     label={t("dashboard.company.industry")}
+                    isMulti
                     list={industries}
+                    placeholder={t("dashboard.company.placeholder")}
+                    noOption={t("dashboard.company.noOption")}
                     defaultValue={defaultIndustries}
                     onChange={props.saveDataOnEvent} />
                 <div className={classesCSS.Subtitle}>
@@ -80,13 +86,12 @@ const company = (props) => {
                             onBlur={props.saveDataOnEvent} />
                     </div>
                 </div>
-                <InputSelect
+                <InputMultiselect
                     name="companyCountry"
                     label={t("dashboard.company.country")}
                     list={countries}
                     onChange={props.saveDataOnEvent}
-                    defaultValue={t("dashboard.company.countries." + props.dashboardData?.companyCountry)}
-                />
+                    defaultValue={defaultCountry} />
                 <div className={classesCSS.Subtitle}>
                     <Translate value={"dashboard.company.teamsize"} />
                 </div>
@@ -96,7 +101,7 @@ const company = (props) => {
                     values={TeamSize}
                     onChange={props.saveDataOnEvent}
                     register={props.register} />
-            </React.Fragment>}
+            </React.Fragment >}
         />
     )
 }
