@@ -34,7 +34,7 @@ export const dashboardDataModel = {
     companySecondaryAddress: "",
     companyCity: "Mosjøen",
     companyZip: "8657",
-    companyCountry: "Norway",
+    companyCountry: "NO",
     companyTeamSize: "2-5",
     companyIndustry: {
         bikes: false,

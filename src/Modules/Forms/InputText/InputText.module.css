@@ -1,10 +1,11 @@
-.InputContainer {
+/*** Dashboard - default ***/
+.dashboard {
     position: relative;
     width: 100%;
     box-sizing: border-box;
 }
 
-.InputLabel {
+.dashboard .InputLabel {
     position: absolute;
     top: 12px;
     padding-right: 5px;
@@ -16,7 +17,7 @@
     box-sizing: border-box;
 }
 
-.Input {
+.dashboard .Input {
     width: 100%;
     height: 40px;
     color: var(--primary);
@@ -29,9 +30,52 @@
     box-sizing: border-box;
 }
 
-.Input:focus  {
+.dashboard .Input:hover {
+    border: 1px solid var(--secondary);
+}
+
+.dashboard .Input:focus  {
     outline: none;
     border: var(--tertiary) solid 1px;
+}
+
+/*** Questionaire ***/
+.questionaire {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.questionaire .InputLabel {
+    position: absolute;
+    top: 12px;
+    padding-right: 5px;
+    background-color: white;
+    color: var(--tertiary);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.25px;
+    box-sizing: border-box;
+}
+
+.questionaire .Input {
+    width: 100%;
+    height: 60px;
+    color: var(--primary);
+    border: none;
+    border-bottom: var(--secondary) solid 1px;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    box-shadow: 0 3px 3px var(--uberLight);
+    box-sizing: border-box;
+}
+
+.questionaire .Input:focus  {
+    outline: none;
+    border: none;
+    border-bottom: var(--tertiary) solid 1px;
 }
 
 .questionaire {
@@ -47,10 +91,4 @@
 
 .questionaire::placeholder  {
     color: var(--secondary);
-}
-
-.questionaire:focus  {
-    outline: none;
-    border: none;
-    border-bottom: var(--tertiary) solid 1px;
 }

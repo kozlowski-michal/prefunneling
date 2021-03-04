@@ -109,6 +109,21 @@ const translations = {
                 zip: "Zip code",
                 country: "Country",
                 teamsize: "Team size",
+                countries: {
+                    AT: "Austria",
+                    CZ: "CzechRepublic",
+                    DK: "Denmark",
+                    FI: "Finland",
+                    FR: "France",
+                    DE: "Germany",
+                    IT: "Italy",
+                    NL: "Netherlands",
+                    NO: "Norway",
+                    PL: "Poland",
+                    SE: "Sweden",
+                    CH: "Switzerland",
+                    US: "USA",
+                }
             },
             booking: {
                 title: "Booking",
@@ -119,8 +134,8 @@ const translations = {
             errors: {
                 noName: "Your name could not be empty",
                 noEmail: "Please, write your email adress",
-            }
-        }
+            },
+        },
     },
     de: {
         leftDialog: {
@@ -232,6 +247,21 @@ const translations = {
                 zip: "Zip code(DE)",
                 country: "Country(DE)",
                 teamsize: "Team size(DE)",
+                countries: {
+                    AT: "Austria(DE)",
+                    CZ: "CzechRepublic(DE)",
+                    DK: "Denmark(DE)",
+                    FI: "Finland(DE)",
+                    FR: "France(DE)",
+                    DE: "Germany(DE)",
+                    IT: "Italy(DE)",
+                    NL: "Netherlands(DE)",
+                    NO: "Norway(DE)",
+                    PL: "Poland(DE)",
+                    SE: "Sweden(DE)",
+                    CH: "Switzerland(DE)",
+                    US: "USA(DE)",
+                }
             },
             booking: {
                 title: "Booking(DE)",

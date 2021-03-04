@@ -27,8 +27,8 @@ const askForContact = (props) => {
                     register={props.register} />
                 <InputError
                     errorField={props.errors.email}
-                    message={t("dashboard.errors.noEmail")}
-                    spaceHolder />
+                    message={t("questionaire.errors.noEmail")}
+                    style="questionaire" />
             </React.Fragment>}
         />
     )

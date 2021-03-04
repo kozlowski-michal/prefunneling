@@ -14,7 +14,7 @@ const askAboutServices = (props) => (
             defaultValue={props.dialogData.website}
             keys={translations.en.questionaire.website}
             register={props.register} />
-        <InputError spaceHolder />{/* does nothing, styling purpose (placeholder) */}
+        <InputError style="questionaire" />{/* does nothing yet, styling purpose (placeholder) */}
     </div>
 )
 

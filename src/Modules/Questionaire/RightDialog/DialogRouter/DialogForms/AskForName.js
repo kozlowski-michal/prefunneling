@@ -21,8 +21,8 @@ const askForName = (props) => (
                 step={props.step} />
             <InputError
                 errorField={props.errors.name}
-                message={t("dashboard.errors.noName")}
-                spaceHolder />
+                message={t("questionaire.errors.noName")}
+                style="questionaire" />
         </React.Fragment>
     } />
 )

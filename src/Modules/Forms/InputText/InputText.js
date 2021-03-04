@@ -6,14 +6,14 @@ import classesCSS from './InputText.module.css';
 //  label?
 //  defaultValue?
 //  placeholder?
-//  class? default as in dashboard
+//  style? default as in dashboard
 //  onBlur?
 //  onKeyUp?
 //  register?
 
 const InputText = (props) => {
     let [eventValue, setEventValue] = useState(props.defaultValue);
-    let style = props.style ? [classesCSS.Input, classesCSS[props.style]].join(" ") : classesCSS.Input;
+    let style = props.style ? classesCSS[props.style] : classesCSS.dashboard;
 
     // onBlur triggers only when new value is different than before
     const onBlurHandler = (event, callback) => {
@@ -25,7 +25,7 @@ const InputText = (props) => {
     }
 
     return (
-        <div className={classesCSS.InputContainer}>
+        <div className={style}>
             {props.label ? <div className={classesCSS.InputLabel}>
                 {props.label}
             </div> : null}
@@ -33,7 +33,7 @@ const InputText = (props) => {
                 name={props.name}
                 defaultValue={props.defaultValue ? props.defaultValue : null}
                 placeholder={props.placeholder ? props.placeholder : null}
-                className={style}
+                className={classesCSS.Input}
                 onKeyUp={props.onKeyUp ? (event) => props.onKeyUp({ [props.name]: event.target.value }) : null}
                 onBlur={props.onBlur ? (event) => onBlurHandler(event, props.onBlur) : null}
                 type="text"

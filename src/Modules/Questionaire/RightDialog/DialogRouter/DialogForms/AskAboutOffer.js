@@ -19,7 +19,7 @@ const askAboutOffer = (props) => (
             <InputError
                 errorField={props.errors.offer}
                 message={t("questionaire.errors.oneCheck")}
-                spaceHolder />
+                style="questionaire" />
         </div>}
     />
 )

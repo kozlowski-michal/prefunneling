@@ -19,7 +19,7 @@ const askAboutTeamSize = (props) => (
             register={props.register} />
         <DialogMessage
             step={props.step} />
-        <InputError spaceHolder />{/* does nothing, styling purpose */}
+        <InputError style="questionaire" />{/* does nothing yet, styling purpose */}
     </React.Fragment>
 )
 

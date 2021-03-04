@@ -1,10 +1,12 @@
 import React from 'react';
 import { I18n, Translate, t } from 'react-i18nify';
+import { Country } from '../../../../data/enums';
 
 import { TeamSize } from '../../../../data/enums';
 import classesCSS from './DialogForms.module.css'
 import InputText from '../../../Forms/InputText/InputText';
 import InputRange from '../../../Forms/InputRange/InputRange';
+import InputSelect from '../../../Forms/InputSelect/InputSelect';
 
 const company = (props) => (
     <I18n render={() =>
@@ -48,11 +50,18 @@ const company = (props) => (
                         onBlur={props.saveDataOnEvent} />
                 </div>
             </div>
-            <InputText
+            <InputSelect
                 name="companyCountry"
                 label={t("dashboard.company.country")}
-                defaultValue={props.dashboardData?.companyCountry}
-                onBlur={props.saveDataOnEvent} />
+                list={Object.values(Country).map((countryISO) => {
+                    return {
+                        key: countryISO,
+                        value: t("dashboard.company.countries." + countryISO),
+                    }
+                })}
+                onChange={props.saveDataOnEvent}
+                defaultValue={t("dashboard.company.countries." + props.dashboardData?.companyCountry)}
+            />
             <div className={classesCSS.Subtitle}>
                 <Translate value={"dashboard.company.teamsize"} />
             </div>

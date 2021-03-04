@@ -4,22 +4,17 @@ import classesCSS from './InputError.module.css';
 //Props:
 //  errorField
 //  message
-//  spaceholder?
+//  style?
 
 const dialogError = (props) => {
-    let style = props.spaceHolder ? [classesCSS.ErrorContainer, classesCSS.SpaceHolder].join(" ") : classesCSS.ErrorContainer;
+    let style = props.style ? classesCSS[props.style] : classesCSS.dashboard;
+
     return (
         <React.Fragment>
-            { props.spaceHolder ?
-                <div className={style} >
-                    {props.errorField ?
-                        props.message : null}
-                </div> :
-                props.errorField ?
-                    <div className={style} >
-                        {props.message}
-                    </div> : null
-            }
+            <div className={style} >
+                {props.errorField ?
+                    <p>{props.message}</p> : null}
+            </div>
         </React.Fragment>
     )
 }

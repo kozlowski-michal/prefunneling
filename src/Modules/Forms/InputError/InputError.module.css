@@ -1,17 +1,32 @@
 @import '../../../data/colors.css';
 
-.ErrorContainer {
+/*** Dashboard - default ***/
+.dashboard {
     width: 100%;
-    margin-top: 20px;
     padding: 0;
     display: flex;
     align-items: flex-start;
     color: var(--formRed);
     box-sizing: border-box;
 }
+.dashboard p {
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+}
 
-.SpaceHolder {
-    height: 25px;
+/*** Questionaire ***/
+.questionaire {
     width: 100%;
+    height: 25px;
+    padding: 0;
     margin: 10px 0;
+    display: flex;
+    align-items: flex-start;
+    color: var(--formRed);
+    box-sizing: border-box;
+}
+.questionaire p {
+    margin: 0;
+    padding: 0;
 }
