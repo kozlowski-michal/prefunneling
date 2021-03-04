@@ -19,9 +19,9 @@ export const DropDownSVG = () => (
 const inputSelect = (props) => {
     let style = props.style ? classesCSS[props.style] : classesCSS.dashboard;
 
-    const returnKey = (value) => {
-        let item = props.list.find((item) => item.value == value)
-        props.onChange({ [props.name]: item.key });
+    const returnValue = (label) => {
+        let item = props.list.find((item) => item.label == label)
+        props.onChange({ [props.name]: item.value });
     }
 
     return (
@@ -33,10 +33,11 @@ const inputSelect = (props) => {
                 name={props.name}
                 className={classesCSS.Select}
                 defaultValue={props.defaultValue}
-                onChange={(event) => returnKey(event.target.value)} >
+                onChange={(event) => returnValue(event.target.value)}
+                ref={props.register} >
                 {props.list.map((item) => <option
-                    key={item.key}>
-                    {item.value}
+                    key={item.value}>
+                    {item.label}
                 </option>
                 )}
             </select>

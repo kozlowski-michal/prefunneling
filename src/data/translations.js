@@ -136,6 +136,19 @@ const translations = {
                 noEmail: "Please, write your email adress",
             },
         },
+        shared: {
+            industry: {
+                bikes: 'Bikes/ Scooters',
+                photo: 'Photo/ Film',
+                transport: 'Transport',
+                cars: 'Cars/ RVs',
+                machines: 'Machines',
+                activities: 'Activities',
+                boats: 'Boats / Yachts',
+                ceremonial: 'Ceremonial',
+                other: 'Other',
+            },
+        }
     },
     de: {
         leftDialog: {
@@ -272,6 +285,19 @@ const translations = {
             errors: {
                 noName: "Your name could not be empty(DE)",
                 noEmail: "Please, write your email adress(DE)",
+            }
+        },
+        shared: {
+            industry: {
+                bikes: 'Bikes/ Scooters(DE)',
+                photo: 'Photo/ Film(DE)',
+                transport: 'Transport(DE)',
+                cars: 'Cars/ RVs(DE)',
+                machines: 'Machines(DE)',
+                activities: 'Activities(DE)',
+                boats: 'Boats / Yachts(DE)',
+                ceremonial: 'Ceremonial(DE)',
+                other: 'Other(DE)',
             }
         }
     }

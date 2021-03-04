@@ -24,8 +24,17 @@ export const Country = {
     USA: "US",
 }
 
-
-
+export const Industry = [
+    "bikes",
+    "photo",
+    "transport",
+    "cars",
+    "machines",
+    "activities",
+    "boats",
+    "ceremonial",
+    "other",
+]
 
 
 
