@@ -37,7 +37,7 @@ export const dataToLeftDialog = (step, dialogData) => {
     switch (step) {
         case (Steps.askForWebsite):
         case (Steps.askAboutTeamSize):
-        case (Steps.askAboutOffer):
+        case (Steps.askAboutIndustry):
         case (Steps.askForContact):
         case (Steps.done):
             returnedData = {
@@ -61,7 +61,7 @@ export const dataToLeftDialog = (step, dialogData) => {
 
     switch (step) {
         case (Steps.askAboutTeamSize):
-        case (Steps.askAboutOffer):
+        case (Steps.askAboutIndustry):
         case (Steps.askForContact):
         case (Steps.done):
             returnedData = {

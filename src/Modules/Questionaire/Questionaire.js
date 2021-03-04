@@ -23,8 +23,8 @@ const Questionnaire = (props) => {
             if (formData.servicesNeeded) { // deep merging
                 formData = { servicesNeeded: { ...oldDialogData.servicesNeeded, ...formData.servicesNeeded } }
             }
-            if (formData.offer) { // deep merging
-                formData = { offer: { ...oldDialogData.offer, ...formData.offer } }
+            if (formData.industry) { // deep merging
+                formData = { industry: { ...oldDialogData.industry, ...formData.industry } }
             }
             formData['language'] = getLocale();
             return { ...oldDialogData, ...formData };

@@ -6,7 +6,7 @@ export const Steps = {
     askAboutServices: 1,
     askForWebsite: 2,
     askAboutTeamSize: 3,
-    askAboutOffer: 4,
+    askAboutIndustry: 4,
     askForContact: 5,
     done: 6,
 }

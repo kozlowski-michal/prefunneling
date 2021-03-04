@@ -5,7 +5,7 @@ import AskForName from './DialogForms/AskForName';
 import AskAboutServices from './DialogForms/AskAboutServices';
 import AskForWebsite from './DialogForms/AskForWebsite';
 import AskAboutTeamSize from './DialogForms/AskAboutTeamSize';
-import AskAboutOffer from './DialogForms/AskAboutOffer';
+import AskAboutIndustry from './DialogForms/AskAboutIndustry';
 import AskForContact from './DialogForms/AskForContact';
 import DialogDone from './DialogFormElements/DialogDone';
 
@@ -23,8 +23,8 @@ const DialogForms = (props) => {
         case Steps.askAboutTeamSize:
             return <AskAboutTeamSize {...props} />
 
-        case Steps.askAboutOffer:
-            return <AskAboutOffer {...props} />
+        case Steps.askAboutIndustry:
+            return <AskAboutIndustry {...props} />
 
         case Steps.askForContact:
             return <AskForContact {...props} />

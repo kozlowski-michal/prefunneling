@@ -9,7 +9,7 @@ export const questionaireDataModel = {
     },
     website: "yes",
     teamSize: "2-5",
-    offer: {
+    industry: {
         bikes: false,
         photo: false,
         transport: false,
@@ -28,7 +28,6 @@ export const dashboardDataModel = {
     customerName: "John Olsson",
     customerEmail: "johns@mail.no",
     customerPhone: "",
-
     companyName: "John's yachts",
     companyStreet: "Tore Hunds gate 5",
     companySecondaryAddress: "",

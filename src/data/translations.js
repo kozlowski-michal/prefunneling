@@ -11,7 +11,7 @@ const translations = {
                     soon: <span>Website soon.<br />Great! 💪</span>,
                     yes: <span>Website present.<br />Great! 💪</span>,
                 },
-                askAboutOffer: "That’s a big team already, exciting! 💪",
+                askAboutIndustry: "That’s a big team already, exciting! 💪",
                 askForContact: "Great choice!",
                 done: "Ready. Create your account to be the next in line! 🤙",
                 haveWebsite: {
@@ -46,7 +46,7 @@ const translations = {
                 title: "What size is your team?",
                 message: "Based on your team size we can offer you advanced cooperation features.",
             },
-            askAboutOffer: {
+            askAboutIndustry: {
                 pretitle: "Great,",
                 title: "What do you offer?",
             },
@@ -67,17 +67,6 @@ const translations = {
                 yes: "Yes, I have one already!",
                 soon: "No, but I’m on it.",
                 no: "I have no website yet and want help."
-            },
-            offer: {
-                bikes: 'Bikes/ Scooters',
-                photo: 'Photo/ Film',
-                transport: 'Transport',
-                cars: 'Cars/ RVs',
-                machines: 'Machines',
-                activities: 'Activities',
-                boats: 'Boats / Yachts',
-                ceremonial: 'Ceremonial',
-                other: 'Other',
             },
             placeholders: {
                 name: "Name",
@@ -162,7 +151,7 @@ const translations = {
                     soon: <span>Website soon.<br />Great! 💪(DE)</span>,
                     yes: <span>Website present.<br />Great! 💪(DE)</span>,
                 },
-                askAboutOffer: "That’s a big team already, exciting! 💪(DE)",
+                askAboutIndustry: "That’s a big team already, exciting! 💪(DE)",
                 askForContact: "Great choice!(DE)",
                 done: "Ready. Create your account to be the next in line! 🤙(DE)",
                 haveWebsite: {
@@ -197,7 +186,7 @@ const translations = {
                 title: "What size is your team?(DE)",
                 message: "Based on your team size we can offer you advanced cooperation features.(DE)",
             },
-            askAboutOffer: {
+            askAboutIndustry: {
                 pretitle: "Great,(DE)",
                 title: "What do you offer?(DE)",
             },
@@ -218,17 +207,6 @@ const translations = {
                 yes: "Yes, I have one already!(DE)",
                 soon: "No, but I’m on it.(DE)",
                 no: "I have no website yet and want help.(DE)"
-            },
-            offer: {
-                bikes: 'Bikes/ Scooters(DE)',
-                photo: 'Photo/ Film(DE)',
-                transport: 'Transport(DE)',
-                cars: 'Cars/ RVs(DE)',
-                machines: 'Machines(DE)',
-                activities: 'Activities(DE)',
-                boats: 'Boats / Yachts(DE)',
-                ceremonial: 'Ceremonial(DE)',
-                other: 'Other(DE)',
             },
             placeholders: {
                 name: "Name(DE)",

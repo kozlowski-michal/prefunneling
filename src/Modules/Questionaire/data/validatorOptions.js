@@ -12,9 +12,9 @@ const validatorOptions = (step) => {
             return yupResolver(yup.object().shape({
                 servicesNeeded: yup.array().min(1)
             }));
-        case Steps.askAboutOffer:
+        case Steps.askAboutIndustry:
             return yupResolver(yup.object().shape({
-                offer: yup.array().min(1)
+                industry: yup.array().min(1)
             }));
         case Steps.askForContact:
             return yupResolver(yup.object().shape(
