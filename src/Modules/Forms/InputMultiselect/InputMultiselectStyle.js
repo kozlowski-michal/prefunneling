@@ -38,7 +38,7 @@ const inputMultiselectStyle = (className) => {
                     paddingTop: "4px",
                     minHeight: "40px",
                     borderColor: isFocused ? colorTertiary : colorHalfLight,
-                    borderRadius: '10px',
+                    borderRadius: '5px',
                     outline: "none",
                     boxShadow: "none",
                     ":hover": {

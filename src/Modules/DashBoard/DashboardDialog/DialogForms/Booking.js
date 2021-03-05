@@ -5,6 +5,7 @@ import { Website } from '../../../../data/enums';
 import InputMultiselect from '../../../Forms/InputMultiselect/InputMultiselect';
 import InputText from '../../../Forms/InputText/InputText';
 import InputUpload from '../../../Forms/InputUpload/InputUpload';
+import InputColor from '../../../Forms/InputColor/InputColor';
 import classesCSS from './DialogForms.module.css'
 
 const booking = (props) => {
@@ -46,8 +47,18 @@ const booking = (props) => {
                     />
                 </div>
                 <div className={classesCSS.Column}>
-                    color1<br />color2
-                    </div>
+                    <InputColor
+                        name="bookingFontColor"
+                        label={t("dashboard.booking.fontColorLabel")}
+                        color={props.dashboardData?.bookingFontColor}
+                        onChange={props.saveDataOnEvent} />
+                    <InputColor
+                        name="bookingButtonColor"
+                        label={t("dashboard.booking.buttonColorLabel")}
+                        color={props.dashboardData?.bookingButtonColor}
+                        onChange={props.saveDataOnEvent} />
+
+                </div>
             </div>
         </React.Fragment>
     )

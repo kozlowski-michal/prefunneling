@@ -34,7 +34,7 @@ const InputText = (props) => {
                 {props.before ? <div className={classesCSS.InputBefore}>
                     {props.before}
                 </div> : null}
-                < input
+                <input
                     name={props.name}
                     defaultValue={props.defaultValue ? props.defaultValue : null}
                     placeholder={props.placeholder ? props.placeholder : null}

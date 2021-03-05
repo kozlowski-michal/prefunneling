@@ -31,7 +31,7 @@
     height: 40px;
     color: var(--primary);
     border: 1px solid var(--halfLight);
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 0 12px;
     font-size: 14px;
     box-shadow: 0 3px 3px var(--uberLight);
