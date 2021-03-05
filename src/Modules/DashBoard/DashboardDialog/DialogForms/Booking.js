@@ -4,6 +4,7 @@ import { Website } from '../../../../data/enums';
 
 import InputMultiselect from '../../../Forms/InputMultiselect/InputMultiselect';
 import InputText from '../../../Forms/InputText/InputText';
+import InputUpload from '../../../Forms/InputUpload/InputUpload';
 import classesCSS from './DialogForms.module.css'
 
 const booking = (props) => {
@@ -39,7 +40,10 @@ const booking = (props) => {
             </div>
             <div className={classesCSS.Row}>
                 <div className={classesCSS.Column}>
-                    <p>logo</p>
+                    <InputUpload
+                        name="bookingLogo"
+                        label={t("dashboard.booking.logoLabel")}
+                    />
                 </div>
                 <div className={classesCSS.Column}>
                     color1<br />color2

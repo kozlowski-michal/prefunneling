@@ -51,7 +51,7 @@ export const dashboardDataModel = {
     bookingUrl: "www.johnsboats.no",
     bookingFontColor: "#000000",
     bookingButtonColor: "#00CCEE",
-    bookingLogo: "",
+    bookingLogo: " ",
 
     featuresChannels: {
         integration: true,

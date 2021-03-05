@@ -126,6 +126,9 @@ const translations = {
                 },
                 url: "Website URL",
                 design: "Design",
+                logoLabel: "Logo",
+                fontColorLabel: "Font color",
+                buttonColorLabel: "Button color",
             },
             features: {
                 title: "Features",
@@ -276,6 +279,9 @@ const translations = {
                 },
                 url: "Website URL(DE)",
                 design: "Design(DE)",
+                logoLabel: "Logo(DE)",
+                fontColorLabel: "Font color(DE)",
+                buttonColorLabel: "Button color(DE)",
             },
             features: {
                 title: "Features(DE)",
