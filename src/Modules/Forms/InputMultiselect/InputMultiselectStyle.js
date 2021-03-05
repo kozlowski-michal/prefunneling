@@ -10,6 +10,7 @@ const inputMultiselectStyle = (className) => {
             let colorUberLight = bodyStyles.getPropertyValue('--uberLight');
 
             return {
+                //IndicatorSeparator: () => null,
                 menu: styles => {
                     return {
                         ...styles,

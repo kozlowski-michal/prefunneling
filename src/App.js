@@ -1,5 +1,5 @@
 import React from 'react';
-import { addLocales, setLocale, setTranslations } from 'react-i18nify';
+import { I18n, addLocales, setLocale, setTranslations } from 'react-i18nify';
 import en from 'date-fns/locale/en-GB';
 import de from 'date-fns/locale/de';
 import { BrowserRouter } from 'react-router-dom';
@@ -17,9 +17,11 @@ function App() {
 
   return (
     <div className='App'>
-      <BrowserRouter>
-        <Layout />
-      </BrowserRouter>
+      <I18n render={() =>
+        <BrowserRouter>
+          <Layout />
+        </BrowserRouter>
+      } />
     </div>
   );
 }

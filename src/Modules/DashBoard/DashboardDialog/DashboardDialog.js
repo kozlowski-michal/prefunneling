@@ -43,7 +43,11 @@ const DashboardDialog = (props) => {
             </div>
             <div className={classesCSS.DashboardColumn}>
                 <FormContainer boldTitle="booking">
-                    <Booking />
+                    <Booking
+                        dashboardData={props.dashboardData}
+                        saveDataOnEvent={props.saveDataOnEvent}
+                        errors={errors}
+                        register={register} />
                 </FormContainer>
                 <FormContainer title="features">
                     <Features />

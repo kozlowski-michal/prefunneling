@@ -118,6 +118,14 @@ const translations = {
             },
             booking: {
                 title: "Booking",
+                websiteLabel: "Website",
+                website: {
+                    yes: "Already existing",
+                    soon: "In progres",
+                    no: "None",
+                },
+                url: "Website URL",
+                design: "Design",
             },
             features: {
                 title: "Features",
@@ -260,6 +268,14 @@ const translations = {
             },
             booking: {
                 title: "Booking(DE)",
+                websiteLabel: "Website(DE)",
+                website: {
+                    yes: "Already existing(DE)",
+                    soon: "In progres(DE)",
+                    no: "None(DE)",
+                },
+                url: "Website URL(DE)",
+                design: "Design(DE)",
             },
             features: {
                 title: "Features(DE)",

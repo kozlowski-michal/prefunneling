@@ -1,5 +1,6 @@
 import React from 'react';
 import Select from 'react-select'
+
 import classesCSS from './InputMultiselect.module.css';
 import inputMultiselectStyle from './InputMultiselectStyle'
 
@@ -55,7 +56,8 @@ const inputSelect = (props) => {
                 placeholder={props.placeholder}
                 noOptionsMessage={() => props.noOption}
                 options={props.list}
-                defaultValue={props.defaultValue}
+                value={props.defaultValue}
+                //defaultValue={props.defaultValue}
                 isMulti={props.isMulti ? props.isMulti : null}
                 isSearchable={false}
                 menuPlacement="auto"

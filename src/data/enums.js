@@ -8,6 +8,12 @@ export const TeamSize = [
     "> 50",
 ]
 
+export const Website = [
+    "yes",
+    "soon",
+    "no",
+]
+
 export const Country = {
     Austria: "AT",
     CzechRepublic: "CZ",
