@@ -33,7 +33,6 @@ const booking = (props) => {
                 name="bookingUrl"
                 before="https://"
                 label={t("dashboard.booking.url")}
-                style="dashboard"
                 defaultValue={props.dashboardData?.bookingUrl}
                 onBlur={props.saveDataOnEvent} />
             <div className={classesCSS.Subtitle}>

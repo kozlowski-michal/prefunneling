@@ -132,6 +132,26 @@ const translations = {
             },
             features: {
                 title: "Features",
+                welcome: "What do you need to support your business:",
+                channelsLabel: "Online booking channels",
+                channels: {
+                    integration: "Website Integration",
+                    payments: "Online payments",
+                    shop: "Shop page",
+                    smoobu: "Smoobu channel manager",
+                },
+                automationLabel: "Order handling automation",
+                automation: {
+                    checkInOut: "Check-in / check-out handling",
+                    damage: "Damage management",
+                    request: "Request",
+                },
+                managmentLabel: "Inventory managment",
+                managment: {
+                    variations: "Article variations",
+                    tracing: "Location (GPS) tracking",
+                    codes: "QR-codes",
+                },
             },
             errors: {
                 noName: "Your name could not be empty",
@@ -285,6 +305,26 @@ const translations = {
             },
             features: {
                 title: "Features(DE)",
+                welcome: "What do you need to support your business:(DE)",
+                channelsLabel: "Online booking channels(DE)",
+                channels: {
+                    integration: "Website Integration(DE)",
+                    payments: "Online payments(DE)",
+                    shop: "Shop page(DE)",
+                    smoobu: "Smoobu channel manager(DE)",
+                },
+                automationLabel: "Order handling automation(DE)",
+                automation: {
+                    checkInOut: "Check-in / check-out handling(DE)",
+                    damage: "Damage management(DE)",
+                    request: "Request(DE)",
+                },
+                managmentLabel: "Inventory managment(DE)",
+                managment: {
+                    variations: "Article variations(DE)",
+                    tracing: "Location (GPS) tracking(DE)",
+                    codes: "QR-codes(DE)",
+                },
             },
             errors: {
                 noName: "Your name could not be empty(DE)",

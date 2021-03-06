@@ -1,12 +1,12 @@
 /*** Dashboard - default ***/
-.dashboard {
+.default {
     position: relative;
     width: 100%;
     box-sizing: border-box;
     margin-top: 20px;
 }
 
-.dashboard .InputLabel {
+.default .InputLabel {
     position: absolute;
     top: -8px;
     padding-right: 5px;
@@ -20,13 +20,13 @@
     box-sizing: border-box;
 }
 
-.dashboard .InputBefore {
+.default .InputBefore {
     padding-top: 3px;
     margin-right: 5px;
     color: var(--tertiary);
 }
 
-.dashboard .InputContainer {
+.default .InputContainer {
     width: 100%;
     height: 40px;
     color: var(--primary);
@@ -40,16 +40,16 @@
     align-items: center;
 }
 
-.dashboard .InputContainer:hover {
+.default .InputContainer:hover {
     border: 1px solid var(--secondary);
 }
 
-.dashboard .InputContainer:focus-within  {
+.default .InputContainer:focus-within  {
     outline: none;
     border: var(--tertiary) solid 1px;
 }
 
-.dashboard .Input {
+.default .Input {
     width: 100%;
     height: 100%;
     border: none;
@@ -58,12 +58,10 @@
     color: var(--primary);
 }
 
-.dashboard .Input:focus {
+.default .Input:focus {
     border: none;
     outline: none;
 }
-
-
 
 /*** Questionaire ***/
 .questionaire {

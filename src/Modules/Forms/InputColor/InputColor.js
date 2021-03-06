@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classesCSS from './InputColor.module.css';
 
 const inputColor = (props) => {
-    let style = props.style ? classesCSS[props.style] : classesCSS.dashboard;
+    let style = props.style ? classesCSS[props.style] : classesCSS.default;
 
     return (
-        <div className={style}>
+        <label className={style}>
             {props.label ? <div className={classesCSS.InputLabel}>
                 {props.label}
             </div> : null}
@@ -19,7 +19,7 @@ const inputColor = (props) => {
                         onChange={(event) => props.onChange({ [props.name]: event.target.value })} />
                 </div>
             </div>
-        </div>
+        </label>
     )
 }
 

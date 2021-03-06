@@ -1,0 +1,119 @@
+@import '../../../data/colors.css';
+
+.default {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.default .Container {
+    height: 41px;
+    width: calc(100% + 60px);
+    margin: 0 -30px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.default .Container ~ .Container {
+    border-top: solid 1px var(--light);
+}
+
+.default .Title {
+    font-weight: 700;
+}
+
+.default .ReadMore {
+    display: flex;
+    font-size: 12;
+    color: var(--tertiary);
+    cursor: pointer;
+}
+
+.default .ReadMore:hover {
+    color: var(--main);
+}
+
+.default .Label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--tertiary);
+}
+
+.default .Label:hover {
+    color: var(--main);
+}
+
+.default .Label:focus-within {
+    
+}
+
+.default input {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.default .CheckboxField {
+    position: relative;
+    display: flex;
+    width: 14px;
+    height: 14px;
+    margin-right: 14px;
+    padding: 0px;
+    display: inline-block;
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+.default .Label:hover .CheckboxField {
+    border-color: var(--tertiary);
+}
+
+.default input:checked ~ .CheckboxField {
+    width: 20px;
+    height: 20px;
+    background-color: var(--main);
+    border: none;
+}
+
+.default input:checked ~ .CheckboxField:after {
+    display: block;
+}
+
+.default input:checked ~ span {
+    color: var(--main);
+}
+
+.default .Label:hover input:checked ~ span {
+    color: var(--dark);
+}
+
+.default .Label:hover input:checked ~ .CheckboxField {
+    background-color: var(--dark);
+}
+  
+.default .CheckboxField:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 7px;
+    top: 1px;
+    width: 5px;
+    height: 15px;
+    border: 1px solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg) scale(0.5);
+    -ms-transform: rotate(45deg) scale(0.5);
+    transform: rotate(45deg) scale(0.5);
+}
+

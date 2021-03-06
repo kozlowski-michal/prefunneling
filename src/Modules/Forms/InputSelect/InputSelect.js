@@ -17,7 +17,7 @@ export const DropDownSVG = () => (
 )
 
 const inputSelect = (props) => {
-    let style = props.style ? classesCSS[props.style] : classesCSS.dashboard;
+    let style = props.style ? classesCSS[props.style] : classesCSS.default;
 
     const returnValue = (label) => {
         let item = props.list.find((item) => item.label == label)

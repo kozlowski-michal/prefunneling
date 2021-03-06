@@ -59,12 +59,12 @@ export const dashboardDataModel = {
         shop: true,
         smoobu: false,
     },
-    featuresChannelsAutomation: {
+    featuresAutomation: {
         checkInOut: true,
         damage: false,
         request: false,
     },
-    featuresChannelsManagment: {
+    featuresManagment: {
         variations: true,
         tracing: false,
         codes: false,

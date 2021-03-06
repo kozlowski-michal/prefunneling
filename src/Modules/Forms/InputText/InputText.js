@@ -14,7 +14,7 @@ import classesCSS from './InputText.module.css';
 
 const InputText = (props) => {
     let [eventValue, setEventValue] = useState(props.defaultValue);
-    let style = props.style ? classesCSS[props.style] : classesCSS.dashboard;
+    let style = props.style ? classesCSS[props.style] : classesCSS.default;
 
     // onBlur triggers only when new value is different than before
     const onBlurHandler = (event, callback) => {

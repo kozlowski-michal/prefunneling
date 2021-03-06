@@ -50,10 +50,14 @@ const DashboardDialog = (props) => {
                         register={register} />
                 </FormContainer>
                 <FormContainer title="features">
-                    <Features />
+                    <Features
+                        dashboardData={props.dashboardData}
+                        saveDataOnEvent={props.saveDataOnEvent}
+                        errors={errors}
+                        register={register} />
                 </FormContainer>
             </div>
-        </div>
+        </div >
     )
 }
 

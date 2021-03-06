@@ -1,5 +1,5 @@
 /*** Dashboard - default ***/
-.dashboard {
+.default {
     position: relative;
     width: 100%;
     box-sizing: border-box;
@@ -7,7 +7,7 @@
     z-index: 0;
 }
 
-.dashboard .SelectLabel {
+.default .SelectLabel {
     position: absolute;
     top: 12px;
     padding-right: 5px;
@@ -21,7 +21,7 @@
     text-overflow: ellipsis;
 }
 
-.dashboard .Select {
+.default .Select {
     width: 100%;
     height: 40px;
     color: var(--primary);
@@ -37,16 +37,16 @@
     -webkit-appearance: none;
 }
 
-.dashboard:hover .Select{
+.default:hover .Select{
     border: 1px solid var(--secondary);
 }
 
-.dashboard .Select:focus {
+.default .Select:focus {
     outline: none;
     border: 1px solid var(--tertiary);
 }
 
-.dashboard .DropDown {
+.default .DropDown {
     position: absolute;
     top: 32px;
     right: 20px;
@@ -54,10 +54,10 @@
     z-index: -5;
 }
 
-.dashboard:hover .DropDown {
+.default:hover .DropDown {
     stroke: var(--tertiary);
 }
 
-.dashboard .Select:focus ~ .DropDown {
+.default .Select:focus ~ .DropDown {
     stroke: var(--tertiary);
 }
