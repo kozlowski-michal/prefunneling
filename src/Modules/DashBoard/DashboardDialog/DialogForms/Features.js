@@ -34,8 +34,6 @@ const features = (props) => {
         if (props.dashboardData?.featuresManagment[key]) defaultFeaturesManagmentList.push({ value: key, label: t("dashboard.features.managment." + key) });
     });
 
-    console.log(featuresChannelsList);
-
     return (
         <React.Fragment>
             <div className={classesCSS.Message}>
@@ -44,16 +42,19 @@ const features = (props) => {
             <InputCheckbox
                 name="featuresChannels"
                 label={t("dashboard.features.channelsLabel")}
+                onChange={props.saveDataOnEvent}
                 list={featuresChannelsList}
                 defaultList={defaultFeaturesChannelsList} />
             <InputCheckbox
                 name="featuresAutomation"
                 label={t("dashboard.features.automationLabel")}
+                onChange={props.saveDataOnEvent}
                 list={featuresAutomationList}
                 defaultList={defaultFeaturesAutomationList} />
             <InputCheckbox
-                name="featuresManagments"
+                name="featuresManagment"
                 label={t("dashboard.features.managmentLabel")}
+                onChange={props.saveDataOnEvent}
                 list={featuresManagmentList}
                 defaultList={defaultFeaturesManagmentList} />
         </React.Fragment>

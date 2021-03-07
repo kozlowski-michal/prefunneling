@@ -61,15 +61,13 @@ const inputMultiselectStyle = (className) => {
                         minHeight: "20px",
                         borderRadius: "10px",
                         padding: "1px 5px",
-                        ":hover": {
-                            background: colorLight,
-                        },
                     };
                 },
                 multiValueRemove: (styles) => ({
                     ...styles,
                     color: colorSecondary,
                     ':hover': {
+                        background: colorLight,
                         color: colorTertiary,
                     },
                 }),
