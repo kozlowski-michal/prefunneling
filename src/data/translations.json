@@ -127,6 +127,8 @@
                 },
                 "url": "Website URL",
                 "design": "Design",
+                "drag": "Drag 'n' drop your logo here",
+                "drop": "Drop your file here",
                 "logoLabel": "Logo",
                 "fontColorLabel": "Font color",
                 "buttonColorLabel": "Button color"
@@ -156,7 +158,8 @@
             },
             "errors": {
                 "noName": "Your name could not be empty",
-                "noEmail": "Please, write your email adress"
+                "noEmail": "Please, write your email adress",
+                "noCompanyName": "Comapny name could not be empty"
             }
         },
         "shared": {
@@ -301,6 +304,8 @@
                 },
                 "url": "Website URL(DE)",
                 "design": "Design(DE)",
+                "drag": "Drag 'n' drop your logo here(DE)",
+                "drop": "Drop your file here(DE)",
                 "logoLabel": "Logo(DE)",
                 "fontColorLabel": "Font color(DE)",
                 "buttonColorLabel": "Button color(DE)"
@@ -330,7 +335,8 @@
             },
             "errors": {
                 "noName": "Your name could not be empty(DE)",
-                "noEmail": "Please, write your email adress(DE)"
+                "noEmail": "Please, write your email adress(DE)",
+                "noCompanyName": "Comapny name could not be empty(DE)"
             }
         },
         "shared": {

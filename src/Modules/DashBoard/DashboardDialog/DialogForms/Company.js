@@ -6,6 +6,7 @@ import { TeamSize } from '../../../../data/enums';
 import InputText from '../../../Forms/InputText/InputText';
 import InputRange from '../../../Forms/InputRange/InputRange';
 import InputMultiselect from '../../../Forms/InputMultiselect/InputMultiselect';
+import InputError from '../../../Forms/InputError/InputError';
 import classesCSS from './DialogForms.module.css'
 
 const company = (props) => {
@@ -48,7 +49,11 @@ const company = (props) => {
                 name="companyName"
                 label={t("dashboard.company.name")}
                 defaultValue={props.dashboardData?.companyName}
-                onBlur={props.saveDataOnEvent} />
+                onBlur={props.saveDataOnEvent}
+                register={props.register} />
+            <InputError
+                errorField={props.errors.companyName}
+                message={t("dashboard.errors.noCompanyName")} />
             <InputMultiselect
                 name="companyIndustry"
                 label={t("dashboard.company.industry")}
@@ -57,7 +62,11 @@ const company = (props) => {
                 placeholder={t("dashboard.company.placeholder")}
                 noOption={t("dashboard.company.noOption")}
                 defaultValue={defaultIndustryList}
-                onChange={props.saveDataOnEvent} />
+                onChange={props.saveDataOnEvent}
+                register={props.register} />
+            <InputError
+                errorField={props.errors.companyIndustry}
+                message={t("dashboard.errors.companyIndustry")} />
             <div className={classesCSS.Subtitle}>
                 <Translate value={"dashboard.company.address"} />
             </div>

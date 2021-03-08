@@ -18,6 +18,7 @@ const DashboardDialog = (props) => {
             {
                 customerName: yup.string().required(),
                 customerEmail: yup.string().required().email(),
+                companyName: yup.string().required(),
             }
         ))
     });
