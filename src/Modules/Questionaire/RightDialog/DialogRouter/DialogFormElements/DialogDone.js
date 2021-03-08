@@ -15,8 +15,11 @@ const dialogDone = (props) => {
             <h2 className={classesCSS.Title} >
                 <Translate value={"questionaire." + Object.keys(Steps)[props.step] + ".pretitle"} />
             </h2>
-            <p className={classesCSS.MessageDone} >
-                <Translate value={"questionaire." + Object.keys(Steps)[props.step] + ".message"} />
+            <p className={classesCSS.MessageDoneTop} >
+                <Translate value={"questionaire." + Object.keys(Steps)[props.step] + ".messageTop"} />
+            </p>
+            <p className={classesCSS.MessageDoneBottom} >
+                <Translate value={"questionaire." + Object.keys(Steps)[props.step] + ".messageBottom"} />
             </p>
         </div>
     )

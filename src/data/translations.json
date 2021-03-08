@@ -1,0 +1,350 @@
+{
+    "en": {
+        "leftDialog": {
+            "MarcoTitle": "Head of Customer’s success",
+            "questionaire": {
+                "askForName": "Okay!\nLet’s get started. 🤘️",
+                "askAboutServices": "Hej %{name}!\nNice to meet you!",
+                "askForWebsite": "Makes sense! 💪",
+                "askAboutTeamSize": {
+                    "no": "No website yet, okay.\nNo problem! 💪",
+                    "soon": "Website soon.\nGreat! 💪",
+                    "yes": "Website present.\nGreat! 💪"
+                },
+                "askAboutIndustry": "That’s a big team already, exciting! 💪",
+                "askForContact": "Great choice!",
+                "done": "Ready. Create your account to be the next in line! 🤙",
+                "haveWebsite": {
+                    "yes": "Yes, I have website already!",
+                    "soon": "I have no website, but I’m on it.",
+                    "no": "I have no website yet and want help."
+                },
+                "selections": "Selections:"
+            },
+            "dashboard": {
+                "title": "We will reach out soon!",
+                "message": "Feel free to start your account configuration.\nThe more data you fill out, the faster we can process your account!"
+            }
+        },
+        "questionaire": {
+            "askForName": {
+                "pretitle": "First,",
+                "title": "What's your name?",
+                "message": "Please let us know how to address you best.\nWe will protect your data and won’t share it anyhow."
+            },
+            "askAboutServices": {
+                "pretitle": "Next,",
+                "title": "How we can help you best?",
+                "need": "I need ... "
+            },
+            "askForWebsite": {
+                "pretitle": "Great,",
+                "title": "Do you have a website?"
+            },
+            "askAboutTeamSize": {
+                "pretitle": "Understood,",
+                "title": "What size is your team?",
+                "message": "Based on your team size we can offer you advanced cooperation features."
+            },
+            "askAboutIndustry": {
+                "pretitle": "Great,",
+                "title": "What do you offer?"
+            },
+            "askForContact": {
+                "pretitle": "Almost done,",
+                "title": "How can we reach you out?"
+            },
+            "done": {
+                "pretitle": "That's it!",
+                "messageTop": "Please validate your e-mail address.",
+                "messageBottom": "We will reach out to you afterwards and help you setting up your account."
+            },
+            "servicesNeeded": {
+                "channels": "Online booking channels",
+                "automation": "Order handling automation",
+                "managment": "Inventory management"
+            },
+            "website": {
+                "yes": "Yes, I have one already!",
+                "soon": "No, but I’m on it.",
+                "no": "I have no website yet and want help."
+            },
+            "placeholders": {
+                "name": "Name",
+                "email": "Email",
+                "phone": "Phone (optional)"
+            },
+            "errors": {
+                "noName": "Please, write your name",
+                "noEmail": "Please, write your email adress",
+                "oneCheck": "Please, select at least one option"
+            },
+            "ssl": "SSL encrypted"
+        },
+        "dashboard": {
+            "customer": {
+                "title": "Your data",
+                "name": "Name",
+                "email": "E-mail",
+                "phone": "Phone"
+            },
+            "company": {
+                "title": "Company data",
+                "name": "Company name",
+                "industry": "Industry",
+                "address": "Address",
+                "street": "Street + Number",
+                "street2": "Address 2",
+                "city": "City",
+                "zip": "Zip code",
+                "country": "Country",
+                "teamsize": "Team size",
+                "countries": {
+                    "AT": "Austria",
+                    "CZ": "CzechRepublic",
+                    "DK": "Denmark",
+                    "FI": "Finland",
+                    "FR": "France",
+                    "DE": "Germany",
+                    "IT": "Italy",
+                    "NL": "Netherlands",
+                    "NO": "Norway",
+                    "PL": "Poland",
+                    "SE": "Sweden",
+                    "CH": "Switzerland",
+                    "US": "USA"
+                },
+                "noOption": "All options have been selected already",
+                "placeholder": "Please, select at least one option"
+            },
+            "booking": {
+                "title": "Booking",
+                "websiteLabel": "Website",
+                "website": {
+                    "yes": "Already existing",
+                    "soon": "In progres",
+                    "no": "None"
+                },
+                "url": "Website URL",
+                "design": "Design",
+                "logoLabel": "Logo",
+                "fontColorLabel": "Font color",
+                "buttonColorLabel": "Button color"
+            },
+            "features": {
+                "title": "Features",
+                "welcome": "What do you need to support your business:",
+                "channelsLabel": "Online booking channels",
+                "channels": {
+                    "integration": "Website Integration",
+                    "payments": "Online payments",
+                    "shop": "Shop page",
+                    "smoobu": "Smoobu channel manager"
+                },
+                "automationLabel": "Order handling automation",
+                "automation": {
+                    "checkInOut": "Check-in / check-out handling",
+                    "damage": "Damage management",
+                    "request": "Request"
+                },
+                "managmentLabel": "Inventory managment",
+                "managment": {
+                    "variations": "Article variations",
+                    "tracing": "Location (GPS) tracking",
+                    "codes": "QR-codes"
+                }
+            },
+            "errors": {
+                "noName": "Your name could not be empty",
+                "noEmail": "Please, write your email adress"
+            }
+        },
+        "shared": {
+            "industry": {
+                "bikes": "Bikes/ Scooters",
+                "photo": "Photo/ Film",
+                "transport": "Transport",
+                "cars": "Cars/ RVs",
+                "machines": "Machines",
+                "activities": "Activities",
+                "boats": "Boats / Yachts",
+                "ceremonial": "Ceremonial",
+                "other": "Other"
+            }
+        }
+    },
+    "de": {
+        "leftDialog": {
+            "MarcoTitle": "Head of Customer’s success(DE)",
+            "questionaire": {
+                "askForName": "Okay!\nLet’s get started. 🤘️(DE)",
+                "askAboutServices": "Hej %{name}!\nNice to meet you!(DE)",
+                "askForWebsite": "Makes sense! 💪(DE)",
+                "askAboutTeamSize": {
+                    "no": "No website yet, okay.\nNo problem! 💪(DE)",
+                    "soon": "Website soon.\nGreat! 💪(DE)",
+                    "yes": "Website present.\nGreat! 💪(DE)"
+                },
+                "askAboutIndustry": "That’s a big team already, exciting! 💪(DE)",
+                "askForContact": "Great choice!(DE)",
+                "done": "Ready. Create your account to be the next in line! 🤙(DE)",
+                "haveWebsite": {
+                    "yes": "Yes, I have website already!(DE)",
+                    "soon": "I have no website, but I’m on it.(DE)",
+                    "no": "I have no website yet and want help.(DE)"
+                },
+                "selections": "Selections:(DE)"
+            },
+            "dashboard": {
+                "title": "We will reach out soon!(DE)",
+                "message": "Feel free to start your account configuration.\nThe more data you fill out, the faster we can process your account!(DE)"
+            }
+        },
+        "questionaire": {
+            "askForName": {
+                "pretitle": "First,(DE)",
+                "title": "What's your name?(DE)",
+                "message": "Please let us know how to address you best.\nWe will protect your data and won’t share it anyhow.(DE)"
+            },
+            "askAboutServices": {
+                "pretitle": "Next,(DE)",
+                "title": "How we can help you best?(DE)",
+                "need": "I need ... (DE)"
+            },
+            "askForWebsite": {
+                "pretitle": "Great,(DE)",
+                "title": "Do you have a website?(DE)"
+            },
+            "askAboutTeamSize": {
+                "pretitle": "Understood,(DE)",
+                "title": "What size is your team?(DE)",
+                "message": "Based on your team size we can offer you advanced cooperation features.(DE)"
+            },
+            "askAboutIndustry": {
+                "pretitle": "Great,(DE)",
+                "title": "What do you offer?(DE)"
+            },
+            "askForContact": {
+                "pretitle": "Almost done,(DE)",
+                "title": "How can we reach you out?(DE)"
+            },
+            "done": {
+                "pretitle": "That's it!(DE)",
+                "messageTop": "Please validate your e-mail address.(DE)",
+                "messageBottom": "We will reach out to you afterwards and help you setting up your account.(DE)"
+            },
+            "servicesNeeded": {
+                "channels": "Online booking channels(DE)",
+                "automation": "Order handling automation(DE)",
+                "managment": "Inventory management(DE)"
+            },
+            "website": {
+                "yes": "Yes, I have one already!(DE)",
+                "soon": "No, but I’m on it.(DE)",
+                "no": "I have no website yet and want help.(DE)"
+            },
+            "placeholders": {
+                "name": "Name(DE)",
+                "email": "Email(DE)",
+                "phone": "Phone (optional)(DE)"
+            },
+            "errors": {
+                "noName": "Please, write your name(DE)",
+                "noEmail": "Please, write your email adress(DE)",
+                "oneCheck": "Please, select at least one option(DE)"
+            },
+            "ssl": "SSL encrypted(DE)"
+        },
+        "dashboard": {
+            "customer": {
+                "title": "Your data(DE)",
+                "name": "Name(DE)",
+                "email": "E-mail(DE)",
+                "phone": "Phone(DE)"
+            },
+            "company": {
+                "title": "Company data(DE)",
+                "name": "Company name(DE)",
+                "industry": "Industry(DE)",
+                "address": "Address(DE)",
+                "street": "Street + Number(DE)",
+                "street2": "Address 2(DE)",
+                "city": "City(DE)",
+                "zip": "Zip code(DE)",
+                "country": "Country(DE)",
+                "teamsize": "Team size(DE)",
+                "countries": {
+                    "AT": "Austria(DE)",
+                    "CZ": "CzechRepublic(DE)",
+                    "DK": "Denmark(DE)",
+                    "FI": "Finland(DE)",
+                    "FR": "France(DE)",
+                    "DE": "Germany(DE)",
+                    "IT": "Italy(DE)",
+                    "NL": "Netherlands(DE)",
+                    "NO": "Norway(DE)",
+                    "PL": "Poland(DE)",
+                    "SE": "Sweden(DE)",
+                    "CH": "Switzerland(DE)",
+                    "US": "USA(DE)"
+                },
+                "noOption": "All options have been selected already(DE)",
+                "placeholder": "Please, select at least one option(DE)"
+            },
+            "booking": {
+                "title": "Booking(DE)",
+                "websiteLabel": "Website(DE)",
+                "website": {
+                    "yes": "Already existing(DE)",
+                    "soon": "In progres(DE)",
+                    "no": "None(DE)"
+                },
+                "url": "Website URL(DE)",
+                "design": "Design(DE)",
+                "logoLabel": "Logo(DE)",
+                "fontColorLabel": "Font color(DE)",
+                "buttonColorLabel": "Button color(DE)"
+            },
+            "features": {
+                "title": "Features(DE)",
+                "welcome": "What do you need to support your business:(DE)",
+                "channelsLabel": "Online booking channels(DE)",
+                "channels": {
+                    "integration": "Website Integration(DE)",
+                    "payments": "Online payments(DE)",
+                    "shop": "Shop page(DE)",
+                    "smoobu": "Smoobu channel manager(DE)"
+                },
+                "automationLabel": "Order handling automation(DE)",
+                "automation": {
+                    "checkInOut": "Check-in / check-out handling(DE)",
+                    "damage": "Damage management(DE)",
+                    "request": "Request(DE)"
+                },
+                "managmentLabel": "Inventory managment(DE)",
+                "managment": {
+                    "variations": "Article variations(DE)",
+                    "tracing": "Location (GPS) tracking(DE)",
+                    "codes": "QR-codes(DE)"
+                }
+            },
+            "errors": {
+                "noName": "Your name could not be empty(DE)",
+                "noEmail": "Please, write your email adress(DE)"
+            }
+        },
+        "shared": {
+            "industry": {
+                "bikes": "Bikes/ Scooters(DE)",
+                "photo": "Photo/ Film(DE)",
+                "transport": "Transport(DE)",
+                "cars": "Cars/ RVs(DE)",
+                "machines": "Machines(DE)",
+                "activities": "Activities(DE)",
+                "boats": "Boats / Yachts(DE)",
+                "ceremonial": "Ceremonial(DE)",
+                "other": "Other(DE)"
+            }
+        }
+    }
+}
