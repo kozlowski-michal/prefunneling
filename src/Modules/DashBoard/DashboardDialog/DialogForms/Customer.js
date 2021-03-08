@@ -8,7 +8,7 @@ const customer = (props) => (
     <React.Fragment>
         <InputText
             name="customerName"
-            label={t("dashboard.customer.title")}
+            label={t("dashboard.customer.name")}
             defaultValue={props.dashboardData?.customerName}
             onBlur={props.saveDataOnEvent}
             register={props.register} />

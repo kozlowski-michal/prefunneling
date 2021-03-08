@@ -159,7 +159,7 @@
             "errors": {
                 "noName": "Your name could not be empty",
                 "noEmail": "Please, write your email adress",
-                "noCompanyName": "Comapny name could not be empty"
+                "noCompanyName": "Company name could not be empty"
             }
         },
         "shared": {
@@ -336,7 +336,7 @@
             "errors": {
                 "noName": "Your name could not be empty(DE)",
                 "noEmail": "Please, write your email adress(DE)",
-                "noCompanyName": "Comapny name could not be empty(DE)"
+                "noCompanyName": "Company name could not be empty(DE)"
             }
         },
         "shared": {
