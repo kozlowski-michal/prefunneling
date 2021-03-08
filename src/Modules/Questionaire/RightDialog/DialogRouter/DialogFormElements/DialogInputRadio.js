@@ -1,5 +1,5 @@
 import React from 'react'
-import { I18n, translate } from 'react-i18nify';
+import { t } from 'react-i18nify';
 
 import classesCSS from './DialogInputRadio.module.css';
 
@@ -20,7 +20,7 @@ const dialogInputRadio = (props) => {
                         ref={props.register}
                     />
                     <div className={classesCSS.RadioField} ></div>
-                    <I18n render={() => translate("questionaire." + props.name + "." + key)} />
+                    {t("questionaire." + props.name + "." + key)}
                 </label>
             })}
         </div>

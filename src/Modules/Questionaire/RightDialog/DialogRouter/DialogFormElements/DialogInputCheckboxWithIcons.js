@@ -1,5 +1,5 @@
 import React from 'react'
-import { I18n, translate } from 'react-i18nify';
+import { t } from 'react-i18nify';
 
 import IconsSVG from '../../../../../data/svg/DialogIcons';
 import classesCSS from './DialogInputCheckboxWithIcons.module.css';
@@ -22,7 +22,7 @@ const dialogInputCheckbox = (props) => (
                     <IconsSVG industry={key} />
                 </div>
                 <div className={classesCSS.TextContainer}>
-                    {<I18n render={() => translate("shared." + props.name + "." + key)} />}
+                    {t("shared." + props.name + "." + key)}
                 </div>
             </label>
         })}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { I18n, getLocale, setLocale } from 'react-i18nify';
+import { getLocale, setLocale } from 'react-i18nify';
 import { NavLink } from 'react-router-dom';
 
 import { Logo, LogoMobile } from './Logo/Logo';
@@ -25,17 +25,15 @@ const header = () => {
 
             <div className={classesCSS.NavContainer} >
                 <div className={classesCSS.Shadow}></div>
-                <I18n render={() =>
-                    getLocale() == 'de' ?
-                        <div className={classesCSS.RightItem} onClick={() => setLocale('en')} >
-                            <DeDeSVG />
+                {getLocale() == 'de' ?
+                    <div className={classesCSS.RightItem} onClick={() => setLocale('en')} >
+                        <DeDeSVG />
                             Region
                         </div> :
-                        <div className={classesCSS.RightItem} onClick={() => setLocale('de')} >
-                            <EnUsSVG />
+                    <div className={classesCSS.RightItem} onClick={() => setLocale('de')} >
+                        <EnUsSVG />
                             Region
-                        </div>
-                } />
+                        </div>}
                 <div className={classesCSS.RightSeparator}></div>
                 <div className={classesCSS.RightItem} >
                     <DownloadSVG />

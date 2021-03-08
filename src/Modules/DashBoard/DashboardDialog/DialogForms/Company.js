@@ -6,7 +6,6 @@ import { TeamSize } from '../../../../data/enums';
 import InputText from '../../../Forms/InputText/InputText';
 import InputRange from '../../../Forms/InputRange/InputRange';
 import InputMultiselect from '../../../Forms/InputMultiselect/InputMultiselect';
-import InputSelect from '../../../Forms/InputSelect/InputSelect';
 import classesCSS from './DialogForms.module.css'
 
 const company = (props) => {
