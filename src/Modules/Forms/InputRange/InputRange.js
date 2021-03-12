@@ -17,6 +17,38 @@ const InputRange = (props) => {
         props.onChange({ [props.name]: props.values[labelIndex] });
     }
 
+    const colorRight = getComputedStyle(document.documentElement).getPropertyValue('--formViolet');
+    const colorLeft = getComputedStyle(document.documentElement).getPropertyValue('--formAzure');
+
+    // colored dots on slider
+    const dotsNumber = props.values.length;
+    const steps = Array.from(Array(dotsNumber).keys()).
+        map(step => step / (dotsNumber - 1));
+
+    const findColorAtSpotRGB = (cLeftHex, cRightHex, percent) => {
+        const cLeftDec = cLeftHex.
+            slice(2).
+            match(/.{1,2}/g).
+            map((sub) => parseInt(sub, 16));
+        const cRightDec = cRightHex.
+            slice(2).
+            match(/.{1,2}/g).
+            map((sub) => parseInt(sub, 16));
+
+        const ranges = cLeftDec.map((item, index) => {
+            return (+item - +cRightDec[index])
+        });
+
+        const colorAtSpotRGB = cLeftDec.map((item, index) => {
+            return (+item - (+ranges[index] * percent).toFixed(0));
+        });
+
+        return "rgb(" + colorAtSpotRGB[0] + "," + colorAtSpotRGB[1] + "," + colorAtSpotRGB[2] + ")";
+    }
+
+    const colorsAtSpots = steps.map(spot => findColorAtSpotRGB(colorLeft, colorRight, spot));
+    console.log(colorsAtSpots);
+
     return (
         <div className={style}>
             {/* creating labels */}
@@ -33,6 +65,13 @@ const InputRange = (props) => {
                                     item
                                 }
                             </div>
+                            {/* creating slider's dots */}
+                            {/*<div className={classesCSS.SliderCircleContainer} >
+                                <div
+                                    className={classesCSS.SliderCircle}
+                                    style={{ borderColor: colorsAtSpots[index] }}
+                                />
+                            </div>*/}
                         </div>
                     )
                 })}
@@ -50,7 +89,7 @@ const InputRange = (props) => {
                     ref={props.register()}
                 />
             </div>
-        </div>
+        </div >
     )
 }
 
