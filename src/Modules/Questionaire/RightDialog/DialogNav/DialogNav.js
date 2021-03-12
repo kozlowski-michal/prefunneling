@@ -4,15 +4,15 @@ import { Steps } from '../../data/enums';
 import { ArrowNextSVG, ArrowBackSVG } from '../../../../data/svg/DialogButtons';
 import classesCSS from './DialogNav.module.css';
 
-const dialogNav = (props) => {
+const dialogNav = ({ step, goBack }) => {
     return (
-        props.step != Steps.done ?
+        step != Steps.done ?
             <div className={classesCSS.ButtonsContainer} >
-                {props.step != 0 ?
+                {step != 0 ?
                     <button
                         type="button"
                         className={classesCSS.ButtonBack}
-                        onClick={props.goBack}
+                        onClick={goBack}
                     >
                         <ArrowBackSVG />
                     </button> : null

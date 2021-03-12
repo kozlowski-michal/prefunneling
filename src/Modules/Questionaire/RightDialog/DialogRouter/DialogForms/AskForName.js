@@ -13,7 +13,7 @@ const askForName = (props) => (
             name="name"
             placeholder={t("questionaire.placeholders.name")}
             defaultValue={props.dialogData?.name}
-            onKeyUp={props.saveDataOnEvent}
+            onKeyUp={props.onChange}
             style="questionaire"
             register={props.register} />
         <DialogMessage

@@ -50,10 +50,12 @@ const company = (props) => {
                 label={t("dashboard.company.name")}
                 defaultValue={props.dashboardData?.companyName}
                 onBlur={props.saveDataOnEvent}
-                register={props.register} />
+                register={props.register}
+            />
             <InputError
                 errorField={props.errors.companyName}
-                message={t("dashboard.errors.noCompanyName")} />
+                message={t("dashboard.errors.noCompanyName")}
+            />
             <InputMultiselect
                 name="companyIndustry"
                 label={t("dashboard.company.industry")}
@@ -63,10 +65,12 @@ const company = (props) => {
                 noOption={t("dashboard.company.noOption")}
                 defaultValue={defaultIndustryList}
                 onChange={props.saveDataOnEvent}
-                register={props.register} />
+                register={props.register}
+            />
             <InputError
                 errorField={props.errors.companyIndustry}
-                message={t("dashboard.errors.companyIndustry")} />
+                message={t("dashboard.errors.companyIndustry")}
+            />
             <div className={classesCSS.Subtitle}>
                 <Translate value={"dashboard.company.address"} />
             </div>
@@ -76,24 +80,28 @@ const company = (props) => {
                         name="companyStreet"
                         label={t("dashboard.company.street")}
                         defaultValue={props.dashboardData?.companyStreet}
-                        onBlur={props.saveDataOnEvent} />
+                        onBlur={props.saveDataOnEvent}
+                    />
                     <InputText
                         name="companyCity"
                         label={t("dashboard.company.city")}
                         defaultValue={props.dashboardData?.companyCity}
-                        onBlur={props.saveDataOnEvent} />
+                        onBlur={props.saveDataOnEvent}
+                    />
                 </div>
                 <div className={classesCSS.Column}>
                     <InputText
                         name="companySecondaryAddress"
                         label={t("dashboard.company.street2")}
                         defaultValue={props.dashboardData?.companySecondaryAddress}
-                        onBlur={props.saveDataOnEvent} />
+                        onBlur={props.saveDataOnEvent}
+                    />
                     <InputText
                         name="companyZip"
                         label={t("dashboard.company.zip")}
                         defaultValue={props.dashboardData?.companyZip}
-                        onBlur={props.saveDataOnEvent} />
+                        onBlur={props.saveDataOnEvent}
+                    />
                 </div>
             </div>
             <InputMultiselect
@@ -101,13 +109,8 @@ const company = (props) => {
                 label={t("dashboard.company.country")}
                 list={countryList}
                 onChange={props.saveDataOnEvent}
-                defaultValue={defaultCountry} />
-            {/*<InputSelect
-                name="companyCountry"
-                label={t("dashboard.company.country")}
-                list={countryList}
-                onChange={props.saveDataOnEvent}
-            defaultValue={t("dashboard.company.countries." + props.dashboardData.companyCountry)} />*/}
+                defaultValue={defaultCountry}
+            />
             <div className={classesCSS.Subtitle}>
                 <Translate value={"dashboard.company.teamsize"} />
             </div>
@@ -116,7 +119,10 @@ const company = (props) => {
                 defaultValue={props.dashboardData?.companyTeamSize}
                 values={TeamSize}
                 onChange={props.saveDataOnEvent}
-                register={props.register} />
+                register={props.register}
+                colorLeft={getComputedStyle(document.documentElement).getPropertyValue('--formAzure')}
+                colorRight={getComputedStyle(document.documentElement).getPropertyValue('--formViolet')}
+            />
         </React.Fragment >
     )
 }

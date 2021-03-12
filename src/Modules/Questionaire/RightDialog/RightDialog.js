@@ -8,7 +8,7 @@ import validatorOptions from '../data/validatorOptions';
 import classesCSS from './RightDialog.module.css';
 import { Steps } from '../data/enums';
 
-const RightDialog = (props) => {
+const RightDialog = ({ goBack, ...props }) => {
     let { register, handleSubmit, errors } = useForm({
         mode: 'onBlur',
         reValidateMode: 'onChange',
@@ -23,16 +23,15 @@ const RightDialog = (props) => {
             <form onSubmit={handleSubmit(props.submit)} className={classesForm} >
                 <div className={classesFormContainer} >
                     <DialogRouter
-                        step={props.step}
-                        saveDataOnEvent={props.saveDataOnEvent}
-                        dialogData={props.dialogData}
+                        {...props}
                         errors={errors}
-                        register={register} />
+                        register={register}
+                    />
                 </div>
                 <DialogNav
                     step={props.step}
-                    submit={props.submit}
-                    goBack={props.goBack} />
+                    goBack={goBack}
+                />
             </form>
             { props.step != Steps.done ?
                 <p className={classesCSS.Encrypted} >

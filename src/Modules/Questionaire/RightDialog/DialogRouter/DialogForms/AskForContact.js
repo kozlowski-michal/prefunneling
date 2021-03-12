@@ -13,7 +13,7 @@ const askForContact = (props) => {
                 name="email"
                 placeholder={t("questionaire.placeholders.email")}
                 defaultValue={props.dialogData.email}
-                onKeyUp={props.saveDataOnEvent}
+                onKeyUp={props.onChange}
                 style="questionaire"
                 register={props.register} />
             <div style={{ width: "100%", height: "20px" }}></div>
@@ -21,7 +21,7 @@ const askForContact = (props) => {
                 name="phone"
                 placeholder={t("questionaire.placeholders.phone")}
                 defaultValue={props.dialogData.phone}
-                onKeyUp={props.saveDataOnEvent}
+                onKeyUp={props.onChange}
                 style="questionaire"
                 register={props.register} />
             <InputError

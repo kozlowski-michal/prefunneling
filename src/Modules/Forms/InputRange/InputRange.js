@@ -2,30 +2,29 @@ import React, { useState } from 'react'
 
 import classesCSS from './InputRange.module.css';
 
-const InputRange = (props) => {
-    let rangeDefaultValue = props.values.indexOf(props.defaultValue);
+const InputRange = ({ name, defaultValue = 1, values, onChange, register, colorRight, colorLeft }) => {
+    let rangeDefaultValue = values.indexOf(defaultValue);
     let [currentValueFromRange, setValueFromRange] = useState(rangeDefaultValue);
-    let style = props.style ? [classesCSS.RangeContainer, classesCSS[props.style]].join(" ") : classesCSS.RangeContainer;
+    let [isHovered, setHover] = useState(false);
 
     const onChangeHandler = (event) => {
         setValueFromRange(() => currentValueFromRange = event.target.value);
-        props.onChange({ [props.name]: event });
+        onChange({ [name]: event });
     }
 
     const labelClickHandler = (labelIndex) => {
         setValueFromRange(() => currentValueFromRange = labelIndex);
-        props.onChange({ [props.name]: props.values[labelIndex] });
+        onChange({ [name]: values[labelIndex] });
     }
 
-    const colorRight = getComputedStyle(document.documentElement).getPropertyValue('--formViolet');
-    const colorLeft = getComputedStyle(document.documentElement).getPropertyValue('--formAzure');
-
     // colored dots on slider
-    const dotsNumber = props.values.length;
+    const dotsNumber = values.length;
     const steps = Array.from(Array(dotsNumber).keys()).
         map(step => step / (dotsNumber - 1));
+    const stepsHover = Array.from(Array(dotsNumber).keys()).
+        map(step => (step / (dotsNumber - 1)) * 0.5);
 
-    const findColorAtSpotRGB = (cLeftHex, cRightHex, percent) => {
+    const findColorAtSpot = (cLeftHex, cRightHex, percent) => {
         const cLeftDec = cLeftHex.
             slice(2).
             match(/.{1,2}/g).
@@ -39,54 +38,78 @@ const InputRange = (props) => {
             return (+item - +cRightDec[index])
         });
 
-        const colorAtSpotRGB = cLeftDec.map((item, index) => {
-            return (+item - (+ranges[index] * percent).toFixed(0));
+        let outColorHex = "#";
+        cLeftDec.map((item, index) => {
+            let colorPart = (+item - (+ranges[index] * percent).toFixed(0));
+            colorPart = colorPart.toString(16);
+            if (colorPart === "0") colorPart += "0";
+            outColorHex += (colorPart);
         });
 
-        return "rgb(" + colorAtSpotRGB[0] + "," + colorAtSpotRGB[1] + "," + colorAtSpotRGB[2] + ")";
+        return outColorHex;
     }
 
-    const colorsAtSpots = steps.map(spot => findColorAtSpotRGB(colorLeft, colorRight, spot));
-    console.log(colorsAtSpots);
+    const colorsAtSpots = isHovered ?
+        stepsHover.map(spot => findColorAtSpot(colorLeft, colorRight, spot))
+        : steps.map(spot => findColorAtSpot(colorLeft, colorRight, spot));
+
+    const gradientStyle = isHovered ?
+        { backgroundImage: "linear-gradient(to right, var(--formAzure), var(--formViolet) 200%)" }
+        : { backgroundImage: "linear-gradient(to right, var(--formAzure), var(--formViolet))" }
 
     return (
-        <div className={style}>
+        <div className={classesCSS.RangeContainer}>
             {/* creating labels */}
             <div className={classesCSS.RangeLabel} >
-                {props.values.map((item, index) => {
-                    let labelPosition = (100 / (props.values.length - 1)) * index;
+                {values.map((item, index) => {
+                    let labelPosition = (100 / (values.length - 1)) * index;
                     return (
-                        <div key={index} className={classesCSS.RangeLabelItemContainer} style={{ left: labelPosition + "%" }} >
+                        <div
+                            key={index}
+                            className={classesCSS.RangeLabelItemContainer}
+                            style={{ left: labelPosition + "%" }}
+                        >
                             <div
                                 className={classesCSS.RangeLabelItem}
-                                onClick={() => labelClickHandler(index)}>
+                                onClick={() => labelClickHandler(index)}
+                                onMouseEnter={() => setHover(true)}
+                                onMouseLeave={() => setHover(false)}
+                            >
                                 {currentValueFromRange == index ?
                                     <strong>{item}</strong> :
                                     item
                                 }
                             </div>
                             {/* creating slider's dots */}
-                            {/*<div className={classesCSS.SliderCircleContainer} >
+                            {<div className={classesCSS.SliderCircleContainer} >
                                 <div
                                     className={classesCSS.SliderCircle}
-                                    style={{ borderColor: colorsAtSpots[index] }}
+                                    style={{ background: colorsAtSpots[index] }}
                                 />
-                            </div>*/}
+                                <div
+                                    className={classesCSS.SliderInnerCircle}
+                                />
+                            </div>}
                         </div>
                     )
                 })}
             </div>
             {/* slider */}
-            <div className={classesCSS.SliderContainer}>
+            <div
+                className={classesCSS.SliderContainer}
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+            >
                 <input className={classesCSS.Slider}
+                    style={gradientStyle}
                     type="range"
-                    name={props.name}
-                    id={props.name}
+                    name={name}
+                    id={name}
                     min="0"
-                    max={props.values.length - 1}
+                    max={values.length - 1}
                     value={currentValueFromRange}
                     onChange={(event) => onChangeHandler(event)}
-                    ref={props.register()}
+                    ref={register()}
                 />
             </div>
         </div >

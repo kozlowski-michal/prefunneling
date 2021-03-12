@@ -15,7 +15,7 @@ const askAboutTeamSize = (props) => (
             defaultValue={props.dialogData?.teamSize}
             values={TeamSize}
             style="questionaire"
-            onChange={props.saveDataOnEvent}
+            onChange={props.onChange}
             register={props.register} />
         <DialogMessage
             step={props.step} />

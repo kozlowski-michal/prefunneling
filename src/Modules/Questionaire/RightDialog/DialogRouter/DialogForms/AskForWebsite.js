@@ -10,7 +10,7 @@ const askAboutServices = (props) => (
         <DialogTitle step={props.step} />
         <DialogInputRadio
             name="website"
-            saveDataOnEvent={props.saveDataOnEvent}
+            onChange={props.onChange}
             defaultValue={props.dialogData.website}
             keys={translations.en.questionaire.website}
             register={props.register} />

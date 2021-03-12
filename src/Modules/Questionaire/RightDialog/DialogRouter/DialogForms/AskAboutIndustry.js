@@ -12,7 +12,7 @@ const askAboutIndustry = (props) => (
         <DialogTitle step={props.step} />
         <DialogInputCheckboxWithIcons
             name="industry"
-            saveDataOnEvent={props.saveDataOnEvent}
+            onChange={props.onChange}
             defaultValue={props.dialogData.industry}
             keys={Industry}
             register={props.register} />

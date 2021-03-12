@@ -18,7 +18,7 @@ const Questionnaire = (props) => {
         console.log(dialogData);  // <============================================================= DEL
     }, [stepCounter]);
 
-    const saveDataOnEventHandler = (formData) => {
+    const handleChange = (formData) => {
         setDialogData((oldDialogData) => {
             if (formData.servicesNeeded) { // deep merging
                 formData = { servicesNeeded: { ...oldDialogData.servicesNeeded, ...formData.servicesNeeded } }
@@ -40,7 +40,7 @@ const Questionnaire = (props) => {
             <RightDialog
                 step={stepCounter}
                 dialogData={dialogData}
-                saveDataOnEvent={(data) => saveDataOnEventHandler(data)}
+                onChange={(data) => handleChange(data)}
                 submit={() => stepChangeHandler(1)}
                 goBack={() => stepChangeHandler(-1)}
             />
