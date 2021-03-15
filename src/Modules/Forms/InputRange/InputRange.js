@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import classesCSS from './InputRange.module.css';
 
-const InputRange = ({ name, defaultValue = 1, values, onChange, register, colorRight, colorLeft }) => {
+const InputRange = ({ name, defaultValue = 1, values, onChange, register, colorRight, colorLeft, hoverOffset }) => {
     let rangeDefaultValue = values.indexOf(defaultValue);
     let [currentValueFromRange, setValueFromRange] = useState(rangeDefaultValue);
     let [isHovered, setHover] = useState(false);
@@ -22,7 +22,7 @@ const InputRange = ({ name, defaultValue = 1, values, onChange, register, colorR
     const steps = Array.from(Array(dotsNumber).keys()).
         map(step => step / (dotsNumber - 1));
     const stepsHover = Array.from(Array(dotsNumber).keys()).
-        map(step => (step / (dotsNumber - 1)) * 0.5);
+        map(step => (step / (dotsNumber - 1)) / hoverOffset);
 
     const findColorAtSpot = (cLeftHex, cRightHex, percent) => {
         const cLeftDec = cLeftHex.
@@ -42,7 +42,7 @@ const InputRange = ({ name, defaultValue = 1, values, onChange, register, colorR
         cLeftDec.map((item, index) => {
             let colorPart = (+item - (+ranges[index] * percent).toFixed(0));
             colorPart = colorPart.toString(16);
-            if (colorPart === "0") colorPart += "0";
+            if (colorPart.length === 1) colorPart = "0" + colorPart;
             outColorHex += (colorPart);
         });
 
@@ -54,8 +54,8 @@ const InputRange = ({ name, defaultValue = 1, values, onChange, register, colorR
         : steps.map(spot => findColorAtSpot(colorLeft, colorRight, spot));
 
     const gradientStyle = isHovered ?
-        { backgroundImage: "linear-gradient(to right, var(--formAzure), var(--formViolet) 200%)" }
-        : { backgroundImage: "linear-gradient(to right, var(--formAzure), var(--formViolet))" }
+        { backgroundImage: "linear-gradient(to right, " + colorLeft + ", " + colorRight + " " + hoverOffset * 100 + "%)" }
+        : { backgroundImage: "linear-gradient(to right, " + colorLeft + ", " + colorRight + ")" }
 
     return (
         <div className={classesCSS.RangeContainer}>

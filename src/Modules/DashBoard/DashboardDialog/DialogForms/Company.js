@@ -122,6 +122,7 @@ const company = (props) => {
                 register={props.register}
                 colorLeft={getComputedStyle(document.documentElement).getPropertyValue('--formAzure')}
                 colorRight={getComputedStyle(document.documentElement).getPropertyValue('--formViolet')}
+                hoverOffset="2" // hoverOffset > 1
             />
         </React.Fragment >
     )
