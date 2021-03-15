@@ -3,35 +3,35 @@ import { Translate, t } from 'react-i18nify';
 import InputCheckbox from '../../../Forms/InputCheckbox/InputCheckbox';
 import classesCSS from './DialogForms.module.css'
 
-const features = (props) => {
+const features = ({ dashboardData, onChange, errors, register }) => {
     const featuresChannelsList = [];
-    Object.keys(props.dashboardData?.featuresChannels).map((key) => {
+    Object.keys(dashboardData?.featuresChannels).map((key) => {
         featuresChannelsList.push({ value: key, label: t("dashboard.features.channels." + key) });
     });
 
     const featuresAutomationList = [];
-    Object.keys(props.dashboardData?.featuresAutomation).map((key) => {
+    Object.keys(dashboardData?.featuresAutomation).map((key) => {
         featuresAutomationList.push({ value: key, label: t("dashboard.features.automation." + key) });
     });
 
     const featuresManagmentList = [];
-    Object.keys(props.dashboardData?.featuresManagment).map((key) => {
+    Object.keys(dashboardData?.featuresManagment).map((key) => {
         featuresManagmentList.push({ value: key, label: t("dashboard.features.managment." + key) });
     });
 
     const defaultFeaturesChannelsList = [];
-    Object.keys(props.dashboardData?.featuresChannels).map((key) => {
-        if (props.dashboardData?.featuresChannels[key]) defaultFeaturesChannelsList.push({ value: key, label: t("dashboard.features.channels." + key) });
+    Object.keys(dashboardData?.featuresChannels).map((key) => {
+        if (dashboardData?.featuresChannels[key]) defaultFeaturesChannelsList.push({ value: key, label: t("dashboard.features.channels." + key) });
     });
 
     const defaultFeaturesAutomationList = [];
-    Object.keys(props.dashboardData?.featuresAutomation).map((key) => {
-        if (props.dashboardData?.featuresAutomation[key]) defaultFeaturesAutomationList.push({ value: key, label: t("dashboard.features.automation." + key) });
+    Object.keys(dashboardData?.featuresAutomation).map((key) => {
+        if (dashboardData?.featuresAutomation[key]) defaultFeaturesAutomationList.push({ value: key, label: t("dashboard.features.automation." + key) });
     });
 
     const defaultFeaturesManagmentList = [];
-    Object.keys(props.dashboardData?.featuresManagment).map((key) => {
-        if (props.dashboardData?.featuresManagment[key]) defaultFeaturesManagmentList.push({ value: key, label: t("dashboard.features.managment." + key) });
+    Object.keys(dashboardData?.featuresManagment).map((key) => {
+        if (dashboardData?.featuresManagment[key]) defaultFeaturesManagmentList.push({ value: key, label: t("dashboard.features.managment." + key) });
     });
 
     return (
@@ -42,19 +42,19 @@ const features = (props) => {
             <InputCheckbox
                 name="featuresChannels"
                 label={t("dashboard.features.channelsLabel")}
-                onChange={props.saveDataOnEvent}
+                onChange={onChange}
                 list={featuresChannelsList}
                 defaultList={defaultFeaturesChannelsList} />
             <InputCheckbox
                 name="featuresAutomation"
                 label={t("dashboard.features.automationLabel")}
-                onChange={props.saveDataOnEvent}
+                onChange={onChange}
                 list={featuresAutomationList}
                 defaultList={defaultFeaturesAutomationList} />
             <InputCheckbox
                 name="featuresManagment"
                 label={t("dashboard.features.managmentLabel")}
-                onChange={props.saveDataOnEvent}
+                onChange={onChange}
                 list={featuresManagmentList}
                 defaultList={defaultFeaturesManagmentList} />
         </React.Fragment>

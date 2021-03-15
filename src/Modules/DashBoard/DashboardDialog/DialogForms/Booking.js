@@ -8,7 +8,7 @@ import InputUpload from '../../../Forms/InputUpload/InputUpload';
 import InputColor from '../../../Forms/InputColor/InputColor';
 import classesCSS from './DialogForms.module.css'
 
-const booking = (props) => {
+const booking = ({ dashboardData, onChange, errors, register }) => {
     const websiteList = Website.map((option) => {
         return {
             value: option,
@@ -17,8 +17,8 @@ const booking = (props) => {
     });
 
     const defaultWebsite = {
-        value: props.dashboardData?.bookingWebsite,
-        label: t("dashboard.booking.website." + props.dashboardData?.bookingWebsite)
+        value: dashboardData?.bookingWebsite,
+        label: t("dashboard.booking.website." + dashboardData?.bookingWebsite)
     };
 
     return (
@@ -27,14 +27,14 @@ const booking = (props) => {
                 name="bookingWebsite"
                 label={t("dashboard.booking.websiteLabel")}
                 list={websiteList}
-                onChange={props.saveDataOnEvent}
+                onChange={onChange}
                 defaultValue={defaultWebsite} />
             <InputText
                 name="bookingUrl"
                 before="https://"
                 label={t("dashboard.booking.url")}
-                defaultValue={props.dashboardData?.bookingUrl}
-                onBlur={props.saveDataOnEvent} />
+                defaultValue={dashboardData?.bookingUrl}
+                onBlur={onChange} />
             <div className={classesCSS.Subtitle}>
                 <Translate value={"dashboard.booking.design"} />
             </div>
@@ -49,13 +49,13 @@ const booking = (props) => {
                     <InputColor
                         name="bookingFontColor"
                         label={t("dashboard.booking.fontColorLabel")}
-                        color={props.dashboardData?.bookingFontColor}
-                        onChange={props.saveDataOnEvent} />
+                        color={dashboardData?.bookingFontColor}
+                        onChange={onChange} />
                     <InputColor
                         name="bookingButtonColor"
                         label={t("dashboard.booking.buttonColorLabel")}
-                        color={props.dashboardData?.bookingButtonColor}
-                        onChange={props.saveDataOnEvent} />
+                        color={dashboardData?.bookingButtonColor}
+                        onChange={onChange} />
 
                 </div>
             </div>

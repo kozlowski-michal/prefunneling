@@ -4,31 +4,31 @@ import { t } from 'react-i18nify';
 import InputText from '../../../Forms/InputText/InputText';
 import InputError from '../../../Forms/InputError/InputError';
 
-const customer = (props) => (
+const customer = ({ dashboardData, onChange, errors, register }) => (
     <React.Fragment>
         <InputText
             name="customerName"
             label={t("dashboard.customer.name")}
-            defaultValue={props.dashboardData?.customerName}
-            onBlur={props.saveDataOnEvent}
-            register={props.register} />
+            defaultValue={dashboardData?.customerName}
+            onBlur={onChange}
+            register={register} />
         <InputError
-            errorField={props.errors.customerName}
+            errorField={errors.customerName}
             message={t("dashboard.errors.noName")} />
         <InputText
             name="customerEmail"
             label={t("dashboard.customer.email")}
-            defaultValue={props.dashboardData?.customerEmail}
-            onBlur={props.saveDataOnEvent}
-            register={props.register} />
+            defaultValue={dashboardData?.customerEmail}
+            onBlur={onChange}
+            register={register} />
         <InputError
-            errorField={props.errors.customerEmail}
+            errorField={errors.customerEmail}
             message={t("dashboard.errors.noEmail")} />
         <InputText
             name="customerPhone"
             label={t("dashboard.customer.phone")}
-            defaultValue={props.dashboardData?.customerPhone}
-            onBlur={props.saveDataOnEvent} />
+            defaultValue={dashboardData?.customerPhone}
+            onBlur={onChange} />
     </React.Fragment>
 )
 

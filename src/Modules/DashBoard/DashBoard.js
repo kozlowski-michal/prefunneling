@@ -9,13 +9,11 @@ const DashBoard = (props) => {
 
     useEffect(() => {
         props.sendToLeftDialog(dataToLeftDialog());
-        console.log("Collected data:");  // <============================================================= DEL
-        console.log(dashboardData);  // <============================================================= DEL
     }, [dashboardData]);
 
     const saveDataOnEventHandler = (formData) => {
         setDashboardData((oldData) => {
-            console.log("Received data:"); // <============================================================= DEL
+            console.log("Received data [Dashboard.js]:"); // <============================================================= DEL
             console.log(formData); // <============================================================= DEL
             return { ...oldData, ...formData };
         })
@@ -25,7 +23,7 @@ const DashBoard = (props) => {
         <React.Fragment>
             <DashboardDialog
                 dashboardData={dashboardData}
-                saveDataOnEvent={(data) => saveDataOnEventHandler(data)} />
+                onChange={(data) => saveDataOnEventHandler(data)} />
         </React.Fragment>
     )
 }

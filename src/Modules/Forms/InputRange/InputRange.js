@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 
 import classesCSS from './InputRange.module.css';
 
-const InputRange = ({ name, defaultValue = 1, values, onChange, register, colorRight, colorLeft, hoverOffset }) => {
+const InputRange = ({ name, defaultValue = 1, values, onChange, register, colorRight, colorLeft, hoverOffset = 2 }) => {
+    // hoverOffset must be greater than 1
     let rangeDefaultValue = values.indexOf(defaultValue);
     let [currentValueFromRange, setValueFromRange] = useState(rangeDefaultValue);
     let [isHovered, setHover] = useState(false);

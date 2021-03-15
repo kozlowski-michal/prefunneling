@@ -10,7 +10,7 @@ import Booking from './DialogForms/Booking';
 import Features from './DialogForms/Features';
 import FormContainer from './FormContainer/FormContainer';
 
-const DashboardDialog = (props) => {
+const DashboardDialog = ({ dashboardData, onChange }) => {
     let { register, errors } = useForm({
         mode: 'onChange',
         reValidateMode: 'onChange',
@@ -28,16 +28,16 @@ const DashboardDialog = (props) => {
             <div className={classesCSS.DashboardColumn}>
                 <FormContainer title="customer">
                     <Customer
-                        dashboardData={props.dashboardData}
-                        saveDataOnEvent={props.saveDataOnEvent}
+                        dashboardData={dashboardData}
+                        onChange={onChange}
                         errors={errors}
                         register={register}
                     />
                 </FormContainer>
                 <FormContainer title="company">
                     <Company
-                        dashboardData={props.dashboardData}
-                        saveDataOnEvent={props.saveDataOnEvent}
+                        dashboardData={dashboardData}
+                        onChange={onChange}
                         errors={errors}
                         register={register} />
                 </FormContainer>
@@ -45,15 +45,15 @@ const DashboardDialog = (props) => {
             <div className={classesCSS.DashboardColumn}>
                 <FormContainer boldTitle="booking">
                     <Booking
-                        dashboardData={props.dashboardData}
-                        saveDataOnEvent={props.saveDataOnEvent}
+                        dashboardData={dashboardData}
+                        onChange={onChange}
                         errors={errors}
                         register={register} />
                 </FormContainer>
                 <FormContainer title="features">
                     <Features
-                        dashboardData={props.dashboardData}
-                        saveDataOnEvent={props.saveDataOnEvent}
+                        dashboardData={dashboardData}
+                        onChange={onChange}
                         errors={errors}
                         register={register} />
                 </FormContainer>

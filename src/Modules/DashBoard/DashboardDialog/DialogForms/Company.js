@@ -9,7 +9,7 @@ import InputMultiselect from '../../../Forms/InputMultiselect/InputMultiselect';
 import InputError from '../../../Forms/InputError/InputError';
 import classesCSS from './DialogForms.module.css'
 
-const company = (props) => {
+const company = ({ dashboardData, onChange, errors, register }) => {
     // values for inputs
     const industryList = Object.values(Industry).map((industry) => {
         return {
@@ -19,7 +19,7 @@ const company = (props) => {
     });
 
     let defaultIndustryList = [];
-    Object.entries(props.dashboardData?.companyIndustry).map((entry) => {
+    Object.entries(dashboardData?.companyIndustry).map((entry) => {
         let [key, value] = entry;
         if (value) defaultIndustryList.push(key);
     });
@@ -39,8 +39,8 @@ const company = (props) => {
     });
 
     const defaultCountry = {
-        value: props.dashboardData?.companyCountry,
-        label: t("dashboard.company.countries." + props.dashboardData?.companyCountry)
+        value: dashboardData?.companyCountry,
+        label: t("dashboard.company.countries." + dashboardData?.companyCountry)
     };
 
     return (
@@ -48,12 +48,12 @@ const company = (props) => {
             <InputText
                 name="companyName"
                 label={t("dashboard.company.name")}
-                defaultValue={props.dashboardData?.companyName}
-                onBlur={props.saveDataOnEvent}
-                register={props.register}
+                defaultValue={dashboardData?.companyName}
+                onBlur={onChange}
+                register={register}
             />
             <InputError
-                errorField={props.errors.companyName}
+                errorField={errors.companyName}
                 message={t("dashboard.errors.noCompanyName")}
             />
             <InputMultiselect
@@ -64,11 +64,11 @@ const company = (props) => {
                 placeholder={t("dashboard.company.placeholder")}
                 noOption={t("dashboard.company.noOption")}
                 defaultValue={defaultIndustryList}
-                onChange={props.saveDataOnEvent}
-                register={props.register}
+                onChange={onChange}
+                register={register}
             />
             <InputError
-                errorField={props.errors.companyIndustry}
+                errorField={errors.companyIndustry}
                 message={t("dashboard.errors.companyIndustry")}
             />
             <div className={classesCSS.Subtitle}>
@@ -79,28 +79,28 @@ const company = (props) => {
                     <InputText
                         name="companyStreet"
                         label={t("dashboard.company.street")}
-                        defaultValue={props.dashboardData?.companyStreet}
-                        onBlur={props.saveDataOnEvent}
+                        defaultValue={dashboardData?.companyStreet}
+                        onBlur={onChange}
                     />
                     <InputText
                         name="companyCity"
                         label={t("dashboard.company.city")}
-                        defaultValue={props.dashboardData?.companyCity}
-                        onBlur={props.saveDataOnEvent}
+                        defaultValue={dashboardData?.companyCity}
+                        onBlur={onChange}
                     />
                 </div>
                 <div className={classesCSS.Column}>
                     <InputText
                         name="companySecondaryAddress"
                         label={t("dashboard.company.street2")}
-                        defaultValue={props.dashboardData?.companySecondaryAddress}
-                        onBlur={props.saveDataOnEvent}
+                        defaultValue={dashboardData?.companySecondaryAddress}
+                        onBlur={onChange}
                     />
                     <InputText
                         name="companyZip"
                         label={t("dashboard.company.zip")}
-                        defaultValue={props.dashboardData?.companyZip}
-                        onBlur={props.saveDataOnEvent}
+                        defaultValue={dashboardData?.companyZip}
+                        onBlur={onChange}
                     />
                 </div>
             </div>
@@ -108,7 +108,7 @@ const company = (props) => {
                 name="companyCountry"
                 label={t("dashboard.company.country")}
                 list={countryList}
-                onChange={props.saveDataOnEvent}
+                onChange={onChange}
                 defaultValue={defaultCountry}
             />
             <div className={classesCSS.Subtitle}>
@@ -116,13 +116,13 @@ const company = (props) => {
             </div>
             <InputRange
                 name="companyTeamSize"
-                defaultValue={props.dashboardData?.companyTeamSize}
+                defaultValue={dashboardData?.companyTeamSize}
                 values={TeamSize}
-                onChange={props.saveDataOnEvent}
-                register={props.register}
+                onChange={onChange}
+                register={register}
                 colorLeft={getComputedStyle(document.documentElement).getPropertyValue('--formAzure')}
                 colorRight={getComputedStyle(document.documentElement).getPropertyValue('--formViolet')}
-                hoverOffset="2" // hoverOffset > 1
+                hoverOffset="2"
             />
         </React.Fragment >
     )
