@@ -7,11 +7,14 @@ const InputText = ({
     placeholder,
     defaultValue,
     before,
+    style,
     onBlur,
     onKeyUp,
-    register
+    register,
 }) => {
     const [eventValue, setEventValue] = useState(defaultValue);
+
+    let inputStyle = style ? classesCSS[style] : classesCSS.default;
 
     // onBlur triggers only when new value is different than previous
     const onBlurHandler = (event, callback) => {
@@ -23,7 +26,7 @@ const InputText = ({
     }
 
     return (
-        <div className={classesCSS.default}>
+        <div className={inputStyle}>
             {label &&
                 <div className={classesCSS.InputLabel}>
                     {label}

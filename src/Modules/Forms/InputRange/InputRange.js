@@ -10,7 +10,8 @@ const InputRange = ({
     register,
     colorRight,
     colorLeft,
-    hoverOffset = 2 // changes gradient on hover, must be greater than 1
+    hoverOffset = 2, // changes gradient on hover, must be greater than 1
+    // style, - it could be implemented if there will be others styles for component
 }) => {
 
     let rangeDefaultValue = values.indexOf(defaultValue);
