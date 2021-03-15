@@ -25,40 +25,50 @@ import inputMultiselectStyle from './InputMultiselectStyle'
 // no multi:
 // {name: opt}
 
-const inputSelect = (props) => {
-    let style = props.style ? classesCSS[props.style] : classesCSS.dashboard;
+const inputSelect = ({
+    name,
+    dataList,
+    placeholder,
+    noOption,
+    isMulti,
+    defaultValue,
+    label,
+    style,
+    onChange,
+    register,
+}) => {
     let dataToReturn = {};
-    props.list.map((item) => {
+    dataList.map((item) => {
         dataToReturn = { ...dataToReturn, [item.value]: false }
     });
 
     const returnValue = (dataFromSelect) => {
-        switch (props.isMulti) {
+        switch (isMulti) {
             case true:
                 dataFromSelect = dataFromSelect.map((item) => {
                     dataToReturn = { ...dataToReturn, [item.value]: true }
                 })
-                return props.onChange({ [props.name]: dataToReturn });
+                return onChange({ [name]: dataToReturn });
             default:
-                return props.onChange({ [props.name]: dataFromSelect.value });
+                return onChange({ [name]: dataFromSelect.value });
         }
     }
 
-    const customStyle = props.style ? inputMultiselectStyle(props.style) : inputMultiselectStyle('dashboard');
+    const customStyle = inputMultiselectStyle('dashboard');
 
     return (
-        <div className={style}>
-            {props.label ? <div className={classesCSS.SelectLabel}>
-                {props.label}
-            </div> : null}
+        <div className={classesCSS.dashboard}>
+            {label &&
+                <div className={classesCSS.SelectLabel}>
+                    {label}
+                </div>}
             <Select
                 styles={customStyle}
-                placeholder={props.placeholder}
-                noOptionsMessage={() => props.noOption}
-                options={props.list}
-                value={props.defaultValue}
-                //defaultValue={props.defaultValue}
-                isMulti={props.isMulti ? props.isMulti : null}
+                placeholder={placeholder}
+                noOptionsMessage={() => noOption}
+                options={dataList}
+                value={defaultValue}
+                isMulti={isMulti}
                 isSearchable={false}
                 menuPlacement="auto"
                 onChange={(item) => returnValue(item)} />

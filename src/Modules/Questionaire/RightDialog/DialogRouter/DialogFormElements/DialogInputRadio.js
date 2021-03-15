@@ -11,7 +11,7 @@ const dialogInputRadio = (props) => {
             {keys.map((key, index) => {
                 return <label key={key} className={classesCSS.RadioContainer}>
                     <input
-                        defaultChecked={index == defaultIndex ? true : false}
+                        defaultChecked={index === defaultIndex}
                         onChange={(event) => props.onChange({ website: event.target.value })}
                         type="radio"
                         name={props.name}
@@ -19,7 +19,7 @@ const dialogInputRadio = (props) => {
                         value={key}
                         ref={props.register}
                     />
-                    <div className={classesCSS.RadioField} ></div>
+                    <div className={classesCSS.RadioField} />
                     {t("questionaire." + props.name + "." + key)}
                 </label>
             })}

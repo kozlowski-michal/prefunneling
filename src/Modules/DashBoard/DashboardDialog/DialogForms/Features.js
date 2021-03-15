@@ -35,7 +35,7 @@ const features = ({ dashboardData, onChange, errors, register }) => {
     });
 
     return (
-        <React.Fragment>
+        <>
             <div className={classesCSS.Message}>
                 <Translate value={"dashboard.features.welcome"} />
             </div>
@@ -57,7 +57,7 @@ const features = ({ dashboardData, onChange, errors, register }) => {
                 onChange={onChange}
                 list={featuresManagmentList}
                 defaultList={defaultFeaturesManagmentList} />
-        </React.Fragment>
+        </>
     )
 }
 

@@ -1,48 +1,47 @@
 import React, { useState } from 'react';
 import classesCSS from './InputText.module.css';
 
-//Props:
-//  name
-//  label?
-//  before?
-//  defaultValue?
-//  placeholder?
-//  style? default as in dashboard
-//  onBlur?
-//  onKeyUp?
-//  register?
+const InputText = ({
+    name,
+    label,
+    placeholder,
+    defaultValue,
+    before,
+    onBlur,
+    onKeyUp,
+    register
+}) => {
+    const [eventValue, setEventValue] = useState(defaultValue);
 
-const InputText = (props) => {
-    let [eventValue, setEventValue] = useState(props.defaultValue);
-    let style = props.style ? classesCSS[props.style] : classesCSS.default;
-
-    // onBlur triggers only when new value is different than before
+    // onBlur triggers only when new value is different than previous
     const onBlurHandler = (event, callback) => {
         let newValue = event.target.value;
         if (eventValue != newValue) {
-            callback({ [props.name]: newValue });
+            callback({ [name]: newValue });
             setEventValue(() => newValue);
         }
     }
 
     return (
-        <div className={style}>
-            {props.label ? <div className={classesCSS.InputLabel}>
-                {props.label}
-            </div> : null}
+        <div className={classesCSS.default}>
+            {label &&
+                <div className={classesCSS.InputLabel}>
+                    {label}
+                </div>}
             <div className={classesCSS.InputContainer}>
-                {props.before ? <div className={classesCSS.InputBefore}>
-                    {props.before}
-                </div> : null}
+                {before &&
+                    <div className={classesCSS.InputBefore}>
+                        {before}
+                    </div>}
                 <input
-                    name={props.name}
-                    defaultValue={props.defaultValue ? props.defaultValue : null}
-                    placeholder={props.placeholder ? props.placeholder : null}
+                    name={name}
+                    defaultValue={defaultValue}
+                    placeholder={placeholder}
                     className={classesCSS.Input}
-                    onKeyUp={props.onKeyUp ? (event) => props.onKeyUp({ [props.name]: event.target.value }) : null}
-                    onBlur={props.onBlur ? (event) => onBlurHandler(event, props.onBlur) : null}
+                    onKeyUp={onKeyUp && ((event) => onKeyUp({ [name]: event.target.value }))}
+                    onBlur={onBlur && ((event) => onBlurHandler(event, onBlur))}
                     type="text"
-                    ref={props.register ? props.register : null} />
+                    ref={register} />
             </div>
         </div>
     )

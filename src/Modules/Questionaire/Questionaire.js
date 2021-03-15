@@ -6,8 +6,8 @@ import { getLocale } from 'react-i18nify';
 import { dataToLeftDialog } from './data/dataToLeftDialog';
 
 const Questionnaire = (props) => {
-    let [stepCounter, setStepCounter] = useState(0);
-    let [dialogData, setDialogData] = useState(questionaireDataModel);
+    const [stepCounter, setStepCounter] = useState(0);
+    const [dialogData, setDialogData] = useState(questionaireDataModel);
 
     useEffect(() => {
         props.sendToLeftDialog(dataToLeftDialog(stepCounter, dialogData));
@@ -20,10 +20,10 @@ const Questionnaire = (props) => {
 
     const handleChange = (formData) => {
         setDialogData((oldDialogData) => {
-            if (formData.servicesNeeded) { // deep merging
+            if (formData.servicesNeeded) {
                 formData = { servicesNeeded: { ...oldDialogData.servicesNeeded, ...formData.servicesNeeded } }
             }
-            if (formData.industry) { // deep merging
+            if (formData.industry) {
                 formData = { industry: { ...oldDialogData.industry, ...formData.industry } }
             }
             formData['language'] = getLocale();
@@ -31,20 +31,20 @@ const Questionnaire = (props) => {
         });
     }
 
-    const stepChangeHandler = (value) => {
+    const handleStep = (value) => {
         setStepCounter(() => stepCounter + value);
     }
 
     return (
-        <React.Fragment>
+        <>
             <RightDialog
                 step={stepCounter}
                 dialogData={dialogData}
                 onChange={(data) => handleChange(data)}
-                submit={() => stepChangeHandler(1)}
-                goBack={() => stepChangeHandler(-1)}
+                onSubmit={() => handleStep(1)}
+                onBack={() => handleStep(-1)}
             />
-        </React.Fragment >
+        </>
     )
 }
 

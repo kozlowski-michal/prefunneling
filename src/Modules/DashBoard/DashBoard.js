@@ -5,26 +5,28 @@ import { dashboardDataModel } from '../../data/collectedData';
 import DashboardDialog from './DashboardDialog/DashboardDialog';
 
 const DashBoard = (props) => {
-    let [dashboardData, setDashboardData] = useState(dashboardDataModel);
+    const [dashboardData, setDashboardData] = useState(dashboardDataModel);
 
     useEffect(() => {
         props.sendToLeftDialog(dataToLeftDialog());
+        console.log("Collected data [Modules/Dashboard/Dashboard.js]:"); // <============================================================= DEL
+        console.log(dashboardData); // <============================================================= DEL
     }, [dashboardData]);
 
-    const saveDataOnEventHandler = (formData) => {
+    const handleChange = (formData) => {
         setDashboardData((oldData) => {
-            console.log("Received data [Dashboard.js]:"); // <============================================================= DEL
+            console.log("Received data [Modules/Dashboard/Dashboard.js]:"); // <============================================================= DEL
             console.log(formData); // <============================================================= DEL
             return { ...oldData, ...formData };
         })
     }
 
     return (
-        <React.Fragment>
+        <>
             <DashboardDialog
                 dashboardData={dashboardData}
-                onChange={(data) => saveDataOnEventHandler(data)} />
-        </React.Fragment>
+                onChange={(data) => handleChange(data)} />
+        </>
     )
 }
 

@@ -8,19 +8,19 @@ import validatorOptions from '../data/validatorOptions';
 import classesCSS from './RightDialog.module.css';
 import { Steps } from '../data/enums';
 
-const RightDialog = ({ goBack, ...props }) => {
-    let { register, handleSubmit, errors } = useForm({
+const RightDialog = ({ onBack, onSubmit, ...props }) => {
+    const { register, handleSubmit, errors } = useForm({
         mode: 'onBlur',
         reValidateMode: 'onChange',
         resolver: validatorOptions(props.step)
     });
 
-    let classesFormContainer = props.step == Steps.done ? [classesCSS.FormContainer, classesCSS.FormContainerDone].join(" ") : classesCSS.FormContainer;
-    let classesForm = props.step == Steps.done ? [classesCSS.Form, classesCSS.FormDone].join(" ") : classesCSS.Form;
+    let classesFormContainer = props.step === Steps.done ? [classesCSS.FormContainer, classesCSS.FormContainerDone].join(" ") : classesCSS.FormContainer;
+    let classesForm = props.step === Steps.done ? [classesCSS.Form, classesCSS.FormDone].join(" ") : classesCSS.Form;
 
     return (
         <div className={classesCSS.Survey} >
-            <form onSubmit={handleSubmit(props.submit)} className={classesForm} >
+            <form onSubmit={handleSubmit(onSubmit)} className={classesForm} >
                 <div className={classesFormContainer} >
                     <DialogRouter
                         {...props}
@@ -30,7 +30,7 @@ const RightDialog = ({ goBack, ...props }) => {
                 </div>
                 <DialogNav
                     step={props.step}
-                    goBack={goBack}
+                    onBack={onBack}
                 />
             </form>
             { props.step != Steps.done ?

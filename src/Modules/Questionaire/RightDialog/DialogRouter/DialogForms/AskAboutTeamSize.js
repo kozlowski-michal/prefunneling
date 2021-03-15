@@ -8,19 +8,21 @@ import DialogMessage from '../DialogFormElements/DialogMessage';
 import { TeamSize } from '../../../../../data/enums';
 
 const askAboutTeamSize = (props) => (
-    <React.Fragment>
+    <>
         <DialogTitle step={props.step} />
         <InputRange
             name="teamSize"
             defaultValue={props.dialogData?.teamSize}
             values={TeamSize}
-            style="questionaire"
             onChange={props.onChange}
-            register={props.register} />
+            register={props.register}
+            colorLeft={getComputedStyle(document.documentElement).getPropertyValue('--formAzure')}
+            colorRight={getComputedStyle(document.documentElement).getPropertyValue('--formViolet')}
+            hoverOffset="2" />
         <DialogMessage
             step={props.step} />
         <InputError style="questionaire" />{/* does nothing yet, styling purpose */}
-    </React.Fragment>
+    </>
 )
 
 export default askAboutTeamSize;

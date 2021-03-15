@@ -1,21 +1,16 @@
 import React from 'react'
 import classesCSS from './InputError.module.css';
 
-//Props:
-//  errorField
-//  message
-//  style?
-
-const dialogError = (props) => {
-    let style = props.style ? classesCSS[props.style] : classesCSS.dashboard;
-
+const dialogError = ({ message, errorField }) => {
     return (
-        <React.Fragment>
-            <div className={style} >
-                {props.errorField ?
-                    <p>{props.message}</p> : null}
+        <>
+            <div className={classesCSS.dashboard} >
+                {errorField &&
+                    <p>
+                        {message}
+                    </p>}
             </div>
-        </React.Fragment>
+        </>
     )
 }
 

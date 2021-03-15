@@ -19,7 +19,7 @@ const dialogInputCheckbox = (props) => {
                         value={key}
                         ref={props.register}
                     />
-                    <div className={classesCSS.CheckboxField} ></div>
+                    <div className={classesCSS.CheckboxField} />
                     {t("questionaire." + props.name + "." + key)}
                 </label>
             })}

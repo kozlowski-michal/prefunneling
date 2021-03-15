@@ -44,7 +44,7 @@ const company = ({ dashboardData, onChange, errors, register }) => {
     };
 
     return (
-        <React.Fragment>
+        <>
             <InputText
                 name="companyName"
                 label={t("dashboard.company.name")}
@@ -60,7 +60,7 @@ const company = ({ dashboardData, onChange, errors, register }) => {
                 name="companyIndustry"
                 label={t("dashboard.company.industry")}
                 isMulti
-                list={industryList}
+                dataList={industryList}
                 placeholder={t("dashboard.company.placeholder")}
                 noOption={t("dashboard.company.noOption")}
                 defaultValue={defaultIndustryList}
@@ -107,7 +107,7 @@ const company = ({ dashboardData, onChange, errors, register }) => {
             <InputMultiselect
                 name="companyCountry"
                 label={t("dashboard.company.country")}
-                list={countryList}
+                dataList={countryList}
                 onChange={onChange}
                 defaultValue={defaultCountry}
             />
@@ -124,7 +124,7 @@ const company = ({ dashboardData, onChange, errors, register }) => {
                 colorRight={getComputedStyle(document.documentElement).getPropertyValue('--formViolet')}
                 hoverOffset="2"
             />
-        </React.Fragment >
+        </>
     )
 }
 

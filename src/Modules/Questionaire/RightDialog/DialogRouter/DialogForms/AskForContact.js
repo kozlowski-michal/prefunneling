@@ -7,7 +7,7 @@ import InputError from '../../../../Forms/InputError/InputError';
 
 const askForContact = (props) => {
     return (
-        <React.Fragment>
+        <>
             <DialogTitle step={props.step} />
             <InputText
                 name="email"
@@ -16,7 +16,7 @@ const askForContact = (props) => {
                 onKeyUp={props.onChange}
                 style="questionaire"
                 register={props.register} />
-            <div style={{ width: "100%", height: "20px" }}></div>
+            <div style={{ width: "100%", height: "20px" }} />
             <InputText
                 name="phone"
                 placeholder={t("questionaire.placeholders.phone")}
@@ -28,7 +28,7 @@ const askForContact = (props) => {
                 errorField={props.errors.email}
                 message={t("questionaire.errors.noEmail")}
                 style="questionaire" />
-        </React.Fragment>
+        </>
     )
 }
 

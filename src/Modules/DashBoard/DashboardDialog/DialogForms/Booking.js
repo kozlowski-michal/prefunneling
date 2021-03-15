@@ -22,11 +22,11 @@ const booking = ({ dashboardData, onChange, errors, register }) => {
     };
 
     return (
-        <React.Fragment>
+        <>
             <InputMultiselect
                 name="bookingWebsite"
                 label={t("dashboard.booking.websiteLabel")}
-                list={websiteList}
+                dataList={websiteList}
                 onChange={onChange}
                 defaultValue={defaultWebsite} />
             <InputText
@@ -59,7 +59,7 @@ const booking = ({ dashboardData, onChange, errors, register }) => {
 
                 </div>
             </div>
-        </React.Fragment>
+        </>
     )
 }
 

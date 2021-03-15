@@ -11,7 +11,7 @@ import Features from './DialogForms/Features';
 import FormContainer from './FormContainer/FormContainer';
 
 const DashboardDialog = ({ dashboardData, onChange }) => {
-    let { register, errors } = useForm({
+    const { register, errors } = useForm({
         mode: 'onChange',
         reValidateMode: 'onChange',
         resolver: yupResolver(yup.object().shape(

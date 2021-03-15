@@ -5,7 +5,7 @@ import InputText from '../../../Forms/InputText/InputText';
 import InputError from '../../../Forms/InputError/InputError';
 
 const customer = ({ dashboardData, onChange, errors, register }) => (
-    <React.Fragment>
+    <>
         <InputText
             name="customerName"
             label={t("dashboard.customer.name")}
@@ -29,7 +29,7 @@ const customer = ({ dashboardData, onChange, errors, register }) => (
             label={t("dashboard.customer.phone")}
             defaultValue={dashboardData?.customerPhone}
             onBlur={onChange} />
-    </React.Fragment>
+    </>
 )
 
 export default customer;

@@ -2,19 +2,28 @@ import React, { useState } from 'react'
 
 import classesCSS from './InputRange.module.css';
 
-const InputRange = ({ name, defaultValue = 1, values, onChange, register, colorRight, colorLeft, hoverOffset = 2 }) => {
-    // hoverOffset must be greater than 1
+const InputRange = ({
+    name,
+    defaultValue = 1,
+    values,
+    onChange,
+    register,
+    colorRight,
+    colorLeft,
+    hoverOffset = 2 // changes gradient on hover, must be greater than 1
+}) => {
+
     let rangeDefaultValue = values.indexOf(defaultValue);
-    let [currentValueFromRange, setValueFromRange] = useState(rangeDefaultValue);
-    let [isHovered, setHover] = useState(false);
+    const [currentValueFromRange, setValueFromRange] = useState(rangeDefaultValue);
+    const [isHovered, setHover] = useState(false);
 
     const onChangeHandler = (event) => {
-        setValueFromRange(() => currentValueFromRange = event.target.value);
+        setValueFromRange(() => event.target.value);
         onChange({ [name]: event });
     }
 
     const labelClickHandler = (labelIndex) => {
-        setValueFromRange(() => currentValueFromRange = labelIndex);
+        setValueFromRange(() => labelIndex);
         onChange({ [name]: values[labelIndex] });
     }
 
@@ -76,7 +85,7 @@ const InputRange = ({ name, defaultValue = 1, values, onChange, register, colorR
                                 onMouseEnter={() => setHover(true)}
                                 onMouseLeave={() => setHover(false)}
                             >
-                                {currentValueFromRange == index ?
+                                {currentValueFromRange === index ?
                                     <strong>{item}</strong> :
                                     item
                                 }

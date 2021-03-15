@@ -5,7 +5,7 @@ import Questionnaire from './Modules/Questionaire/Questionaire';
 import DashBoard from './Modules/DashBoard/DashBoard';
 
 
-const router = (props) => {
+const mainRouter = (props) => {
     return (
         <Switch>
             <Route
@@ -24,4 +24,4 @@ const router = (props) => {
     )
 }
 
-export default router;
+export default mainRouter;

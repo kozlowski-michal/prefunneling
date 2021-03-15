@@ -1,5 +1,5 @@
 import React from 'react';
-import { I18n, Translate } from 'react-i18nify';
+import { Translate } from 'react-i18nify';
 
 import { RoundBulletSVG } from '../../../data/svg/DialogSummaryBullets';
 import { SquareBulletSVG } from '../../../data/svg/DialogSummaryBullets';
@@ -7,16 +7,10 @@ import { Steps } from "./enums";
 
 export const dataToLeftDialog = (step, dialogData) => {
     let returnedData = {
-        title:
-            <I18n render={() =>
-                <Translate value={"leftDialog.questionaire." + Object.keys(Steps)[step]} name={dialogData?.name} />
-            } />
+        title: <Translate value={"leftDialog.questionaire." + Object.keys(Steps)[step]} name={dialogData?.name} />
     };
-    if (step == Steps.askAboutTeamSize) returnedData = {
-        title:
-            <I18n render={() =>
-                <Translate value={"leftDialog.questionaire." + Object.keys(Steps)[step] + "." + dialogData.website} />
-            } />
+    if (step === Steps.askAboutTeamSize) returnedData = {
+        title: <Translate value={"leftDialog.questionaire." + Object.keys(Steps)[step] + "." + dialogData.website} />
     };
 
     switch (step) {
@@ -42,10 +36,7 @@ export const dataToLeftDialog = (step, dialogData) => {
         case (Steps.done):
             returnedData = {
                 ...returnedData,
-                listTitle:
-                    <I18n render={() =>
-                        <Translate value={"leftDialog.questionaire.selections"} />
-                    } />,
+                listTitle: <Translate value={"leftDialog.questionaire.selections"} />,
                 squareList: services.map((item, index) => {
                     return (
                         <p key={index} >
@@ -70,9 +61,7 @@ export const dataToLeftDialog = (step, dialogData) => {
                     [<p key={dialogData.website} >
                         <RoundBulletSVG />
                         <span>
-                            <I18n render={() =>
-                                <Translate value={"leftDialog.questionaire.haveWebsite." + dialogData.website} />
-                            } />
+                            <Translate value={"leftDialog.questionaire.haveWebsite." + dialogData.website} />
                         </span>
                     </p>]
             }

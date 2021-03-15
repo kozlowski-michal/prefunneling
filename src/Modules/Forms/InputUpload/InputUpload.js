@@ -64,9 +64,13 @@ const InputUpload = (props) => {
                     <input {...getInputProps()} />
                     {thumbs}
                     {isDragActive ?
-                        <p className={classesCSS.Drag}>{t("dashboard.booking.drop")}</p> :
-                        thumbs.length == 0 ?
-                            <p className={classesCSS.Drag}>{t("dashboard.booking.drag")}</p> : null
+                        <p className={classesCSS.Drag}>
+                            {t("dashboard.booking.drop")}
+                        </p> :
+                        thumbs.length === 0 &&
+                        <p className={classesCSS.Drag}>
+                            {t("dashboard.booking.drag")}
+                        </p>
                     }
                 </div>
                 {size}

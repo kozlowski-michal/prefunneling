@@ -7,7 +7,7 @@ import InputText from '../../../../Forms/InputText/InputText';
 import InputError from '../../../../Forms/InputError/InputError';
 
 const askForName = (props) => (
-    <React.Fragment>
+    <>
         <DialogTitle step={props.step} />
         <InputText
             name="name"
@@ -22,7 +22,7 @@ const askForName = (props) => (
             errorField={props.errors.name}
             message={t("questionaire.errors.noName")}
             style="questionaire" />
-    </React.Fragment>
+    </>
 )
 
 export default askForName;

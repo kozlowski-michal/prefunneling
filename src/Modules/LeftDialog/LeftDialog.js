@@ -10,14 +10,14 @@ import LeftDialogListTitle from './LeftDialogElements/LeftDialogListTitle';
 
 const leftDialog = (props) => {
     return (
-        <React.Fragment>
+        <>
             <LeftDialogTitle
                 title={props.title} />
 
             {props.message ? <LeftDialogMessage
                 message={props.message} /> : null}
 
-            <div className={classesCSS.TitleLine} ></div>
+            <div className={classesCSS.TitleLine} />
 
             {props.marco ? <Marco /> : null}
 
@@ -29,7 +29,7 @@ const leftDialog = (props) => {
 
             {props.roundList?.length > 0 ? <LeftDialogRoundList
                 list={props.roundList} /> : null}
-        </React.Fragment>
+        </>
     )
 }
 

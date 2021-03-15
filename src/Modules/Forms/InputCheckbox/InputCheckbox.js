@@ -41,7 +41,7 @@ const inputCheckbox = (props) => {
                             value={item.value}
                             ref={props.register}
                         />
-                        <div className={classesCSS.CheckboxField} ></div>
+                        <div className={classesCSS.CheckboxField} />
                         <span>{item.label}</span>
                     </label>
                     <div className={classesCSS.ReadMore}>

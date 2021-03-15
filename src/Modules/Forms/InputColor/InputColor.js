@@ -6,9 +6,10 @@ const inputColor = (props) => {
 
     return (
         <label className={style}>
-            {props.label ? <div className={classesCSS.InputLabel}>
-                {props.label}
-            </div> : null}
+            {props.label &&
+                <div className={classesCSS.InputLabel}>
+                    {props.label}
+                </div>}
             <div className={classesCSS.InputContainer}>
                 {props.color}
                 <div className={classesCSS.ColorContainer} style={{ backgroundColor: props.color }}>

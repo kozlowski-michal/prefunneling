@@ -3,17 +3,17 @@ import React, { useState } from 'react';
 import Header from './Header/Header'
 import LeftDialog from '../Modules/LeftDialog/LeftDialog';
 import classesCSS from './Layout.module.css';
-import Router from '../router.js';
+import MainRouter from '../mainRouter.js';
 
 const Layout = () => {
-    let [leftDialogProps, setLeftDialogProps] = useState(null);
+    const [leftDialogProps, setLeftDialogProps] = useState(null);
 
     const leftDialogPropsHandler = (newLeftDialogProps) => {
         setLeftDialogProps(() => newLeftDialogProps)
     }
 
     return (
-        <React.Fragment>
+        <>
             <Header />
             <main className={classesCSS.Content}>
                 <div className={classesCSS.Container} >
@@ -21,11 +21,11 @@ const Layout = () => {
                         <LeftDialog {...leftDialogProps} />
                     </div>
                     <div className={classesCSS.RightDialog} >
-                        <Router sendToLeftDialog={leftDialogPropsHandler} />
+                        <MainRouter sendToLeftDialog={leftDialogPropsHandler} />
                     </div>
                 </div>
             </main>
-        </React.Fragment>
+        </>
     )
 }
 

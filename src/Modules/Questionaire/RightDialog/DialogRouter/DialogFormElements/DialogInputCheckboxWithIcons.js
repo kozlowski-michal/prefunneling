@@ -17,7 +17,7 @@ const dialogInputCheckbox = (props) => (
                     value={key}
                     ref={props.register}
                 />
-                <div className={classesCSS.CheckboxField} ></div>
+                <div className={classesCSS.CheckboxField} />
                 <div className={classesCSS.IconContainer}>
                     <IconsSVG industry={key} />
                 </div>
