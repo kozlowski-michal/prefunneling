@@ -2,9 +2,9 @@ import React from 'react';
 
 import classesCSS from './LeftDialogElements.module.css';
 
-const leftDialogMessage = (props) => (
+const leftDialogMessage = ({ message }) => (
     <p className={classesCSS.Message} >
-        {props.message}
+        {message}
     </p>
 )
 

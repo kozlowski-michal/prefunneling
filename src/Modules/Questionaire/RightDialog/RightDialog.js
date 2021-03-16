@@ -33,10 +33,10 @@ const RightDialog = ({ onBack, onSubmit, ...props }) => {
                     onBack={onBack}
                 />
             </form>
-            { props.step != Steps.done ?
+            { props.step != Steps.done &&
                 <p className={classesCSS.Encrypted} >
                     <Translate value="questionaire.ssl" />
-                </p> : null}
+                </p>}
         </div>
     )
 }

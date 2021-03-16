@@ -2,9 +2,9 @@ import React from 'react';
 
 import classesCSS from './LeftDialogElements.module.css';
 
-const leftDialogListTitle = (props) => (
+const leftDialogListTitle = ({ listTitle }) => (
     <p className={classesCSS.ListTitle}>
-        {props.listTitle}
+        {listTitle}
     </p>
 )
 

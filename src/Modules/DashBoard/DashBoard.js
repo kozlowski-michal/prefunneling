@@ -9,14 +9,10 @@ const DashBoard = (props) => {
 
     useEffect(() => {
         props.sendToLeftDialog(dataToLeftDialog());
-        console.log("Collected data [Modules/Dashboard/Dashboard.js]:"); // <============================================================= DEL
-        console.log(dashboardData); // <============================================================= DEL
-    }, [dashboardData]);
+    }, []); // fill array with: dashboardData variable if data to left dialog could change
 
     const handleChange = (formData) => {
         setDashboardData((oldData) => {
-            console.log("Received data [Modules/Dashboard/Dashboard.js]:"); // <============================================================= DEL
-            console.log(formData); // <============================================================= DEL
             return { ...oldData, ...formData };
         })
     }

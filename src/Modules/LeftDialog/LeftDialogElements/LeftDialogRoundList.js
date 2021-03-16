@@ -2,9 +2,9 @@ import React from 'react';
 
 import classesCSS from './LeftDialogElements.module.css';
 
-const leftDialogRoundList = (props) => (
+const leftDialogRoundList = ({ list }) => (
     <div className={classesCSS.listContainer}>
-        {props.list}
+        {list}
     </div>
 )
 

@@ -8,27 +8,35 @@ import LeftDialogSquareList from './LeftDialogElements/LeftDialogSquareList';
 import LeftDialogRoundList from './LeftDialogElements/LeftDialogRoundList';
 import LeftDialogListTitle from './LeftDialogElements/LeftDialogListTitle';
 
-const leftDialog = (props) => {
+const leftDialog = ({
+    title,
+    message,
+    marco,
+    listTitle,
+    squareList,
+    roundList,
+}) => {
     return (
         <>
             <LeftDialogTitle
-                title={props.title} />
+                title={title} />
 
-            {props.message ? <LeftDialogMessage
-                message={props.message} /> : null}
+            {message &&
+                <LeftDialogMessage message={message} />}
 
             <div className={classesCSS.TitleLine} />
 
-            {props.marco ? <Marco /> : null}
+            {marco &&
+                <Marco />}
 
-            {props.listTitle ? <LeftDialogListTitle
-                listTitle={props.listTitle} /> : null}
+            {listTitle &&
+                <LeftDialogListTitle listTitle={listTitle} />}
 
-            {props.squareList?.length > 0 ? <LeftDialogSquareList
-                list={props.squareList} /> : null}
+            {squareList?.length > 0 &&
+                <LeftDialogSquareList list={squareList} />}
 
-            {props.roundList?.length > 0 ? <LeftDialogRoundList
-                list={props.roundList} /> : null}
+            {roundList?.length > 0 &&
+                <LeftDialogRoundList list={roundList} />}
         </>
     )
 }

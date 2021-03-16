@@ -2,9 +2,9 @@ import React from 'react';
 
 import classesCSS from './LeftDialogElements.module.css';
 
-const leftDialogSquareList = (props) => (
+const leftDialogSquareList = ({ list }) => (
     <div className={classesCSS.listContainer}>
-        {props.list}
+        {list}
     </div>
 )
 

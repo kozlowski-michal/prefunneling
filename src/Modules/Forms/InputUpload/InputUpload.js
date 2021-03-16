@@ -49,10 +49,10 @@ const InputUpload = (props) => {
 
     return (
         <div className={style} >
-            {props.label ?
+            {props.label &&
                 <div className={classesCSS.InputLabel}>
                     {props.label}
-                </div> : null}
+                </div>}
             <div className={classesCSS.DropContainer}>
                 <div className={classesCSS.uploadIconContainer} onClick={deleteFiles}>
                     <UplaodArrowSVG />

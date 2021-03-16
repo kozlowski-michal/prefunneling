@@ -14,8 +14,6 @@ const Questionnaire = (props) => {
         setDialogData((oldDialogData) => {
             return { ...oldDialogData, language: getLocale() }
         });
-        console.log("Step:" + stepCounter);  // <============================================================= DEL
-        console.log(dialogData);  // <============================================================= DEL
     }, [stepCounter]);
 
     const handleChange = (formData) => {
